@@ -91,7 +91,7 @@ class client_interface(SocketServer.StreamRequestHandler):
         currentTile = self.localPlayer.getCurrentTile()
         needsTeleport = False
 
-        print moveX, moveY, currentTile.dstDir, currentTile.dstGrid
+        print moveX, moveY, currentTile.dstDir, currentTile.dstGrid, self.localPlayer.grid 
 
         if currentTile.dstGrid != "":
             if moveX > 0 and currentTile.dstDir == "EAST": needsTeleport = True

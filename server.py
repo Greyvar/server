@@ -16,76 +16,77 @@ from time import sleep
 import cProfile
 
 class server(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
-	allow_reuse_address = True
-	gridCache = dict()
-	run = True
+  allow_reuse_address = True
+  gridCache = dict()
+  run = True
 
-	def halt(self):
-		logging.debug("Server cleanly shutting down.");
+  def halt(self):
+    logging.debug("Server cleanly shutting down.");
 
-		for client in self.game.clientsToPlayers:
-			client.request.close()
+    for client in self.game.clientsToPlayers:
+      client.request.close()
 
-		self.shutdown();
+    self.shutdown();
 
-	def runTicker(self):
-		while True:
-			self.tick()
-			sleep(1)
+  def runTicker(self):
+    while True:
+      self.tick()
+      sleep(1)
 
 
-	def tick(self):
-		print "ticketdyboo"
-		for client in self.game.clientsToPlayers:
-			print client 
+  def tick(self):
+    logging.debug("Server Tick")
 
-		print "---"
+    for client in self.game.clientsToPlayers:
+      print client 
 
-	def setup(self):
-		self.spawnGrid = self.load_grid("dat/grids/start.grid")
-		self.load_grid("dat/grids/cloister.grid")
-		self.game = game.game(self)
+  def setup(self):
+    self.spawnGrid = self.load_grid("dat/grids/start.grid")
+    self.load_grid("dat/grids/cloister.grid")
+    self.game = game.game(self)
 
-	def load_grid(self, gridFilename):
-		f = open(gridFilename)
-		contents = f.read()
-		f.close()
+  def load_grid(self, gridFilename):
+    logging.debug("Loading grid: " + gridFilename)
 
-		ggrid = self.gridCache[os.path.basename(gridFilename)] = grid.map()
+    f = open(gridFilename)
+    contents = f.read()
+    f.close()
 
-		for line in contents.split("\n"):
-			if len(line) == 0: break
+    ggrid = self.gridCache[os.path.basename(gridFilename)] = grid.map()
 
-			if line[0] == '#': continue
+    for line in contents.split("\n"):
+      if len(line) == 0: break
 
-			row, col, tex, rot, flipV, flipH, trv, tdstg, tdstx, tdsty, tdir, message, eol = line.split(",")
-			row = int(row)
-			col = int(col)
-			rot = int(rot)
-			trv = trv == "true"
-			flipV = flipV == "true"
-			flipH = flipH == "true"
+      if line[0] == '#': continue
 
-			ggrid.setTile(row, col, tile.tile(tex, trv, rot, flipV, flipH, 
-				dstGrid = tdstg,
-				dstX = tdstx,
-				dstY = tdsty,
-				dstDir = tdir,
+      row, col, tex, rot, flipV, flipH, trv, tdstg, tdstx, tdsty, tdir, message, eol = line.split(",")
+      row = int(row)
+      col = int(col)
+      rot = int(rot)
+      trv = trv == "true"
+      flipV = flipV == "true"
+      flipH = flipH == "true"
+
+      ggrid.setTile(row, col, tile.tile(tex, trv, rot, flipV, flipH, 
+        dstGrid = tdstg,
+        dstX = tdstx,
+        dstY = tdsty,
+        dstDir = tdir,
                 message = message
-			))
-			logging.debug("Parsed line in grid: " + line)
+      ))
+      logging.debug("Parsed line in grid: " + line)
 
-		return ggrid
+    return ggrid
 
 def signal_handler(signal, frame):
-	global srv, logging
+  global srv, logging
 
-	print # clear the signal written to terminal
+  print # clear the signal written to terminal
 
-	logging.info("Caught signal:" + str(signal))
-	logging.info("Shutting down after signal.");
+  logging.info("Caught signal:" + str(signal))
+  logging.info("Shutting down after signal.");
 
-	srv.shutdown()
+  srv.shutdown()
 
 signal.signal(signal.SIGINT, signal_handler)
 
@@ -102,5 +103,5 @@ server_tick_thread.setDaemon(True)
 server_tick_thread.start()
 
 while server_thread.isAlive():
-	sleep(1)
+  sleep(1)
 

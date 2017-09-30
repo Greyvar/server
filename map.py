@@ -1,39 +1,50 @@
 import tile
 
 class map:
-	def __init__(self):
-		self.initMap();
+  def __init__(self):
+    self.initMap();
 
-	def initMap(self):
-		self.tiles = {}
+  def __repr__(self):
+    return "map inst"
 
-		for row in range(0, 16):
-			self.tiles[row] = {}
+  def initMap(self):
+    self.tiles = {}
 
-			for col in range(0, 16):
-				self.tiles[row][col] = None
+    for row in range(0, 16):
+      self.tiles[row] = {}
 
-	def getTile(self, x, y):
-		if self.tiles[x][y] == None:
-			t = tile.tile();
-			t.tex = "grass.png"
-			return t
-		else:
-			return self.tiles[x][y]
-		
-	def setTile(self, row, col, tile):
-		self.tiles[row][col] = tile;
+      for col in range(0, 16):
+        self.tiles[row][col] = None
 
-	def allTiles(self):
-		for row in range(0, 16):
-			for col in range(0, 16):
-				yield [row, col, self.getTile(row, col)]
+  def getTile(self, x, y):
+    tileFound = True
 
-	def canStandOn(self, x, y):
-		if y >= len(self.tiles) or y < 0:
-			return False;
+    if x - 1 > len(self.tiles) or y - 1 > len(self.tiles[x]):
+      tileFound = False
+    elif self.tiles[x][y] == None:
+      tileFound = False
 
-		if x >= len(self.tiles[0]) or x < 0:
-			return False;
+    if not tileFound: 
+      t = tile.tile();
+      t.tex = "grass.png"
+      return t
+    else:
+      return self.tiles[x][y]
+    
+  def setTile(self, row, col, tile):
+    self.tiles[row][col] = tile;
 
-		return self.getTile(x, y).traversable;
+  def allTiles(self):
+    for row in range(0, 16):
+      for col in range(0, 16):
+        yield [row, col, self.getTile(row, col)]
+
+  def canStandOn(self, x, y):
+    if y >= len(self.tiles) or y < 0:
+      return False;
+
+    if x >= len(self.tiles[0]) or x < 0:
+      return False;
+
+    return self.getTile(x, y).traversable;
+
