@@ -5,7 +5,7 @@ class map:
     self.initMap();
 
   def __repr__(self):
-    return "map inst"
+    return "map{}"
 
   def initMap(self):
     self.tiles = {}

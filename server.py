@@ -31,7 +31,7 @@ class server(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
   def runTicker(self):
     while True:
       self.tick()
-      sleep(1)
+      sleep(.25)
 
 
   def tick(self):

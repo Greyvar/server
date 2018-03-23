@@ -6,6 +6,10 @@ import threading
 import game
 import socket
 import logging, logging.config
+import yaml
+import math
+
+ETB = chr(0x17)
 
 class client_interface(SocketServer.StreamRequestHandler):
     def setup(self):
@@ -15,78 +19,129 @@ class client_interface(SocketServer.StreamRequestHandler):
     def handle(self):
         logging.debug("New connection.");
 
+        welc = {
+            "serverVersion": "greyvar-devel"
+        }
+
+        self.send("WELC", welc)
+
+        chunkBuf = ""
+
         while self.alive:
             try:
-                line = self.request.recv(1024); 
+                chunk = self.request.recv(1024); 
             except socket.error as e:
                 logging.debug("socket exception: " + str(e))
                 break;
 
-            line = line.decode("utf-8")
+            if not chunk: break;
 
-            if not line: break;
-            if not line.find("\n"): continue;
-    
+            print "recv", chunk
 
-            cmd = line[0:4]
+            if chunk.find(ETB):
+                chunkEnd, nextChunkStart = chunk.split(ETB)
+                chunkBuf += chunkEnd
 
-            if cmd == "HELO":
-                self.handle_helo(line)
-            elif cmd == "QUIT":
-                return;
-            elif cmd == "HALT":
-                self.handle_halt(line);
-            elif cmd == "MOVR":
-                self.handle_movr(line);
-            else:
-                logging.debug("Unknown command from client: " + str(line));
+                self.parse_chunk(chunkBuf)
+                chunkBuf = nextChunkStart
 
         self.server.game.unregisterPlayer(self)
+
+    def parse_chunk(self, chunk):
+        logging.debug("parse chunk: " + str(chunk));
+
+        req = yaml.load(chunk)
+        cmd = req["command"]
+
+        if cmd == "HELO":
+            self.handle_helo(req)
+        elif cmd == "QUIT":
+            return;
+        elif cmd == "HALT":
+            self.handle_halt(req);
+        elif cmd == "MOVR":
+            self.handle_movr(req);
+        else:
+            logging.debug("Unknown command from client: " + str(req));
+
+
+
+    def subdict(self, d, *args):
+        if isinstance(d, object):
+            d = d.__dict__
+
+        return dict(filter(lambda i:i[0] in args, d.items()))
 
     def finish(self):
         self.alive = False
 
     def send_player_you(self, player):
-        self.send("PLRU", player.id, player.nickname, player.skin)
+        plru = self.subdict(player, "id", "nickname", "skin");
+
+        self.send("PLRU", plru)
 
     def send_player_join(self, player):
         logging.debug("sending new player")
-        self.send("PLRJ", player.id, player.nickname, player.skin);
+
+        plrj = self.subdict(player, "id", "nickname", "skin")
+
+        self.send("PLRJ", plrj);
         self.send_move(player)
 
     def send_player_quit(self, player):
         if player != None:
-            self.send("PLRQ", player.id)
+            self.send("PLRQ", self.subdict(player, "id"))
 
     def send_spawn(self, player):
-        self.send("SPWN", player.x, player.y);
+        spwn = self.subdict(player, "x", "y")
+
+        self.send("SPWN", spwn);
 
     def send_move(self, player):
-        self.send("MOVE", player.id, player.x, player.y)
+        move = {
+            "posX": player.x,
+            "posY": player.y,
+            "playerId": player.id,
+            "walkState": int(math.floor(player.walkState))
+        }
+
+        self.send("MOVE", move)
+
 
     def send_grid(self):
         for row, col, tile in self.localPlayer.grid.allTiles():
-            self.send("TILE", row, col, tile.tex, tile.rot, tile.flipV, tile.flipH);
 
-    def send(self, command, *args):
-        message = command.strip().upper() + " " + ",".join(["%s" % el for el in args]) + "\n"
-        self.request.send(message.encode("utf-8"))
+            tile = {
+                "row": row,
+                "col": col,
+                "tex": tile.tex,
+                "rot": tile.rot,
+                "flipV": tile.flipV,
+                "flipH": tile.flipH
+            }
 
-    def handle_helo(self, line):
-        self.localPlayer = self.server.game.registerPlayer(self, line[5:15]);
+            self.send("TILE", tile);
+
+    def send(self, command, payload):
+        payload["apiVersion"] = "v1"
+        payload["command"] = command.strip().upper()
+        payload = yaml.dump(payload)
+        
+        print "send", payload
+
+        message = payload + "\n"
+        self.request.send(message.encode("utf-8") + ETB)
+
+    def handle_helo(self, helo):
+        self.localPlayer = self.server.game.registerPlayer(self, helo['username']);
         self.send_grid();
 
         for plr in self.server.game.clientsToPlayers.values():
             self.send_player_join(plr)
 
-    def handle_movr(self, line):
-        line = line[5:999]
-        line, playerId = self.consumeNumber(line)
-        line, moveX = self.consumeNumber(line)
-        line, moveY = self.consumeNumber(line)
-
-        moveX = int(moveX)
-        moveY = int(moveY)
+    def handle_movr(self, movr):
+        moveX = movr['x']
+        moveY = movr['y']
 
         currentTile = self.localPlayer.getCurrentTile()
         needsTeleport = False
@@ -94,15 +149,14 @@ class client_interface(SocketServer.StreamRequestHandler):
         print moveX, moveY, currentTile.dstDir, currentTile.dstGrid, self.localPlayer.grid 
 
         if currentTile.dstGrid != "":
+            logging.debug("this tile has a destination: " + currentTile.dstDir)
             if moveX > 0 and currentTile.dstDir == "EAST": needsTeleport = True
             if moveX < 0 and currentTile.dstDir == "WEST": needsTeleport = True
             if moveY > 0 and currentTile.dstDir == "NORTH": needsTeleport = True
             if moveY < 0 and currentTile.dstDir == "SOUTH": needsTeleport = True
 
-        destinationTile = self.localPlayer.grid.getTile(self.localPlayer.x + moveX, self.localPlayer.y);
-
         if needsTeleport:
-            print "Moving to grid: ", currentTile.dstGrid
+            print "Teleporting to grid: ", currentTile.dstGrid
             self.localPlayer.grid = self.server.gridCache[currentTile.dstGrid]
 
             self.send_grid()
@@ -111,27 +165,25 @@ class client_interface(SocketServer.StreamRequestHandler):
 
             for cli in self.server.game.clientsToPlayers.keys():
                 cli.send_move(self.localPlayer)
+        elif self.localPlayer.grid.canStandOn(round(self.localPlayer.x + moveX), round(self.localPlayer.y + moveY)):
+            self.localPlayer.x += moveX
+            self.localPlayer.y += moveY
+            self.localPlayer.walkState += .2
 
-
-        elif self.localPlayer.grid.canStandOn(self.localPlayer.x + moveX, self.localPlayer.y + moveY):
-            self.localPlayer.x += int(moveX)
-            self.localPlayer.y += int(moveY)
+            if self.localPlayer.walkState > 2:
+                self.localPlayer.walkState = 0
 
             for cli in self.server.game.clientsToPlayers.keys():
                 cli.send_move(self.localPlayer)
 
-        if destinationTile.message is not None:
-            self.send("MESG", destinationTile.message)
+            destinationTile = self.localPlayer.grid.getTile(round(self.localPlayer.x), round(self.localPlayer.y));
 
-    def handle_halt(self, line):
-        line = line[5:999];
+            if destinationTile.message is not None:
+                mesg = { 
+                    "message": destinationTile.message
+                }
 
+                self.send("MESG", mesg)
+
+    def handle_halt(self, halt):
         self.server.halt()
-
-    def consumeNumber(self, line):
-        if line.find(",") == -1:
-            return ["", int(line)]
-
-        number, remainder = line.split(",", 1)
-        
-        return [remainder, int(number)]
