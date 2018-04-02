@@ -35,7 +35,7 @@ class server(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
 
 
   def tick(self):
-    logging.debug("Server Tick")
+    #logging.debug("Server Tick")
 
     for client in self.game.clientsToPlayers:
       print client 

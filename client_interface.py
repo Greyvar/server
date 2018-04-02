@@ -9,7 +9,7 @@ import logging, logging.config
 import yaml
 import math
 
-ETB = chr(0x17)
+ETB = "---\n"
 
 class client_interface(SocketServer.StreamRequestHandler):
     def setup(self):
@@ -36,19 +36,25 @@ class client_interface(SocketServer.StreamRequestHandler):
 
             if not chunk: break;
 
-            print "recv", chunk
+            chunkBuf += chunk
 
-            if chunk.find(ETB):
-                chunkEnd, nextChunkStart = chunk.split(ETB)
-                chunkBuf += chunkEnd
+            print chunkBuf
 
-                self.parse_chunk(chunkBuf)
-                chunkBuf = nextChunkStart
+            while ETB in chunkBuf:
+                print "foo"
+                packet, chunkBuf = chunkBuf.split(ETB, 1)
+
+                self.parse_chunk(packet.replace("\0", "").decode('utf-8'))
+
+                print "chunk buf is now:\n", chunkBuf, "#"
 
         self.server.game.unregisterPlayer(self)
 
     def parse_chunk(self, chunk):
-        logging.debug("parse chunk: " + str(chunk));
+        if len(chunk) == 0:
+            return
+
+        logging.debug("parse chunk (len: " + str(len(chunk)) + "):\nppp>>>\n" + str(chunk) + "\nppp>>>\n");
 
         req = yaml.load(chunk)
         cmd = req["command"]
@@ -125,9 +131,10 @@ class client_interface(SocketServer.StreamRequestHandler):
     def send(self, command, payload):
         payload["apiVersion"] = "v1"
         payload["command"] = command.strip().upper()
-        payload = yaml.dump(payload)
+        payload = yaml.dump(payload, default_flow_style = False)
         
-        print "send", payload
+        for line in payload.split("\n"):
+          print "send: ", line
 
         message = payload + "\n"
         self.request.send(message.encode("utf-8") + ETB)
