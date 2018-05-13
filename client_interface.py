@@ -12,6 +12,8 @@ import math
 ETB = "---\n"
 
 class client_interface(SocketServer.StreamRequestHandler):
+    templateCommands = {}
+
     def setup(self):
         self.alive = True
         self.server.game.registerClient(self);
@@ -20,9 +22,11 @@ class client_interface(SocketServer.StreamRequestHandler):
         logging.debug("New connection.");
 
         welc = {
-            "serverVersion": "greyvar-devel"
+            "serverVersion": "greyvar.devel",
+            "name": "^8The Construct"
         }
 
+        self.request.send(ETB)
         self.send("WELC", welc)
 
         chunkBuf = ""
@@ -41,12 +45,9 @@ class client_interface(SocketServer.StreamRequestHandler):
             print chunkBuf
 
             while ETB in chunkBuf:
-                print "foo"
                 packet, chunkBuf = chunkBuf.split(ETB, 1)
 
                 self.parse_chunk(packet.replace("\0", "").decode('utf-8'))
-
-                print "chunk buf is now:\n", chunkBuf, "#"
 
         self.server.game.unregisterPlayer(self)
 
@@ -113,18 +114,50 @@ class client_interface(SocketServer.StreamRequestHandler):
 
         self.send("MOVE", move)
 
+    def register_template_command(self, name, command):
+        self.templateCommands[name] = command;
+
+        self.send("TMPL", command)
+
+    def templateize(self, templateName, original):
+        template = self.templateCommands[templateName];
+
+        print "checking ", templateName, " vs ", original
+        
+        canOptimize = True
+
+        for key in template:
+            if key not in original or original[key] != template[key]:
+                canOptimize = False
+                break;
+
+        if canOptimize:
+            print "can optimize!"
+            for key in template:
+                original.pop(key, None)
+
+            original["templateRef"] = templateName
+
+        return original
 
     def send_grid(self):
-        for row, col, tile in self.localPlayer.grid.allTiles():
+        self.register_template_command("tileDefault", {
+          "rot": 0,
+          "vrt": True,
+          "hor": True,
+        });
 
+        for row, col, tile in self.localPlayer.grid.allTiles():
             tile = {
                 "row": row,
                 "col": col,
                 "tex": tile.tex,
                 "rot": tile.rot,
-                "flipV": tile.flipV,
-                "flipH": tile.flipH
+                "vrt": tile.flipV,
+                "hor": tile.flipH
             }
+
+            tile = self.templateize("tileDefault", tile)
 
             self.send("TILE", tile);
 
@@ -133,18 +166,15 @@ class client_interface(SocketServer.StreamRequestHandler):
         payload["command"] = command.strip().upper()
         payload = yaml.dump(payload, default_flow_style = False)
         
-        for line in payload.split("\n"):
-          print "send: ", line
-
-        message = payload + "\n"
+        message = payload;
         self.request.send(message.encode("utf-8") + ETB)
 
     def handle_helo(self, helo):
         self.localPlayer = self.server.game.registerPlayer(self, helo['username']);
         self.send_grid();
 
-        for plr in self.server.game.clientsToPlayers.values():
-            self.send_player_join(plr)
+#        for plr in self.server.game.clientsToPlayers.values():
+#            self.send_player_join(plr)
 
     def handle_movr(self, movr):
         moveX = movr['x']
@@ -153,7 +183,7 @@ class client_interface(SocketServer.StreamRequestHandler):
         currentTile = self.localPlayer.getCurrentTile()
         needsTeleport = False
 
-        print moveX, moveY, currentTile.dstDir, currentTile.dstGrid, self.localPlayer.grid 
+        print "handleMovr() ", moveX, moveY, currentTile.dstDir, currentTile.dstGrid, self.localPlayer.grid 
 
         if currentTile.dstGrid != "":
             logging.debug("this tile has a destination: " + currentTile.dstDir)
@@ -191,6 +221,8 @@ class client_interface(SocketServer.StreamRequestHandler):
                 }
 
                 self.send("MESG", mesg)
+        else:
+            self.send("BLKD", {})
 
     def handle_halt(self, halt):
         self.server.halt()

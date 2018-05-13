@@ -35,14 +35,11 @@ class server(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
 
 
   def tick(self):
-    #logging.debug("Server Tick")
-
-    for client in self.game.clientsToPlayers:
-      print client 
+    logging.debug("Server tick. " + str(len(self.game.clientsToPlayers)) + " clients.")
 
   def setup(self):
-    self.spawnGrid = self.load_grid("dat/grids/start.grid")
-    self.load_grid("dat/grids/cloister.grid")
+    self.spawnGrid = self.load_grid("dat/grids/1.1.grid")
+    self.load_grid("dat/grids/1.2.grid")
     self.game = game.game(self)
 
   def load_grid(self, gridFilename):
@@ -59,13 +56,13 @@ class server(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
 
       if line[0] == '#': continue
 
-      row, col, tex, rot, flipV, flipH, trv, tdstg, tdstx, tdsty, tdir, message, eol = line.split(",")
+      row, col, tex, rot, flipH, flipV, trv, tdstg, tdstx, tdsty, tdir, message, eol = line.split(",")
       row = int(row)
       col = int(col)
       rot = int(rot)
       trv = trv == "true"
-      flipV = flipV == "true"
       flipH = flipH == "true"
+      flipV = flipV == "true"
 
       ggrid.setTile(row, col, tile.tile(tex, trv, rot, flipV, flipH, 
         dstGrid = tdstg,

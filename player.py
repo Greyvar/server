@@ -2,8 +2,8 @@ import random
 
 class player:
   def __init__(self, nickname):
-    self.x = 12;
-    self.y = 7;
+    self.x = 2;
+    self.y = 2;
     self.nickname = nickname
     self.id = None
     self.skin = random.choice(["Purple"])
