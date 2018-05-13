@@ -1,4 +1,4 @@
-# Saved at 1523881096688
+# Saved at 1526184037811
 0,0,hill.png,0,false,false,true,,0,0,SOUTH,null,
 0,1,dirtHillsideDarkCornerInside.png,0,true,false,true,,0,0,SOUTH,null,
 0,2,dirtHillsideDarkGrass.png,180,false,false,false,,0,0,SOUTH,null,
@@ -102,7 +102,7 @@
 6,4,fence.png,0,false,false,false,,0,0,SOUTH,null,
 6,5,grass.png,0,false,false,true,,0,0,SOUTH,null,
 6,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,7,fence.png,0,false,false,false,,0,0,SOUTH,null,
+6,7,fenceSideConnectTop.png,0,false,false,false,,0,0,SOUTH,null,
 6,8,grass.png,0,false,false,false,,0,0,SOUTH,null,
 6,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
 6,10,grass.png,0,false,false,true,,0,0,SOUTH,null,
@@ -118,7 +118,7 @@
 7,4,fence.png,0,false,false,false,,0,0,SOUTH,null,
 7,5,grass.png,0,false,false,false,,0,0,SOUTH,null,
 7,6,grassBush.png,0,false,false,true,,0,0,SOUTH,null,
-7,7,fence.png,0,false,false,true,,0,0,SOUTH,null,
+7,7,fenceSideConnectTop.png,0,true,true,true,,0,0,SOUTH,null,
 7,8,grass.png,0,false,false,false,,0,0,SOUTH,null,
 7,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
 7,10,grassFlowerPurple.png,0,false,false,true,,0,0,SOUTH,null,
