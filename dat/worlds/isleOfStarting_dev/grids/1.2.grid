@@ -1,257 +1,1800 @@
-# Saved at 1523903298302
-0,0,wallTJunction.png,0,false,false,false,,0,0,SOUTH,null,
-0,1,wall.png,270,false,false,false,,0,0,SOUTH,null,
-0,2,wall.png,270,false,false,false,,0,0,SOUTH,null,
-0,3,wall.png,270,false,false,false,,0,0,SOUTH,null,
-0,4,wall.png,270,false,false,false,,0,0,SOUTH,null,
-0,5,wall.png,270,false,false,false,,0,0,SOUTH,null,
-0,6,wallCorner.png,0,false,false,false,,0,0,SOUTH,null,
-0,7,grassPath.png,90,false,false,true,start.grid,15,7,WEST,null,
-0,8,wallCorner.png,270,false,false,false,,0,0,SOUTH,null,
-0,9,wall.png,270,false,false,false,,0,0,SOUTH,null,
-0,10,wall.png,270,false,false,false,,0,0,SOUTH,null,
-0,11,wall.png,270,false,false,false,,0,0,SOUTH,null,
-0,12,wall.png,270,false,false,false,,0,0,SOUTH,null,
-0,13,wall.png,270,false,false,false,,0,0,SOUTH,null,
-0,14,wall.png,270,false,false,false,,0,0,SOUTH,null,
-0,15,wallTJunction.png,270,false,false,false,,0,0,SOUTH,null,
-1,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-1,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,3,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,4,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,5,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,7,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-1,8,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,10,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,11,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,12,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,13,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-1,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-2,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-2,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,3,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,4,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,5,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,7,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-2,8,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,10,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,11,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,12,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,13,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-2,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-3,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-3,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-3,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-3,3,grassTree1Tl.png,0,false,false,false,,0,0,SOUTH,null,
-3,4,grassTree1Bl.png,0,false,false,false,,0,0,SOUTH,null,
-3,5,grass.png,0,false,false,true,,0,0,SOUTH,null,
-3,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-3,7,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-3,8,grass.png,0,false,false,true,,0,0,SOUTH,null,
-3,9,grassWaterCorner.png,90,false,false,true,,0,0,SOUTH,null,
-3,10,grassWaterSide.png,0,false,false,true,,0,0,SOUTH,null,
-3,11,grassWaterSide.png,0,false,false,true,,0,0,SOUTH,null,
-3,12,grassWaterCorner.png,0,false,false,true,,0,0,SOUTH,null,
-3,13,grass.png,0,false,false,true,,0,0,SOUTH,null,
-3,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-3,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-4,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-4,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-4,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-4,3,grassTree1Tr.png,0,false,false,false,,0,0,SOUTH,null,
-4,4,grassTree1Br.png,0,false,false,false,,0,0,SOUTH,null,
-4,5,grass.png,0,false,false,true,,0,0,SOUTH,null,
-4,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-4,7,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-4,8,grass.png,0,false,false,true,,0,0,SOUTH,null,
-4,9,grassWaterSide.png,90,false,false,true,,0,0,SOUTH,null,
-4,10,water.png,0,false,false,true,,0,0,SOUTH,null,
-4,11,water.png,0,false,false,true,,0,0,SOUTH,null,
-4,12,grassWaterSide.png,270,false,false,true,,0,0,SOUTH,null,
-4,13,grass.png,0,false,false,true,,0,0,SOUTH,null,
-4,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-4,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-5,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-5,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-5,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-5,3,grass.png,0,false,false,true,,0,0,SOUTH,null,
-5,4,grass.png,0,false,false,true,,0,0,SOUTH,null,
-5,5,grass.png,0,false,false,true,,0,0,SOUTH,null,
-5,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-5,7,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-5,8,grass.png,0,false,false,true,,0,0,SOUTH,null,
-5,9,grassWaterCorner.png,180,false,false,true,,0,0,SOUTH,null,
-5,10,grassWaterCornerInverse.png,0,false,false,true,,0,0,SOUTH,null,
-5,11,water.png,0,false,false,true,,0,0,SOUTH,null,
-5,12,grassWaterSide.png,270,false,false,true,,0,0,SOUTH,null,
-5,13,grass.png,0,false,false,true,,0,0,SOUTH,null,
-5,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-5,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-6,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-6,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,3,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,4,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,5,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,7,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-6,8,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,10,grassWaterCorner.png,180,false,false,true,,0,0,SOUTH,null,
-6,11,grassWaterSide.png,180,false,false,true,,0,0,SOUTH,null,
-6,12,grassWaterCorner.png,270,false,false,true,,0,0,SOUTH,null,
-6,13,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-7,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-7,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,3,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,4,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,5,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,7,grassPathCorner.png,90,false,false,true,,0,0,SOUTH,null,
-7,8,grassPathCorner.png,270,false,false,true,,0,0,SOUTH,null,
-7,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,10,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,11,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,12,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,13,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-8,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-8,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-8,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-8,3,houseRoofCornerRed.png,0,true,false,false,,0,0,SOUTH,null,
-8,4,houseSide.png,0,true,false,false,,0,0,SOUTH,null,
-8,5,houseCorner.png,0,true,false,false,,0,0,SOUTH,null,
-8,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-8,7,grass.png,0,false,false,true,,0,0,SOUTH,null,
-8,8,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-8,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
-8,10,grass.png,0,false,false,true,,0,0,SOUTH,null,
-8,11,grass.png,0,false,false,true,,0,0,SOUTH,null,
-8,12,grass.png,0,false,false,true,,0,0,SOUTH,null,
-8,13,grass.png,0,false,false,true,,0,0,SOUTH,null,
-8,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-8,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-9,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-9,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-9,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-9,3,houseRoofRed.png,0,false,false,false,,0,0,SOUTH,null,
-9,4,houseWindows.png,0,false,false,false,,0,0,SOUTH,null,
-9,5,houseBottom.png,0,false,false,false,,0,0,SOUTH,null,
-9,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-9,7,grass.png,0,false,false,true,,0,0,SOUTH,null,
-9,8,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-9,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
-9,10,houseRoofCornerBlue.png,0,true,false,false,,0,0,SOUTH,null,
-9,11,houseRoofBottom.png,0,true,false,false,,0,0,SOUTH,null,
-9,12,houseSide.png,0,true,false,false,,0,0,SOUTH,null,
-9,13,houseCorner.png,0,true,false,true,,0,0,SOUTH,null,
-9,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-9,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-10,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-10,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-10,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-10,3,houseRoofRed.png,0,false,false,false,,0,0,SOUTH,null,
-10,4,houseWallPlain.png,0,false,false,false,,0,0,SOUTH,null,
-10,5,houseBottom.png,0,false,false,false,,0,0,SOUTH,null,
-10,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-10,7,grass.png,0,false,false,true,,0,0,SOUTH,null,
-10,8,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-10,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
-10,10,houseRoofBlue.png,0,false,false,false,,0,0,SOUTH,null,
-10,11,houseRoofBottomMiddle.png,0,false,false,false,,0,0,SOUTH,null,
-10,12,houseWallPlain.png,0,false,false,false,,0,0,SOUTH,null,
-10,13,houseBottom.png,0,false,false,true,,0,0,SOUTH,null,
-10,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-10,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-11,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-11,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-11,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-11,3,houseRoofRed.png,0,false,false,false,,0,0,SOUTH,null,
-11,4,houseWindowsTop.png,0,false,false,false,,0,0,SOUTH,null,
-11,5,houseDoor.png,0,false,false,false,,0,0,SOUTH,null,
-11,6,grassPathEnd.png,0,false,false,true,,0,0,SOUTH,null,
-11,7,grassPath.png,0,false,false,true,,0,0,SOUTH,null,
-11,8,grassPathT.png,90,false,false,true,,0,0,SOUTH,null,
-11,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
-11,10,houseRoofBlue.png,0,false,false,false,,0,0,SOUTH,null,
-11,11,houseRoofBottomMiddle.png,0,false,false,false,,0,0,SOUTH,null,
-11,12,houseWindowsTop.png,0,false,false,true,,0,0,SOUTH,null,
-11,13,houseDoor.png,0,false,false,true,,0,0,SOUTH,null,
-11,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-11,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-12,0,wall.png,0,false,false,false,,0,0,SOUTH,null,
-12,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-12,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-12,3,houseRoofCornerRed.png,0,false,false,false,,0,0,SOUTH,null,
-12,4,houseSide.png,0,false,false,false,,0,0,SOUTH,null,
-12,5,houseCorner.png,0,false,false,false,,0,0,SOUTH,null,
-12,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-12,7,grass.png,0,false,false,true,,0,0,SOUTH,null,
-12,8,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-12,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
-12,10,houseRoofCornerBlue.png,0,false,false,false,,0,0,SOUTH,null,
-12,11,houseRoofBottom.png,0,false,false,false,,0,0,SOUTH,null,
-12,12,houseSide.png,0,false,false,false,,0,0,SOUTH,null,
-12,13,houseCorner.png,0,false,false,true,,0,0,SOUTH,null,
-12,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-12,15,wall.png,180,false,false,false,,0,0,SOUTH,null,
-13,0,wallCorner.png,0,false,false,false,,0,0,SOUTH,null,
-13,1,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,2,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,3,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,4,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,5,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,6,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,7,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,8,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-13,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,10,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,11,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,12,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,13,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,14,grass.png,0,false,false,true,,0,0,SOUTH,null,
-13,15,wallCorner.png,270,false,false,false,,0,0,SOUTH,null,
-14,0,grassTree1Tl.png,0,false,false,false,,0,0,SOUTH,null,
-14,1,grassTree1Bl.png,0,false,false,true,,0,0,SOUTH,null,
-14,2,grassTree1Tl.png,0,false,false,true,,0,0,SOUTH,null,
-14,3,grassTree1Bl.png,0,false,false,true,,0,0,SOUTH,null,
-14,4,grassTree1Tl.png,0,false,false,true,,0,0,SOUTH,null,
-14,5,grassTree1Bl.png,0,false,false,true,,0,0,SOUTH,null,
-14,6,grassTree1Tl.png,0,false,false,true,,0,0,SOUTH,null,
-14,7,grassTree1Bl.png,0,false,false,true,,0,0,SOUTH,null,
-14,8,grassPath.png,90,false,false,true,,0,0,SOUTH,null,
-14,9,grass.png,0,false,false,true,,0,0,SOUTH,null,
-14,10,grassTree1Tl.png,0,false,false,true,,0,0,SOUTH,null,
-14,11,grassTree1Bl.png,0,false,false,true,,0,0,SOUTH,null,
-14,12,grassTree1Tl.png,0,false,false,true,,0,0,SOUTH,null,
-14,13,grassTree1Bl.png,0,false,false,true,,0,0,SOUTH,null,
-14,14,grassTree1Tl.png,0,false,false,true,,0,0,SOUTH,null,
-14,15,grassTree1Bl.png,0,false,false,false,,0,0,SOUTH,null,
-15,0,grassTree1Tr.png,0,false,false,false,,0,0,SOUTH,null,
-15,1,grassTree1Br.png,0,false,false,false,,0,0,SOUTH,null,
-15,2,grassTree1Tr.png,0,false,false,false,,0,0,SOUTH,null,
-15,3,grassTree1Br.png,0,false,false,false,,0,0,SOUTH,null,
-15,4,grassTree1Tr.png,0,false,false,false,,0,0,SOUTH,null,
-15,5,grassTree1Br.png,0,false,false,false,,0,0,SOUTH,null,
-15,6,grassTree1Tr.png,0,false,false,false,,0,0,SOUTH,null,
-15,7,grassTree1Br.png,0,false,false,false,,0,0,SOUTH,null,
-15,8,grassPath.png,90,false,false,false,,0,0,SOUTH,null,
-15,9,grass.png,0,false,false,false,,0,0,SOUTH,null,
-15,10,grassTree1Tr.png,0,false,false,false,,0,0,SOUTH,null,
-15,11,grassTree1Br.png,0,false,false,false,,0,0,SOUTH,null,
-15,12,grassTree1Tr.png,0,false,false,false,,0,0,SOUTH,null,
-15,13,grassTree1Br.png,0,false,false,false,,0,0,SOUTH,null,
-15,14,grassTree1Tr.png,0,false,false,false,,0,0,SOUTH,null,
-15,15,grassTree1Br.png,0,false,false,false,,0,0,SOUTH,null,
+---
+width: 16
+height: 16
+tiles:
+- texture: "wallTJunction.png"
+  x: 0
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 0
+  y: 1
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 0
+  y: 2
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 0
+  y: 3
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 0
+  y: 4
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 0
+  y: 5
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wallCorner.png"
+  x: 0
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassPath.png"
+  x: 0
+  y: 7
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+  teleportDst: "start.grid"
+  teleportDir: "WEST"
+  teleportX: 15
+  teleportY: 7
+- texture: "wallCorner.png"
+  x: 0
+  y: 8
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 0
+  y: 9
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 0
+  y: 10
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 0
+  y: 11
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 0
+  y: 12
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 0
+  y: 13
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 0
+  y: 14
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wallTJunction.png"
+  x: 0
+  y: 15
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 1
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 1
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 1
+  y: 7
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 1
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 1
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 2
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 2
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 2
+  y: 7
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 2
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 2
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 3
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 3
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 3
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Tl.png"
+  x: 3
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Bl.png"
+  x: 3
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 3
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 3
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 3
+  y: 7
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 3
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterCorner.png"
+  x: 3
+  y: 9
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterSide.png"
+  x: 3
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterSide.png"
+  x: 3
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterCorner.png"
+  x: 3
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 3
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 3
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 3
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 4
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 4
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 4
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Tr.png"
+  x: 4
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Br.png"
+  x: 4
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 4
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 4
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 4
+  y: 7
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 4
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterSide.png"
+  x: 4
+  y: 9
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 4
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 4
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterSide.png"
+  x: 4
+  y: 12
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 4
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 4
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 4
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 5
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 5
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 5
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 5
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 5
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 5
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 5
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 5
+  y: 7
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 5
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterCorner.png"
+  x: 5
+  y: 9
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterCornerInverse.png"
+  x: 5
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 5
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterSide.png"
+  x: 5
+  y: 12
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 5
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 5
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 5
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 6
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 6
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 6
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 6
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 6
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 6
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 6
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 6
+  y: 7
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 6
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 6
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterCorner.png"
+  x: 6
+  y: 10
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterSide.png"
+  x: 6
+  y: 11
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassWaterCorner.png"
+  x: 6
+  y: 12
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 6
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 6
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 6
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 7
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 7
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPathCorner.png"
+  x: 7
+  y: 7
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPathCorner.png"
+  x: 7
+  y: 8
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 7
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 8
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 8
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 8
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofCornerRed.png"
+  x: 8
+  y: 3
+  rot: 0
+  flipH: true
+  flipV: false
+  traversable: false
+- texture: "houseSide.png"
+  x: 8
+  y: 4
+  rot: 0
+  flipH: true
+  flipV: false
+  traversable: false
+- texture: "houseCorner.png"
+  x: 8
+  y: 5
+  rot: 0
+  flipH: true
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 8
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 8
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 8
+  y: 8
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 8
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 8
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 8
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 8
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 8
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 8
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 8
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 9
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 9
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 9
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofRed.png"
+  x: 9
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseWindows.png"
+  x: 9
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseBottom.png"
+  x: 9
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 9
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 9
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 9
+  y: 8
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 9
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofCornerBlue.png"
+  x: 9
+  y: 10
+  rot: 0
+  flipH: true
+  flipV: false
+  traversable: false
+- texture: "houseRoofBottom.png"
+  x: 9
+  y: 11
+  rot: 0
+  flipH: true
+  flipV: false
+  traversable: false
+- texture: "houseSide.png"
+  x: 9
+  y: 12
+  rot: 0
+  flipH: true
+  flipV: false
+  traversable: false
+- texture: "houseCorner.png"
+  x: 9
+  y: 13
+  rot: 0
+  flipH: true
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 9
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 9
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 10
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 10
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 10
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofRed.png"
+  x: 10
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseWallPlain.png"
+  x: 10
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseBottom.png"
+  x: 10
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 10
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 10
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 10
+  y: 8
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 10
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofBlue.png"
+  x: 10
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseRoofBottomMiddle.png"
+  x: 10
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseWallPlain.png"
+  x: 10
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseBottom.png"
+  x: 10
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 10
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 10
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 11
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 11
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 11
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofRed.png"
+  x: 11
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseWindowsTop.png"
+  x: 11
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseDoor.png"
+  x: 11
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassPathEnd.png"
+  x: 11
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 11
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPathT.png"
+  x: 11
+  y: 8
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 11
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofBlue.png"
+  x: 11
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseRoofBottomMiddle.png"
+  x: 11
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseWindowsTop.png"
+  x: 11
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseDoor.png"
+  x: 11
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 11
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 11
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wall.png"
+  x: 12
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 12
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 12
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofCornerRed.png"
+  x: 12
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseSide.png"
+  x: 12
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseCorner.png"
+  x: 12
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 12
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 12
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 12
+  y: 8
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 12
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofCornerBlue.png"
+  x: 12
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseRoofBottom.png"
+  x: 12
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseSide.png"
+  x: 12
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "houseCorner.png"
+  x: 12
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 12
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wall.png"
+  x: 12
+  y: 15
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "wallCorner.png"
+  x: 13
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 13
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 13
+  y: 8
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 13
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "wallCorner.png"
+  x: 13
+  y: 15
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Tl.png"
+  x: 14
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Bl.png"
+  x: 14
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Tl.png"
+  x: 14
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Bl.png"
+  x: 14
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Tl.png"
+  x: 14
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Bl.png"
+  x: 14
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Tl.png"
+  x: 14
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Bl.png"
+  x: 14
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassPath.png"
+  x: 14
+  y: 8
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 14
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Tl.png"
+  x: 14
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Bl.png"
+  x: 14
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Tl.png"
+  x: 14
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Bl.png"
+  x: 14
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Tl.png"
+  x: 14
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassTree1Bl.png"
+  x: 14
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Tr.png"
+  x: 15
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Br.png"
+  x: 15
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Tr.png"
+  x: 15
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Br.png"
+  x: 15
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Tr.png"
+  x: 15
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Br.png"
+  x: 15
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Tr.png"
+  x: 15
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Br.png"
+  x: 15
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassPath.png"
+  x: 15
+  y: 8
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grass.png"
+  x: 15
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Tr.png"
+  x: 15
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Br.png"
+  x: 15
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Tr.png"
+  x: 15
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Br.png"
+  x: 15
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Tr.png"
+  x: 15
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "grassTree1Br.png"
+  x: 15
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false

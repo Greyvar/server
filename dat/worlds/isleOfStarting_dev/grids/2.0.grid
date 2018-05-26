@@ -1,257 +1,1796 @@
-# Saved at 1524425629475
-0,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,3,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,4,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,5,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,6,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,7,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,8,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,9,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,10,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,11,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,12,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,13,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-0,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,3,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,4,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,5,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,6,waterSandCornerInverse.png,180,false,false,true,,0,0,SOUTH,null,
-1,7,waterSand.png,270,false,false,true,,0,0,SOUTH,null,
-1,8,waterSand.png,270,false,false,true,,0,0,SOUTH,null,
-1,9,waterSandCornerInverse.png,90,false,false,true,,0,0,SOUTH,null,
-1,10,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,11,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,12,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,13,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-1,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-2,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-2,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-2,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-2,3,water.png,0,false,false,true,,0,0,SOUTH,null,
-2,4,water.png,0,false,false,true,,0,0,SOUTH,null,
-2,5,waterSandCornerInverse.png,180,false,false,true,,0,0,SOUTH,null,
-2,6,waterSandCorner.png,0,false,false,true,,0,0,SOUTH,null,
-2,7,sandGrassCorner.png,180,false,false,true,,0,0,SOUTH,null,
-2,8,sandGrassCorner.png,90,false,false,true,,0,0,SOUTH,null,
-2,9,waterSandCorner.png,90,true,true,true,,0,0,SOUTH,null,
-2,10,waterSand.png,270,false,false,true,,0,0,SOUTH,null,
-2,11,waterSandCornerInverse.png,90,false,false,true,,0,0,SOUTH,null,
-2,12,water.png,0,false,false,true,,0,0,SOUTH,null,
-2,13,water.png,0,false,false,true,,0,0,SOUTH,null,
-2,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-2,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-3,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-3,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-3,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-3,3,water.png,0,false,false,true,,0,0,SOUTH,null,
-3,4,waterSandCornerInverse.png,180,false,false,true,,0,0,SOUTH,null,
-3,5,waterSandCorner.png,0,false,false,true,,0,0,SOUTH,null,
-3,6,sandGrassCorner.png,180,false,false,true,,0,0,SOUTH,null,
-3,7,sandGrassCornerInverse.png,0,false,false,true,,0,0,SOUTH,null,
-3,8,sandGrassCornerInverse.png,270,false,false,true,,0,0,SOUTH,null,
-3,9,sandGrassCorner.png,90,false,false,true,,0,0,SOUTH,null,
-3,10,sand.png,0,false,false,true,,0,0,SOUTH,null,
-3,11,waterSandCorner.png,90,true,true,true,,0,0,SOUTH,null,
-3,12,waterSandCornerInverse.png,270,true,true,true,,0,0,SOUTH,null,
-3,13,water.png,0,false,false,true,,0,0,SOUTH,null,
-3,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-3,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-4,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-4,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-4,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-4,3,waterSandCornerInverse.png,180,false,false,true,,0,0,SOUTH,null,
-4,4,waterSandCorner.png,0,false,false,true,,0,0,SOUTH,null,
-4,5,sandGrassCorner.png,180,false,false,true,,0,0,SOUTH,null,
-4,6,sandGrassCornerInverse.png,0,false,false,true,,0,0,SOUTH,null,
-4,7,grassFlowerRed.png,0,false,false,true,,0,0,SOUTH,null,
-4,8,grassSign.png,0,false,false,true,,0,0,SOUTH,null,
-4,9,sandGrassCornerInverse.png,270,false,false,true,,0,0,SOUTH,null,
-4,10,sandGrassCorner.png,90,false,false,true,,0,0,SOUTH,null,
-4,11,sand.png,0,false,false,true,,0,0,SOUTH,null,
-4,12,waterSandCorner.png,90,true,true,true,,0,0,SOUTH,null,
-4,13,waterSandCornerInverse.png,270,true,true,true,,0,0,SOUTH,null,
-4,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-4,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-5,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-5,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-5,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-5,3,waterSand.png,0,false,false,true,,0,0,SOUTH,null,
-5,4,sandGrassCorner.png,180,false,false,true,,0,0,SOUTH,null,
-5,5,sandGrassCornerInverse.png,0,false,false,true,,0,0,SOUTH,null,
-5,6,houseRoofCornerBlue.png,180,false,true,true,,0,0,SOUTH,null,
-5,7,houseRoofBottom.png,180,false,true,true,,0,0,SOUTH,null,
-5,8,houseSide.png,180,false,true,true,,0,0,SOUTH,null,
-5,9,houseCorner.png,180,false,true,true,,0,0,SOUTH,null,
-5,10,sandGrassCornerInverse.png,270,false,false,true,,0,0,SOUTH,null,
-5,11,sandGrassCorner.png,180,false,true,true,,0,0,SOUTH,null,
-5,12,sand.png,0,false,false,true,,0,0,SOUTH,null,
-5,13,waterSand.png,180,false,false,true,,0,0,SOUTH,null,
-5,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-5,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-6,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-6,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-6,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-6,3,waterSand.png,0,false,false,true,,0,0,SOUTH,null,
-6,4,sandyGrass.png,0,false,false,true,,0,0,SOUTH,null,
-6,5,grass.png,0,false,false,true,,0,0,SOUTH,null,
-6,6,houseRoofBlue.png,0,false,false,true,,0,0,SOUTH,null,
-6,7,houseRoofBottomMiddle.png,0,false,false,true,,0,0,SOUTH,null,
-6,8,houseWindows.png,0,false,false,true,,0,0,SOUTH,null,
-6,9,houseBottom.png,0,false,false,true,,0,0,SOUTH,null,
-6,10,grassFlowerRed.png,0,false,false,true,,0,0,SOUTH,null,
-6,11,sandyGrass.png,0,false,true,true,,0,0,SOUTH,null,
-6,12,sand.png,0,false,false,true,,0,0,SOUTH,null,
-6,13,waterSand.png,180,false,false,true,,0,0,SOUTH,null,
-6,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-6,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-7,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-7,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-7,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-7,3,waterSand.png,0,false,false,true,,0,0,SOUTH,null,
-7,4,sandyGrass.png,0,false,false,true,,0,0,SOUTH,null,
-7,5,grassFlowerPurple.png,0,false,false,true,,0,0,SOUTH,null,
-7,6,houseRoofBlue.png,0,false,false,true,,0,0,SOUTH,null,
-7,7,houseRoofBottomMiddle.png,0,false,false,true,,0,0,SOUTH,null,
-7,8,houseWindowsTop.png,0,false,false,true,,0,0,SOUTH,null,
-7,9,houseDoor.png,0,false,false,true,,0,0,SOUTH,null,
-7,10,grass.png,0,false,false,true,,0,0,SOUTH,null,
-7,11,sandyGrass.png,0,false,true,true,,0,0,SOUTH,null,
-7,12,sand.png,0,false,false,true,,0,0,SOUTH,null,
-7,13,waterSand.png,180,false,false,true,,0,0,SOUTH,null,
-7,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-7,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-8,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-8,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-8,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-8,3,waterSand.png,0,false,false,true,,0,0,SOUTH,null,
-8,4,sandGrassCorner.png,270,false,false,true,,0,0,SOUTH,null,
-8,5,sandGrassCornerInverse.png,90,false,false,true,,0,0,SOUTH,null,
-8,6,houseRoofCornerBlue.png,0,false,false,true,,0,0,SOUTH,null,
-8,7,houseRoofBottom.png,0,false,false,true,,0,0,SOUTH,null,
-8,8,houseSide.png,0,false,false,true,,0,0,SOUTH,null,
-8,9,houseCorner.png,0,false,false,true,,0,0,SOUTH,null,
-8,10,sandGrassCornerInverse.png,180,false,false,true,,0,0,SOUTH,null,
-8,11,sandGrassCorner.png,0,false,false,true,,0,0,SOUTH,null,
-8,12,waterSandCorner.png,180,false,false,true,,0,0,SOUTH,null,
-8,13,waterSandCornerInverse.png,0,false,false,true,,0,0,SOUTH,null,
-8,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-8,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-9,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-9,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-9,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-9,3,waterSand.png,0,false,false,true,,0,0,SOUTH,null,
-9,4,sand.png,0,false,false,true,,0,0,SOUTH,null,
-9,5,sandGrassCorner.png,270,false,false,true,,0,0,SOUTH,null,
-9,6,sandGrassCornerInverse.png,90,false,false,true,,0,0,SOUTH,null,
-9,7,grassFlowerGreenBlue.png,0,false,false,true,,0,0,SOUTH,null,
-9,8,grass.png,0,false,false,true,,0,0,SOUTH,null,
-9,9,chest.png,0,false,false,true,,0,0,SOUTH,null,
-9,10,sandyGrass.png,0,false,true,true,,0,0,SOUTH,null,
-9,11,waterSandCorner.png,180,false,false,true,,0,0,SOUTH,null,
-9,12,waterSandCornerInverse.png,0,false,false,true,,0,0,SOUTH,null,
-9,13,water.png,0,false,false,true,,0,0,SOUTH,null,
-9,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-9,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-10,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-10,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-10,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-10,3,waterSandCornerInverse.png,270,false,false,true,,0,0,SOUTH,null,
-10,4,waterSandCorner.png,90,false,false,true,,0,0,SOUTH,null,
-10,5,sand.png,0,false,false,true,,0,0,SOUTH,null,
-10,6,sandyGrass.png,0,false,false,true,,0,0,SOUTH,null,
-10,7,grass.png,0,false,false,true,,0,0,SOUTH,null,
-10,8,grass.png,0,false,false,true,,0,0,SOUTH,null,
-10,9,sandGrassCornerInverse.png,180,false,false,true,,0,0,SOUTH,null,
-10,10,sandGrassCorner.png,0,false,false,true,,0,0,SOUTH,null,
-10,11,waterSand.png,180,false,false,true,,0,0,SOUTH,null,
-10,12,water.png,0,false,false,true,,0,0,SOUTH,null,
-10,13,water.png,0,false,false,true,,0,0,SOUTH,null,
-10,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-10,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-11,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-11,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-11,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-11,3,water.png,0,false,false,true,,0,0,SOUTH,null,
-11,4,waterSand.png,0,false,false,true,,0,0,SOUTH,null,
-11,5,sand.png,0,false,false,true,,0,0,SOUTH,null,
-11,6,sandyGrass.png,0,false,false,true,,0,0,SOUTH,null,
-11,7,sandGrassCornerInverse.png,180,false,false,true,,0,0,SOUTH,null,
-11,8,sandyGrass.png,270,false,true,true,,0,0,SOUTH,null,
-11,9,sandGrassCorner.png,0,false,false,true,,0,0,SOUTH,null,
-11,10,waterSandCorner.png,180,false,false,true,,0,0,SOUTH,null,
-11,11,waterSandCornerInverse.png,0,false,false,true,,0,0,SOUTH,null,
-11,12,water.png,0,false,false,true,,0,0,SOUTH,null,
-11,13,water.png,0,false,false,true,,0,0,SOUTH,null,
-11,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-11,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-12,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-12,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-12,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-12,3,water.png,0,false,false,true,,0,0,SOUTH,null,
-12,4,waterSandCornerInverse.png,270,false,false,true,,0,0,SOUTH,null,
-12,5,waterSandCorner.png,90,false,false,true,,0,0,SOUTH,null,
-12,6,sandGrassCorner.png,270,false,false,true,,0,0,SOUTH,null,
-12,7,sandGrassCorner.png,0,false,false,true,,0,0,SOUTH,null,
-12,8,waterSandCorner.png,180,false,false,true,,0,0,SOUTH,null,
-12,9,waterSand.png,90,false,false,true,,0,0,SOUTH,null,
-12,10,waterSandCornerInverse.png,0,false,false,true,,0,0,SOUTH,null,
-12,11,water.png,0,false,false,true,,0,0,SOUTH,null,
-12,12,water.png,0,false,false,true,,0,0,SOUTH,null,
-12,13,water.png,0,false,false,true,,0,0,SOUTH,null,
-12,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-12,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,3,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,4,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,5,waterSandCornerInverse.png,270,false,false,true,,0,0,SOUTH,null,
-13,6,waterSand.png,90,false,false,true,,0,0,SOUTH,null,
-13,7,waterSand.png,90,false,false,true,,0,0,SOUTH,null,
-13,8,waterSandCornerInverse.png,0,false,false,true,,0,0,SOUTH,null,
-13,9,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,10,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,11,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,12,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,13,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-13,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,3,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,4,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,5,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,6,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,7,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,8,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,9,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,10,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,11,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,12,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,13,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-14,15,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,0,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,1,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,2,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,3,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,4,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,5,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,6,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,7,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,8,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,9,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,10,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,11,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,12,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,13,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,14,water.png,0,false,false,true,,0,0,SOUTH,null,
-15,15,water.png,0,false,false,true,,0,0,SOUTH,null,
+---
+width: 16
+height: 16
+tiles:
+- texture: "water.png"
+  x: 0
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 0
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 1
+  y: 6
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 1
+  y: 7
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 1
+  y: 8
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 1
+  y: 9
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 1
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 2
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 2
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 2
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 2
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 2
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 2
+  y: 5
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 2
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 2
+  y: 7
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 2
+  y: 8
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 2
+  y: 9
+  rot: 90
+  flipH: true
+  flipV: true
+  traversable: true
+- texture: "waterSand.png"
+  x: 2
+  y: 10
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 2
+  y: 11
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 2
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 2
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 2
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 2
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 3
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 3
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 3
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 3
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 3
+  y: 4
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 3
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 3
+  y: 6
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCornerInverse.png"
+  x: 3
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCornerInverse.png"
+  x: 3
+  y: 8
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 3
+  y: 9
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sand.png"
+  x: 3
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 3
+  y: 11
+  rot: 90
+  flipH: true
+  flipV: true
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 3
+  y: 12
+  rot: 270
+  flipH: true
+  flipV: true
+  traversable: true
+- texture: "water.png"
+  x: 3
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 3
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 3
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 4
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 4
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 4
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 4
+  y: 3
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 4
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 4
+  y: 5
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCornerInverse.png"
+  x: 4
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassFlowerRed.png"
+  x: 4
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassSign.png"
+  x: 4
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCornerInverse.png"
+  x: 4
+  y: 9
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 4
+  y: 10
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sand.png"
+  x: 4
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 4
+  y: 12
+  rot: 90
+  flipH: true
+  flipV: true
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 4
+  y: 13
+  rot: 270
+  flipH: true
+  flipV: true
+  traversable: true
+- texture: "water.png"
+  x: 4
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 4
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 5
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 5
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 5
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 5
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 5
+  y: 4
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCornerInverse.png"
+  x: 5
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofCornerBlue.png"
+  x: 5
+  y: 6
+  rot: 180
+  flipH: false
+  flipV: true
+  traversable: true
+- texture: "houseRoofBottom.png"
+  x: 5
+  y: 7
+  rot: 180
+  flipH: false
+  flipV: true
+  traversable: true
+- texture: "houseSide.png"
+  x: 5
+  y: 8
+  rot: 180
+  flipH: false
+  flipV: true
+  traversable: true
+- texture: "houseCorner.png"
+  x: 5
+  y: 9
+  rot: 180
+  flipH: false
+  flipV: true
+  traversable: true
+- texture: "sandGrassCornerInverse.png"
+  x: 5
+  y: 10
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 5
+  y: 11
+  rot: 180
+  flipH: false
+  flipV: true
+  traversable: true
+- texture: "sand.png"
+  x: 5
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 5
+  y: 13
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 5
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 5
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 6
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 6
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 6
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 6
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandyGrass.png"
+  x: 6
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 6
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofBlue.png"
+  x: 6
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofBottomMiddle.png"
+  x: 6
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseWindows.png"
+  x: 6
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseBottom.png"
+  x: 6
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassFlowerRed.png"
+  x: 6
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandyGrass.png"
+  x: 6
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: true
+  traversable: true
+- texture: "sand.png"
+  x: 6
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 6
+  y: 13
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 6
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 6
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 7
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 7
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 7
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 7
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandyGrass.png"
+  x: 7
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassFlowerPurple.png"
+  x: 7
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofBlue.png"
+  x: 7
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofBottomMiddle.png"
+  x: 7
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseWindowsTop.png"
+  x: 7
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseDoor.png"
+  x: 7
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 7
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandyGrass.png"
+  x: 7
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: true
+  traversable: true
+- texture: "sand.png"
+  x: 7
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 7
+  y: 13
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 7
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 7
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 8
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 8
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 8
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 8
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 8
+  y: 4
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCornerInverse.png"
+  x: 8
+  y: 5
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofCornerBlue.png"
+  x: 8
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseRoofBottom.png"
+  x: 8
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseSide.png"
+  x: 8
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "houseCorner.png"
+  x: 8
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCornerInverse.png"
+  x: 8
+  y: 10
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 8
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 8
+  y: 12
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 8
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 8
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 8
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 9
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 9
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 9
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 9
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sand.png"
+  x: 9
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 9
+  y: 5
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCornerInverse.png"
+  x: 9
+  y: 6
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grassFlowerGreenBlue.png"
+  x: 9
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 9
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "chest.png"
+  x: 9
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandyGrass.png"
+  x: 9
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: true
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 9
+  y: 11
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 9
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 9
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 9
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 9
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 10
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 10
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 10
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 10
+  y: 3
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 10
+  y: 4
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sand.png"
+  x: 10
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandyGrass.png"
+  x: 10
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 10
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "grass.png"
+  x: 10
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCornerInverse.png"
+  x: 10
+  y: 9
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 10
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 10
+  y: 11
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 10
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 10
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 10
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 10
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 11
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 11
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 11
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 11
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 11
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sand.png"
+  x: 11
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandyGrass.png"
+  x: 11
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCornerInverse.png"
+  x: 11
+  y: 7
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandyGrass.png"
+  x: 11
+  y: 8
+  rot: 270
+  flipH: false
+  flipV: true
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 11
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 11
+  y: 10
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 11
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 11
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 11
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 11
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 11
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 12
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 12
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 12
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 12
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 12
+  y: 4
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 12
+  y: 5
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 12
+  y: 6
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sandGrassCorner.png"
+  x: 12
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 12
+  y: 8
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 12
+  y: 9
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 12
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 12
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 12
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 12
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 12
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 12
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 13
+  y: 5
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 13
+  y: 6
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 13
+  y: 7
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "waterSandCornerInverse.png"
+  x: 13
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 13
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 14
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "water.png"
+  x: 15
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true

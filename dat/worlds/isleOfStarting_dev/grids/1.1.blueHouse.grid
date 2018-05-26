@@ -1,257 +1,1796 @@
-# Saved at 1526186936544
-0,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,5,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,6,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,7,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,8,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,9,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-0,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,5,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,6,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,7,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,8,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,9,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-1,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,5,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,6,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,7,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,8,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,9,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-2,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,5,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,6,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,7,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,8,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,9,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-3,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,5,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,6,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,7,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,8,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,9,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-4,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-5,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-5,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-5,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-5,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-5,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-5,5,stone.png,0,false,false,true,,0,0,SOUTH,null,
-5,6,stone.png,0,false,false,true,,0,0,SOUTH,null,
-5,7,stone.png,0,false,false,true,,0,0,SOUTH,null,
-5,8,stone.png,0,false,false,true,,0,0,SOUTH,null,
-5,9,stone.png,0,false,false,true,,0,0,SOUTH,null,
-5,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-5,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-5,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-5,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-5,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-5,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-6,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-6,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-6,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-6,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-6,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-6,5,bookcaseCorner.png,0,false,false,true,,0,0,SOUTH,null,
-6,6,stone.png,0,false,false,true,,0,0,SOUTH,null,
-6,7,table.png,0,true,false,true,,0,0,SOUTH,null,
-6,8,tableBottom.png,0,true,false,true,,0,0,SOUTH,null,
-6,9,stone.png,0,false,false,true,,0,0,SOUTH,null,
-6,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-6,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-6,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-6,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-6,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-6,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-7,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-7,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-7,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-7,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-7,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-7,5,bookcaseCorner.png,0,true,false,true,,0,0,SOUTH,null,
-7,6,stone.png,0,false,false,true,,0,0,SOUTH,null,
-7,7,table.png,0,false,false,true,,0,0,SOUTH,null,
-7,8,tableBottom.png,0,false,false,true,,0,0,SOUTH,null,
-7,9,stone.png,0,false,false,true,,0,0,SOUTH,null,
-7,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-7,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-7,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-7,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-7,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-7,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-8,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-8,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-8,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-8,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-8,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-8,5,stone.png,0,false,false,true,,0,0,SOUTH,null,
-8,6,stone.png,0,false,false,true,,0,0,SOUTH,null,
-8,7,stone.png,0,false,false,true,,0,0,SOUTH,null,
-8,8,stone.png,0,false,false,true,,0,0,SOUTH,null,
-8,9,stone.png,0,false,false,true,,0,0,SOUTH,null,
-8,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-8,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-8,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-8,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-8,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-8,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-9,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-9,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-9,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-9,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-9,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-9,5,tv.png,0,false,false,true,,0,0,SOUTH,null,
-9,6,stone.png,0,false,false,true,,0,0,SOUTH,null,
-9,7,castleSofa.png,0,true,false,true,,0,0,SOUTH,null,
-9,8,plushCarpet.png,0,false,false,true,,0,0,SOUTH,null,
-9,9,stone.png,0,false,false,true,,0,0,SOUTH,null,
-9,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-9,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-9,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-9,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-9,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-9,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-10,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-10,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-10,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-10,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-10,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-10,5,stone.png,0,false,false,true,,0,0,SOUTH,null,
-10,6,stone.png,0,false,false,true,,0,0,SOUTH,null,
-10,7,castleSofa.png,0,false,false,true,,0,0,SOUTH,null,
-10,8,plushCarpet.png,0,true,true,true,,0,0,SOUTH,null,
-10,9,stone.png,0,false,false,true,,0,0,SOUTH,null,
-10,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-10,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-10,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-10,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-10,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-10,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-11,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-11,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-11,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-11,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-11,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-11,5,stone.png,0,false,false,true,,0,0,SOUTH,null,
-11,6,stone.png,0,false,false,true,,0,0,SOUTH,null,
-11,7,stone.png,0,false,false,true,,0,0,SOUTH,null,
-11,8,stone.png,0,false,false,true,,0,0,SOUTH,null,
-11,9,stone.png,0,false,false,true,,0,0,SOUTH,null,
-11,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-11,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-11,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-11,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-11,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-11,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,5,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,6,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,7,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,8,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,9,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-12,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,5,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,6,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,7,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,8,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,9,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-13,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,5,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,6,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,7,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,8,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,9,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-14,15,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,0,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,1,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,2,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,3,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,4,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,5,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,6,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,7,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,8,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,9,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,10,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,11,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,12,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,13,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,14,black.png,0,false,false,true,,0,0,SOUTH,null,
-15,15,black.png,0,false,false,true,,0,0,SOUTH,null,
+---
+width: 16
+height: 16
+tiles:
+- texture: "black.png"
+  x: 0
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 0
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 1
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 2
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 3
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 4
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 5
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 5
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 5
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 5
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 5
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 5
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 5
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 5
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 5
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 5
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 5
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 5
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 5
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 5
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 5
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 5
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 6
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 6
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 6
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 6
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 6
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "bookcaseCorner.png"
+  x: 6
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 6
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "table.png"
+  x: 6
+  y: 7
+  rot: 0
+  flipH: true
+  flipV: false
+  traversable: true
+- texture: "tableBottom.png"
+  x: 6
+  y: 8
+  rot: 0
+  flipH: true
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 6
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 6
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 6
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 6
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 6
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 6
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 6
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 7
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 7
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 7
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 7
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 7
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "bookcaseCorner.png"
+  x: 7
+  y: 5
+  rot: 0
+  flipH: true
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 7
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "table.png"
+  x: 7
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "tableBottom.png"
+  x: 7
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 7
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 7
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 7
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 7
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 7
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 7
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 7
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 8
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 8
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 8
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 8
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 8
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 8
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 8
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 8
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 8
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 8
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 8
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 8
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 8
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 8
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 8
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 8
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 9
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 9
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 9
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 9
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 9
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "tv.png"
+  x: 9
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 9
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "castleSofa.png"
+  x: 9
+  y: 7
+  rot: 0
+  flipH: true
+  flipV: false
+  traversable: true
+- texture: "plushCarpet.png"
+  x: 9
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 9
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 9
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 9
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 9
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 9
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 9
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 9
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 10
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 10
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 10
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 10
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 10
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 10
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 10
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "castleSofa.png"
+  x: 10
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "plushCarpet.png"
+  x: 10
+  y: 8
+  rot: 0
+  flipH: true
+  flipV: true
+  traversable: true
+- texture: "stone.png"
+  x: 10
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 10
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 10
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 10
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 10
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 10
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 10
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 11
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 11
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 11
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 11
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 11
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 11
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 11
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 11
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 11
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "stone.png"
+  x: 11
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 11
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 11
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 11
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 11
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 11
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 11
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 12
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 13
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 14
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "black.png"
+  x: 15
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
