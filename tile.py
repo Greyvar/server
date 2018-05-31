@@ -1,4 +1,4 @@
-class tile:
+class Tile:
     def __init__(self, tex = None, traversable = True, rot = 0, flipV = False, flipH = False, dstGrid = None, dstX = 0, dstY = 0, dstDir = None, message = None):
         self.tex = tex
         self.traversable = traversable

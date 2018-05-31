@@ -1,13 +1,13 @@
 import tile
 
-class map:
+class Grid:
   def __init__(self):
-    self.initMap();
+    self.initGrid();
 
   def __repr__(self):
-    return "map{}"
+    return "grid{}"
 
-  def initMap(self):
+  def initGrid(self):
     self.tiles = {}
 
     for row in range(0, 16):

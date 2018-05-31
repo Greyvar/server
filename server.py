@@ -2,8 +2,6 @@
 
 import SocketServer
 import player
-import map as grid
-import tile
 import threading
 import game
 import socket
@@ -12,6 +10,9 @@ import client_interface
 import signal
 import os.path
 from time import sleep
+from grid import Grid
+from tile import Tile
+import yaml
 
 import cProfile
 
@@ -38,40 +39,36 @@ class server(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
     logging.debug("Server tick. " + str(len(self.game.clientsToPlayers)) + " clients.")
 
   def setup(self):
-    self.spawnGrid = self.load_grid("dat/grids/1.1.grid")
-    self.load_grid("dat/grids/1.2.grid")
+    self.load_world("isleOfStarting_dev")
+
     self.game = game.game(self)
+
+  def load_world(self, worldName):
+    try: 
+      worldFile = open("dat/worlds/" + worldName + "/world.yml", "r")
+      worldDef = yaml.load(worldFile.read())
+      worldFile.close()
+
+      gridName = worldDef["spawnGrid"]
+
+      self.spawnGrid = self.load_grid("dat/worlds/" + worldName + "/grids/" + gridName)
+
+    except Exception as e: 
+      print "Failed to load world", str(e)
 
   def load_grid(self, gridFilename):
     logging.debug("Loading grid: " + gridFilename)
 
-    f = open(gridFilename)
-    contents = f.read()
-    f.close()
+    gridFile = open(gridFilename)
+    yamlContents = yaml.load(gridFile.read())
+    gridFile.close()
 
-    ggrid = self.gridCache[os.path.basename(gridFilename)] = grid.map()
+    ggrid = self.gridCache[os.path.basename(gridFilename)] = Grid()
 
-    for line in contents.split("\n"):
-      if len(line) == 0: break
+    for tile in yamlContents["tiles"]:
+      t = Tile(tile['texture'], tile['traversable'], tile['rot'], tile['flipV'], tile['flipH'])
 
-      if line[0] == '#': continue
-
-      row, col, tex, rot, flipH, flipV, trv, tdstg, tdstx, tdsty, tdir, message, eol = line.split(",")
-      row = int(row)
-      col = int(col)
-      rot = int(rot)
-      trv = trv == "true"
-      flipH = flipH == "true"
-      flipV = flipV == "true"
-
-      ggrid.setTile(row, col, tile.tile(tex, trv, rot, flipV, flipH, 
-        dstGrid = tdstg,
-        dstX = tdstx,
-        dstY = tdsty,
-        dstDir = tdir,
-                message = message
-      ))
-      logging.debug("Parsed line in grid: " + line)
+      ggrid.setTile(tile['x'], tile['y'], t)
 
     return ggrid
 

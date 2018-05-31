@@ -8,6 +8,7 @@ import socket
 import logging, logging.config
 import yaml
 import math
+import time
 
 ETB = "---\n"
 
@@ -100,17 +101,19 @@ class client_interface(SocketServer.StreamRequestHandler):
             self.send("PLRQ", self.subdict(player, "id"))
 
     def send_spawn(self, player):
-        spwn = self.subdict(player, "x", "y")
+        spwn = self.subdict(player, "id", "posX", "posY")
 
         self.send("SPWN", spwn);
 
     def send_move(self, player):
         move = {
-            "posX": player.x,
-            "posY": player.y,
+            "posX": player.posX,
+            "posY": player.posY,
             "playerId": player.id,
             "walkState": int(math.floor(player.walkState))
         }
+
+        print "move", player.posX, player.posY
 
         self.send("MOVE", move)
 
@@ -177,15 +180,21 @@ class client_interface(SocketServer.StreamRequestHandler):
 #            self.send_player_join(plr)
 
     def handle_movr(self, movr):
-        moveX = movr['x']
-        moveY = movr['y']
+        if (time.time() - self.localPlayer.timeOfLastMove) < .1:
+            self.send("BLKD", {})
+            return
+        else:
+            self.localPlayer.timeOfLastMove = time.time()
+
+        moveX = movr['x'] * 32
+        moveY = movr['y'] * 32
 
         currentTile = self.localPlayer.getCurrentTile()
         needsTeleport = False
 
         print "handleMovr() ", moveX, moveY, currentTile.dstDir, currentTile.dstGrid, self.localPlayer.grid 
 
-        if currentTile.dstGrid != "":
+        if currentTile.dstGrid != None:
             logging.debug("this tile has a destination: " + currentTile.dstDir)
             if moveX > 0 and currentTile.dstDir == "EAST": needsTeleport = True
             if moveX < 0 and currentTile.dstDir == "WEST": needsTeleport = True
@@ -197,32 +206,34 @@ class client_interface(SocketServer.StreamRequestHandler):
             self.localPlayer.grid = self.server.gridCache[currentTile.dstGrid]
 
             self.send_grid()
-            self.localPlayer.x = int(currentTile.dstX)
-            self.localPlayer.y = int(currentTile.dstY)
+            self.localPlayer.posX = int(currentTile.dstX) * physics.tile_length
+            self.localPlayer.posY = int(currentTile.dstY) * physics.tile_length
 
             for cli in self.server.game.clientsToPlayers.keys():
                 cli.send_move(self.localPlayer)
-        elif self.localPlayer.grid.canStandOn(round(self.localPlayer.x + moveX), round(self.localPlayer.y + moveY)):
-            self.localPlayer.x += moveX
-            self.localPlayer.y += moveY
-            self.localPlayer.walkState += .2
+        else: 
+          if self.localPlayer.grid.canStandOn(self.localPlayer.getTileX(moveX), self.localPlayer.getTileY(moveY)):
+              self.localPlayer.posX += moveX 
+              self.localPlayer.posY += moveY 
+              self.localPlayer.walkState += .2
 
-            if self.localPlayer.walkState > 2:
-                self.localPlayer.walkState = 0
+              if self.localPlayer.walkState > 2:
+                  self.localPlayer.walkState = 0
 
-            for cli in self.server.game.clientsToPlayers.keys():
-                cli.send_move(self.localPlayer)
+              for cli in self.server.game.clientsToPlayers.keys():
+                  cli.send_move(self.localPlayer)
 
-            destinationTile = self.localPlayer.grid.getTile(round(self.localPlayer.x), round(self.localPlayer.y));
+              destinationTile = self.localPlayer.grid.getTile(self.localPlayer.getTileX(), self.localPlayer.getTileY());
 
-            if destinationTile.message is not None:
-                mesg = { 
-                    "message": destinationTile.message
-                }
+              if destinationTile.message is not None:
+                  mesg = { 
+                      "message": destinationTile.message
+                  }
 
-                self.send("MESG", mesg)
-        else:
-            self.send("BLKD", {})
+                  self.send("MESG", mesg)
+          else:
+              print "blocked"
+              self.send("BLKD", {})
 
     def handle_halt(self, halt):
         self.server.halt()

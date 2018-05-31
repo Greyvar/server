@@ -1038,7 +1038,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "grass.png"
+- texture: "sandyGrass.png"
   x: 9
   y: 4
   rot: 0
@@ -1150,7 +1150,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "grass.png"
+- texture: "sandyGrass.png"
   x: 10
   y: 4
   rot: 0
@@ -1262,7 +1262,7 @@ tiles:
   flipH: false
   flipV: true
   traversable: true
-- texture: "grass.png"
+- texture: "sandyGrass.png"
   x: 11
   y: 4
   rot: 0
@@ -1374,7 +1374,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "grass.png"
+- texture: "sandyGrass.png"
   x: 12
   y: 4
   rot: 0
@@ -1605,7 +1605,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "grass.png"
+- texture: "sandyGrass.png"
   x: 14
   y: 5
   rot: 0
@@ -1717,7 +1717,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "grass.png"
+- texture: "sandyGrass.png"
   x: 15
   y: 5
   rot: 0
