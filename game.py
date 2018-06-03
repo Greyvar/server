@@ -2,59 +2,83 @@ import player
 import logging
 
 class game:
-	def __init__(self, server):
-		self.clientsToPlayers = {}
-		self.lastPlayerId = 0
-		self.server = server
+  # https://www.w3schools.com/colors/colors_crayola.asp
+  availableColors = [
+    0xff0000ff, # red 
+    0x50bfe6ff, # blizzard blue
+    0xF2C649ff, # maize 
+    0x9C51B6ff, # purple plum
+    0xAF6E4Dff, # brown sugar
+    0x0048BAff, # absolute zero
+    0xE936A7ff, # frostbite
+    0xBFAFB2ff, # black shadows
+    0x319177ff, # illuminating emerald
+    0x757575ff, # sonic silver
+  ]
 
-	def registerClient(self, client):
-		self.clientsToPlayers[client] = None
+  clientsToPlayers = {}
+  lastPlayerId = 0
+  server = None
 
-	def registerPlayer(self, client, playerName):
-		self.lastPlayerId += 1
+  def __init__(self, server):
+    self.server = server
 
-		plr = player.player(playerName)
-		plr.id = self.lastPlayerId
-		plr.grid = self.server.spawnGrid
+  def registerClient(self, client):
+    self.clientsToPlayers[client] = {
+      "players": {}
+    }
 
-		self.clientsToPlayers[client] = plr
+    client.grid = self.server.spawnGrid
 
-		client.send_player_you(plr);
+  def registerPlayer(self, client, username):
+    if self.getPlayerByUsername(username) != None:
+      return # dont allow duplicate usernames
 
-		for client in self.clientsToPlayers.keys():
-			client.send_player_join(plr)
-			client.send_spawn(plr)
+    self.lastPlayerId += 1
 
-		return plr
+    plr = player.player(username, self.availableColors.pop(0))
+    plr.id = self.lastPlayerId
+    plr.grid = self.server.spawnGrid
 
-	def unregisterPlayer(self, client):
-		plr = self.clientsToPlayers[client];
-		del self.clientsToPlayers[client]
+    self.clientsToPlayers[client]["players"][username] = plr
 
-		for client in self.clientsToPlayers:
-			client.send_player_quit(plr)
+    return plr
 
-	def getPlayerById(self, playerId):
-		playerId = int(playerId)
-		logging.debug("Getting player:" + str(playerId))
+  def unregisterPlayer(self, client, username):
+    plr = self.clientsToPlayers[client]["players"][username];
+    del self.clientsToPlayers[client]["players"][username]
 
-		for player in self.clientsToPlayers.values():
-			if player.id == playerId:
-				return player
+    self.availableColors.append(plr.color)
 
+    for client in self.clientsToPlayers:
+      client.send_player_quit(plr)
 
-	def playerMove(self, client):
-		if (xOffset > 1 or yOffset > 1): return
-		if (p.x + xOffset >= 16 - 1): return
-		if (p.y + yOffset >= 16 - 1): return
-		if (p.x + xOffset == 0): return;
-		if (p.y + yOffset == 0): return;
+  def unregisterClient(self, client):
+    players = self.clientsToPlayers[client]["players"].values()
 
-		t = client.getGrid().getTile(p.x + xOffset, p.y + yOffset);
+    for otherClient in self.clientsToPlayers.keys():
+      for player in players:
+        otherClient.send_player_quit(player)
 
-		if t.traversable:
-			p.x += xOffset;
-			p.y += yOffset;
+    del self.clientsToPlayers[client]
+      
 
+  def getPlayerById(self, playerId):
+    playerId = int(playerId)
+    logging.debug("Getting player:" + str(playerId))
 
+    for client in self.clientsToPlayers:
+      for player in client["players"].values():
+        if player.id == playerId:
+          return player
 
+    return None
+
+  def getPlayerByUsername(self, username):
+    for client in self.clientsToPlayers.values():
+      for player in client["players"].values():
+        print player
+        if username == player.username:
+          return player
+
+    return None

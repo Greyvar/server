@@ -8,14 +8,14 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "dirtHillsideDarkCornerInside.png"
   x: 0
   y: 1
   rot: 0
   flipH: true
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "dirtHillsideDarkGrass.png"
   x: 0
   y: 2
@@ -44,13 +44,13 @@ tiles:
   flipH: true
   flipV: false
   traversable: false
-- texture: "grassSign.png"
+- texture: "grass.png"
   x: 0
   y: 6
   rot: 0
   flipH: false
   flipV: false
-  traversable: false
+  traversable: true
 - texture: "grass.png"
   x: 0
   y: 7
@@ -120,7 +120,7 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "dirtHillsideDark.png"
   x: 1
   y: 1
@@ -232,7 +232,7 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "dirtHillsideDark.png"
   x: 2
   y: 1
@@ -344,7 +344,7 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "dirtHillsideDark.png"
   x: 3
   y: 1
@@ -456,7 +456,7 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "dirtHillsideDark.png"
   x: 4
   y: 1
@@ -568,7 +568,7 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "dirtHillsideDark.png"
   x: 5
   y: 1
@@ -840,7 +840,7 @@ tiles:
   y: 7
   rot: 0
   flipH: true
-  flipV: true
+  flipV: false
   traversable: true
 - texture: "grass.png"
   x: 7
@@ -1094,13 +1094,13 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "grassSign.png"
+- texture: "grass.png"
   x: 9
   y: 12
   rot: 0
   flipH: false
   flipV: false
-  traversable: false
+  traversable: true
 - texture: "sandGrassCornerInverse.png"
   x: 9
   y: 13
@@ -1121,7 +1121,7 @@ tiles:
   rot: 90
   flipH: true
   flipV: true
-  traversable: false
+  traversable: true
 - texture: "hill.png"
   x: 10
   y: 0
@@ -1233,7 +1233,7 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: false
+  traversable: true
 - texture: "hill.png"
   x: 11
   y: 0
@@ -1345,7 +1345,7 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: false
+  traversable: true
 - texture: "hill.png"
   x: 12
   y: 0
@@ -1394,7 +1394,7 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: false
+  traversable: true
 - texture: "grassPath.png"
   x: 12
   y: 7
@@ -1409,7 +1409,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "grassFlowerRed.png"
+- texture: "grass.png"
   x: 12
   y: 9
   rot: 0
@@ -1444,7 +1444,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "grass.png"
+- texture: "grassFlowerGreenBlue.png"
   x: 12
   y: 14
   rot: 0
@@ -1549,7 +1549,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: false
-- texture: "grassFlowerRed.png"
+- texture: "grass.png"
   x: 13
   y: 13
   rot: 0
@@ -1640,21 +1640,21 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "grassSign.png"
+- texture: "grass.png"
   x: 14
   y: 10
   rot: 0
   flipH: false
   flipV: false
-  traversable: false
-- texture: "grass.png"
+  traversable: true
+- texture: "grassFlowerRed.png"
   x: 14
   y: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
-- texture: "grassFlowerGreenBlue.png"
+- texture: "grass.png"
   x: 14
   y: 12
   rot: 0
@@ -1787,7 +1787,7 @@ tiles:
   flipH: true
   flipV: true
   traversable: false
-- texture: "stonePotBottom.png"
+- texture: "stone.png"
   x: 15
   y: 15
   rot: 0

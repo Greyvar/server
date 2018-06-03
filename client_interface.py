@@ -13,7 +13,9 @@ import time
 ETB = "---\n"
 
 class client_interface(SocketServer.StreamRequestHandler):
+    localPlayers = {}
     templateCommands = {}
+    grid = None
 
     def setup(self):
         self.alive = True
@@ -50,7 +52,7 @@ class client_interface(SocketServer.StreamRequestHandler):
 
                 self.parse_chunk(packet.replace("\0", "").decode('utf-8'))
 
-        self.server.game.unregisterPlayer(self)
+        self.server.game.unregisterClient(self)
 
     def parse_chunk(self, chunk):
         if len(chunk) == 0:
@@ -61,8 +63,13 @@ class client_interface(SocketServer.StreamRequestHandler):
         req = yaml.load(chunk)
         cmd = req["command"]
 
+        if cmd != "HELO" and "username" in req: 
+          req["player"] = self.server.game.getPlayerByUsername(req["username"])
+
         if cmd == "HELO":
             self.handle_helo(req)
+        elif cmd == "INIT":
+            self.handle_init(req);
         elif cmd == "QUIT":
             return;
         elif cmd == "HALT":
@@ -71,8 +78,6 @@ class client_interface(SocketServer.StreamRequestHandler):
             self.handle_movr(req);
         else:
             logging.debug("Unknown command from client: " + str(req));
-
-
 
     def subdict(self, d, *args):
         if isinstance(d, object):
@@ -84,14 +89,19 @@ class client_interface(SocketServer.StreamRequestHandler):
         self.alive = False
 
     def send_player_you(self, player):
-        plru = self.subdict(player, "id", "nickname", "skin");
+        plru = self.subdict(player, "id", "username", "skin");
 
         self.send("PLRU", plru)
+
+    def send_player_already_here(self, player):
+        plrh = self.subdict(player, "id", "username", "color")
+
+        self.send("PLRH", plrh)
 
     def send_player_join(self, player):
         logging.debug("sending new player")
 
-        plrj = self.subdict(player, "id", "nickname", "skin")
+        plrj = self.subdict(player, "id", "username", "skin", "color")
 
         self.send("PLRJ", plrj);
         self.send_move(player)
@@ -150,7 +160,7 @@ class client_interface(SocketServer.StreamRequestHandler):
           "hor": True,
         });
 
-        for row, col, tile in self.localPlayer.grid.allTiles():
+        for row, col, tile in self.grid.allTiles():
             tile = {
                 "row": row,
                 "col": col,
@@ -172,27 +182,48 @@ class client_interface(SocketServer.StreamRequestHandler):
         message = payload;
         self.request.send(message.encode("utf-8") + ETB)
 
-    def handle_helo(self, helo):
-        self.localPlayer = self.server.game.registerPlayer(self, helo['username']);
-        self.send_grid();
+    def handle_init(self, init):
+        self.send_grid()
 
-#        for plr in self.server.game.clientsToPlayers.values():
-#            self.send_player_join(plr)
+        # Tell us who is already here
+        for client in self.server.game.clientsToPlayers.values():
+            for player in client["players"]:
+                self.send_player_already_here(player)
+                self.send_spawn(player)
+
+    def handle_helo(self, helo):
+        newPlayer = self.server.game.registerPlayer(self, helo["username"])
+
+        if newPlayer == None:
+            return
+
+        # Register
+        self.localPlayers[helo["username"]] = newPlayer
+
+        # Tell others that we have joined
+        for otherClient in self.server.game.clientsToPlayers.keys():
+          otherClient.send_player_join(newPlayer)
+          otherClient.send_spawn(newPlayer)
+
+        # Tell us who we are
+        self.send_player_you(newPlayer)
 
     def handle_movr(self, movr):
-        if (time.time() - self.localPlayer.timeOfLastMove) < .1:
+        player = movr["player"]
+
+        if (time.time() - player.timeOfLastMove) < .1:
             self.send("BLKD", {})
             return
         else:
-            self.localPlayer.timeOfLastMove = time.time()
+            player.timeOfLastMove = time.time()
 
-        moveX = movr['x'] * 32
-        moveY = movr['y'] * 32
+        moveX = movr['x']
+        moveY = movr['y']
 
-        currentTile = self.localPlayer.getCurrentTile()
+        currentTile = player.getCurrentTile()
         needsTeleport = False
 
-        print "handleMovr() ", moveX, moveY, currentTile.dstDir, currentTile.dstGrid, self.localPlayer.grid 
+        print "handleMovr() ", moveX, moveY, currentTile.dstDir, currentTile.dstGrid, player.grid 
 
         if currentTile.dstGrid != None:
             logging.debug("this tile has a destination: " + currentTile.dstDir)
@@ -203,27 +234,26 @@ class client_interface(SocketServer.StreamRequestHandler):
 
         if needsTeleport:
             print "Teleporting to grid: ", currentTile.dstGrid
-            self.localPlayer.grid = self.server.gridCache[currentTile.dstGrid]
+            palyer.grid = self.server.gridCache[currentTile.dstGrid]
 
             self.send_grid()
-            self.localPlayer.posX = int(currentTile.dstX) * physics.tile_length
-            self.localPlayer.posY = int(currentTile.dstY) * physics.tile_length
+            player.posX = int(currentTile.dstX) * physics.tile_length
+            player.posY = int(currentTile.dstY) * physics.tile_length
 
             for cli in self.server.game.clientsToPlayers.keys():
-                cli.send_move(self.localPlayer)
+                cli.send_move(player)
         else: 
-          if self.localPlayer.grid.canStandOn(self.localPlayer.getTileX(moveX), self.localPlayer.getTileY(moveY)):
-              self.localPlayer.posX += moveX 
-              self.localPlayer.posY += moveY 
-              self.localPlayer.walkState += .2
+          if player.grid.canStandOn(player.getTileX(moveX), player.getTileY(moveY)):
+              player.moveRelative(moveX, moveY)
+              player.walkState += .2
 
-              if self.localPlayer.walkState > 2:
-                  self.localPlayer.walkState = 0
+              if player.walkState > 2:
+                  player.walkState = 0
 
               for cli in self.server.game.clientsToPlayers.keys():
-                  cli.send_move(self.localPlayer)
+                  cli.send_move(player)
 
-              destinationTile = self.localPlayer.grid.getTile(self.localPlayer.getTileX(), self.localPlayer.getTileY());
+              destinationTile = player.grid.getTile(player.getTileX(), player.getTileY());
 
               if destinationTile.message is not None:
                   mesg = { 
