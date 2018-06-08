@@ -1,6 +1,6 @@
-#!/bin/python
+#!/bin/python3
 
-import SocketServer
+import socketserver
 import player
 import threading
 import game
@@ -16,7 +16,7 @@ import yaml
 
 import cProfile
 
-class server(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
+class server(socketserver.ThreadingMixIn, socketserver.TCPServer):
   allow_reuse_address = True
   gridCache = dict()
   run = True
@@ -54,7 +54,7 @@ class server(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
       self.spawnGrid = self.load_grid("dat/worlds/" + worldName + "/grids/" + gridName)
 
     except Exception as e: 
-      print "Failed to load world", str(e)
+      print("Failed to load world", str(e))
 
   def load_grid(self, gridFilename):
     logging.debug("Loading grid: " + gridFilename)
@@ -75,7 +75,7 @@ class server(SocketServer.ThreadingMixIn, SocketServer.TCPServer):
 def signal_handler(signal, frame):
   global srv, logging
 
-  print # clear the signal written to terminal
+  print() # clear the signal written to terminal
 
   logging.info("Caught signal:" + str(signal))
   logging.info("Shutting down after signal.");

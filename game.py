@@ -54,9 +54,9 @@ class game:
       client.send_player_quit(plr)
 
   def unregisterClient(self, client):
-    players = self.clientsToPlayers[client]["players"].values()
+    players = list(self.clientsToPlayers[client]["players"].values())
 
-    for otherClient in self.clientsToPlayers.keys():
+    for otherClient in list(self.clientsToPlayers.keys()):
       for player in players:
         otherClient.send_player_quit(player)
 
@@ -68,16 +68,16 @@ class game:
     logging.debug("Getting player:" + str(playerId))
 
     for client in self.clientsToPlayers:
-      for player in client["players"].values():
+      for player in list(client["players"].values()):
         if player.id == playerId:
           return player
 
     return None
 
   def getPlayerByUsername(self, username):
-    for client in self.clientsToPlayers.values():
-      for player in client["players"].values():
-        print player
+    for client in list(self.clientsToPlayers.values()):
+      for player in list(client["players"].values()):
+        print(player)
         if username == player.username:
           return player
 

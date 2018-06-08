@@ -1,6 +1,5 @@
-import SocketServer
+import socketserver
 import player
-import map
 import tile
 import threading
 import game
@@ -12,7 +11,7 @@ import time
 
 ETB = "---\n"
 
-class client_interface(SocketServer.StreamRequestHandler):
+class client_interface(socketserver.StreamRequestHandler):
     localPlayers = {}
     templateCommands = {}
     grid = None
@@ -45,7 +44,7 @@ class client_interface(SocketServer.StreamRequestHandler):
 
             chunkBuf += chunk
 
-            print chunkBuf
+            print(chunkBuf)
 
             while ETB in chunkBuf:
                 packet, chunkBuf = chunkBuf.split(ETB, 1)
@@ -83,7 +82,7 @@ class client_interface(SocketServer.StreamRequestHandler):
         if isinstance(d, object):
             d = d.__dict__
 
-        return dict(filter(lambda i:i[0] in args, d.items()))
+        return dict([i for i in list(d.items()) if i[0] in args])
 
     def finish(self):
         self.alive = False
@@ -123,7 +122,7 @@ class client_interface(SocketServer.StreamRequestHandler):
             "walkState": int(math.floor(player.walkState))
         }
 
-        print "move", player.posX, player.posY
+        print(("move", player.posX, player.posY))
 
         self.send("MOVE", move)
 
@@ -135,7 +134,7 @@ class client_interface(SocketServer.StreamRequestHandler):
     def templateize(self, templateName, original):
         template = self.templateCommands[templateName];
 
-        print "checking ", templateName, " vs ", original
+        print(("checking ", templateName, " vs ", original))
         
         canOptimize = True
 
@@ -145,7 +144,7 @@ class client_interface(SocketServer.StreamRequestHandler):
                 break;
 
         if canOptimize:
-            print "can optimize!"
+            print("can optimize!")
             for key in template:
                 original.pop(key, None)
 
@@ -186,7 +185,7 @@ class client_interface(SocketServer.StreamRequestHandler):
         self.send_grid()
 
         # Tell us who is already here
-        for client in self.server.game.clientsToPlayers.values():
+        for client in list(self.server.game.clientsToPlayers.values()):
             for player in client["players"]:
                 self.send_player_already_here(player)
                 self.send_spawn(player)
@@ -201,7 +200,7 @@ class client_interface(SocketServer.StreamRequestHandler):
         self.localPlayers[helo["username"]] = newPlayer
 
         # Tell others that we have joined
-        for otherClient in self.server.game.clientsToPlayers.keys():
+        for otherClient in list(self.server.game.clientsToPlayers.keys()):
           otherClient.send_player_join(newPlayer)
           otherClient.send_spawn(newPlayer)
 
@@ -223,7 +222,7 @@ class client_interface(SocketServer.StreamRequestHandler):
         currentTile = player.getCurrentTile()
         needsTeleport = False
 
-        print "handleMovr() ", moveX, moveY, currentTile.dstDir, currentTile.dstGrid, player.grid 
+        print(("handleMovr() ", moveX, moveY, currentTile.dstDir, currentTile.dstGrid, player.grid)) 
 
         if currentTile.dstGrid != None:
             logging.debug("this tile has a destination: " + currentTile.dstDir)
@@ -233,14 +232,14 @@ class client_interface(SocketServer.StreamRequestHandler):
             if moveY < 0 and currentTile.dstDir == "SOUTH": needsTeleport = True
 
         if needsTeleport:
-            print "Teleporting to grid: ", currentTile.dstGrid
+            print(("Teleporting to grid: ", currentTile.dstGrid))
             palyer.grid = self.server.gridCache[currentTile.dstGrid]
 
             self.send_grid()
             player.posX = int(currentTile.dstX) * physics.tile_length
             player.posY = int(currentTile.dstY) * physics.tile_length
 
-            for cli in self.server.game.clientsToPlayers.keys():
+            for cli in list(self.server.game.clientsToPlayers.keys()):
                 cli.send_move(player)
         else: 
           if player.grid.canStandOn(player.getTileX(moveX), player.getTileY(moveY)):
@@ -250,7 +249,7 @@ class client_interface(SocketServer.StreamRequestHandler):
               if player.walkState > 2:
                   player.walkState = 0
 
-              for cli in self.server.game.clientsToPlayers.keys():
+              for cli in list(self.server.game.clientsToPlayers.keys()):
                   cli.send_move(player)
 
               destinationTile = player.grid.getTile(player.getTileX(), player.getTileY());
@@ -262,7 +261,7 @@ class client_interface(SocketServer.StreamRequestHandler):
 
                   self.send("MESG", mesg)
           else:
-              print "blocked"
+              print("blocked")
               self.send("BLKD", {})
 
     def handle_halt(self, halt):

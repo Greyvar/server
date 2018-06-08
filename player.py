@@ -15,7 +15,7 @@ class player:
     self.walkState = 0
     self.grid = None
 
-    print " col is " + str(self.color)
+    print(" col is " + str(self.color))
 
     self.timeOfLastMove = time.time()
 
