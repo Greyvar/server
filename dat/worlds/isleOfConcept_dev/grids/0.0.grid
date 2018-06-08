@@ -282,7 +282,7 @@ tiles:
   flipH: true
   flipV: false
   traversable: true
-- texture: "grassSign.png"
+- texture: "grass.png"
   x: 2
   y: 8
   rot: 0
@@ -401,7 +401,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "digitHolder.png"
+- texture: "grass.png"
   x: 3
   y: 9
   rot: 0
@@ -513,7 +513,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "digitHolder.png"
+- texture: "grass.png"
   x: 4
   y: 9
   rot: 0
@@ -625,7 +625,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "digitHolder.png"
+- texture: "grass.png"
   x: 5
   y: 9
   rot: 0
@@ -737,7 +737,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "digitHolder.png"
+- texture: "grass.png"
   x: 6
   y: 9
   rot: 0
@@ -1073,17 +1073,17 @@ tiles:
   flipH: true
   flipV: true
   traversable: true
-- texture: "sandyGrass.png"
+- texture: "sandGrassCorner.png"
   x: 9
   y: 9
-  rot: 0
+  rot: 270
   flipH: false
   flipV: false
   traversable: true
-- texture: "grass.png"
+- texture: "sandGrassCornerInverse.png"
   x: 9
   y: 10
-  rot: 0
+  rot: 90
   flipH: false
   flipV: false
   traversable: true
@@ -1178,25 +1178,25 @@ tiles:
   flipH: true
   flipV: true
   traversable: true
-- texture: "waterSand.png"
+- texture: "waterSandCornerInverse.png"
   x: 10
   y: 8
-  rot: 180
+  rot: 90
   flipH: true
   flipV: true
   traversable: true
-- texture: "sandGrassCorner.png"
+- texture: "waterSandCorner.png"
   x: 10
   y: 9
-  rot: 180
-  flipH: true
+  rot: 90
+  flipH: false
   flipV: false
   traversable: true
-- texture: "sandGrassCornerInverse.png"
+- texture: "sandyGrass.png"
   x: 10
   y: 10
   rot: 0
-  flipH: true
+  flipH: false
   flipV: false
   traversable: true
 - texture: "grass.png"
@@ -1290,19 +1290,19 @@ tiles:
   flipH: true
   flipV: true
   traversable: true
-- texture: "waterSandCornerInverse.png"
+- texture: "water.png"
   x: 11
   y: 8
-  rot: 90
-  flipH: true
-  flipV: true
-  traversable: true
-- texture: "waterSandCorner.png"
-  x: 11
-  y: 9
-  rot: 90
+  rot: 0
   flipH: false
   flipV: false
+  traversable: true
+- texture: "waterSand.png"
+  x: 11
+  y: 9
+  rot: 180
+  flipH: true
+  flipV: true
   traversable: true
 - texture: "sandyGrass.png"
   x: 11
@@ -1535,7 +1535,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "chest.png"
+- texture: "grass.png"
   x: 13
   y: 11
   rot: 0
@@ -1794,3 +1794,13 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
+entities:
+- x: 11
+  y: 9
+  texture: "sign.png"
+- x: 11
+  y: 10
+  texture: "construct.png"
+- x: 14
+  y: 5
+  texture: "chest.png"

@@ -506,7 +506,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "grassSign.png"
+- texture: "grass.png"
   x: 4
   y: 8
   rot: 0
@@ -1073,7 +1073,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "chest.png"
+- texture: "grass.png"
   x: 9
   y: 9
   rot: 0
@@ -1794,3 +1794,10 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
+entities:
+- x: 4
+  y: 9
+  texture: "sign.png"
+- x: 9
+  y: 9
+  texture: "chest.png"
