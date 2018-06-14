@@ -1,6 +1,7 @@
 ---
 width: 16
 height: 16
+lastEntityId: 4
 tiles:
 - texture: "hill.png"
   x: 0
@@ -1794,4 +1795,20 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-entities: []
+entities:
+- x: 3
+  y: 10
+  id: 3
+  texture: "cake.png"
+- x: 7
+  y: 1
+  id: 2
+  texture: "sign.png"
+- x: 12
+  y: 3
+  id: 1
+  texture: "boulder.png"
+- x: 14
+  y: 12
+  id: 4
+  texture: "cake.png"

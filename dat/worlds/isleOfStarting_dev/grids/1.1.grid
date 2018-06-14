@@ -1,6 +1,7 @@
 ---
 width: 16
 height: 16
+lastEntityId: 4
 tiles:
 - texture: "hill.png"
   x: 0
@@ -471,18 +472,18 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "fenceSideConnectTop.png"
+- texture: "grass.png"
   x: 4
   y: 3
   rot: 0
-  flipH: true
+  flipH: false
   flipV: false
-  traversable: false
-- texture: "fenceSide.png"
+  traversable: true
+- texture: "fenceSideConnectTop.png"
   x: 4
   y: 4
   rot: 0
-  flipH: false
+  flipH: true
   flipV: false
   traversable: false
 - texture: "fenceSide.png"
@@ -583,20 +584,20 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "fence.png"
+- texture: "grass.png"
   x: 5
   y: 3
   rot: 0
   flipH: false
   flipV: false
-  traversable: false
-- texture: "grass.png"
+  traversable: true
+- texture: "fence.png"
   x: 5
   y: 4
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "grassBush.png"
   x: 5
   y: 5
@@ -695,20 +696,20 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "fence.png"
+- texture: "grass.png"
   x: 6
   y: 3
   rot: 0
   flipH: false
   flipV: false
-  traversable: false
-- texture: "grass.png"
+  traversable: true
+- texture: "fence.png"
   x: 6
   y: 4
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "grass.png"
   x: 6
   y: 5
@@ -807,20 +808,20 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "fence.png"
+- texture: "grass.png"
   x: 7
   y: 3
   rot: 0
   flipH: false
   flipV: false
-  traversable: false
-- texture: "grass.png"
+  traversable: true
+- texture: "fence.png"
   x: 7
   y: 4
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "grass.png"
   x: 7
   y: 5
@@ -919,18 +920,18 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "fenceSideConnectTop.png"
+- texture: "grass.png"
   x: 8
   y: 3
   rot: 0
   flipH: false
   flipV: false
-  traversable: false
-- texture: "fenceSide.png"
+  traversable: true
+- texture: "fenceSideConnectTop.png"
   x: 8
   y: 4
   rot: 0
-  flipH: true
+  flipH: false
   flipV: false
   traversable: false
 - texture: "fenceSide.png"
@@ -1723,7 +1724,7 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "grass.png"
   x: 15
   y: 6
@@ -1797,10 +1798,17 @@ tiles:
 entities:
 - x: 2
   y: 2
+  id: 1
   texture: "chest.png"
+- x: 5
+  y: 10
+  id: 2
+  texture: "pressureButton.png"
 - x: 9
   y: 7
-  texture: "tv.png"
+  id: 3
+  texture: "chest.png"
 - x: 12
   y: 13
-  texture: "chest.png"
+  id: 4
+  texture: "sign.png"

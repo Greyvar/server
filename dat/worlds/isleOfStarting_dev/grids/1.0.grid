@@ -1,6 +1,7 @@
 ---
 width: 16
 height: 16
+lastEntityId: 0
 tiles:
 - texture: "water.png"
   x: 0
@@ -807,11 +808,11 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "dirtHillsideDark.png"
+- texture: "hillStairs.png"
   x: 7
   y: 3
   rot: 0
-  flipH: false
+  flipH: true
   flipV: false
   traversable: true
 - texture: "grass.png"
@@ -919,7 +920,7 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "dirtHillsideDark.png"
+- texture: "hillStairs.png"
   x: 8
   y: 3
   rot: 0
@@ -1794,3 +1795,4 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
+entities: []
