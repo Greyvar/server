@@ -28,7 +28,7 @@ class client_interface(socketserver.StreamRequestHandler):
             "name": "^8The Construct"
         }
 
-        self.request.send(ETB)
+        self.request.send(ETB.encode("utf-8"))
         self.send("WELC", welc)
 
         chunkBuf = ""
@@ -42,14 +42,14 @@ class client_interface(socketserver.StreamRequestHandler):
 
             if not chunk: break;
 
-            chunkBuf += chunk
+            chunkBuf += chunk.decode("utf-8")
 
             print(chunkBuf)
 
             while ETB in chunkBuf:
                 packet, chunkBuf = chunkBuf.split(ETB, 1)
 
-                self.parse_chunk(packet.replace("\0", "").decode('utf-8'))
+                self.parse_chunk(packet.replace("\0", ""))
 
         self.server.game.unregisterClient(self)
 
@@ -173,13 +173,27 @@ class client_interface(socketserver.StreamRequestHandler):
 
             self.send("TILE", tile);
 
+        print(self.grid.entities)
+
+        for row, col, ent in self.grid.allEntities():
+            if ent == None: continue
+
+            ent = {
+              "x": row,
+              "y": col,
+              "id": ent.id,
+              "tex": ent.tex
+            }
+
+            self.send("ENT", ent)
+
     def send(self, command, payload):
         payload["apiVersion"] = "v1"
         payload["command"] = command.strip().upper()
         payload = yaml.dump(payload, default_flow_style = False)
         
-        message = payload;
-        self.request.send(message.encode("utf-8") + ETB)
+        message = payload + ETB;
+        self.request.send(message.encode("utf-8"))
 
     def handle_init(self, init):
         self.send_grid()

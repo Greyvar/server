@@ -12,7 +12,9 @@ import os.path
 from time import sleep
 from grid import Grid
 from tile import Tile
+from entity import Entity
 import yaml
+import web
 
 import cProfile
 
@@ -54,7 +56,7 @@ class server(socketserver.ThreadingMixIn, socketserver.TCPServer):
       self.spawnGrid = self.load_grid("dat/worlds/" + worldName + "/grids/" + gridName)
 
     except Exception as e: 
-      print("Failed to load world", str(e))
+      print("Failed to load world", type(e), str(e), e)
 
   def load_grid(self, gridFilename):
     logging.debug("Loading grid: " + gridFilename)
@@ -65,11 +67,21 @@ class server(socketserver.ThreadingMixIn, socketserver.TCPServer):
 
     ggrid = self.gridCache[os.path.basename(gridFilename)] = Grid()
 
+    logging.info("loading tiles")
     for tile in yamlContents["tiles"]:
       t = Tile(tile['texture'], tile['traversable'], tile['rot'], tile['flipV'], tile['flipH'])
 
       ggrid.setTile(tile['x'], tile['y'], t)
 
+    for ent in yamlContents["entities"]:
+      logging.info("Loaded entity")
+
+      e = Entity(ent["texture"])
+      e.id = int(ent["id"])
+
+      ggrid.setEntity(int(ent["x"]), int(ent["y"]), e)
+
+    logging.info("blat")
     return ggrid
 
 def signal_handler(signal, frame):
@@ -79,6 +91,8 @@ def signal_handler(signal, frame):
 
   logging.info("Caught signal:" + str(signal))
   logging.info("Shutting down after signal.");
+
+  web.stop()
 
   srv.shutdown()
 
@@ -95,6 +109,10 @@ server_thread.start();
 server_tick_thread = threading.Thread(target=srv.runTicker)
 server_tick_thread.setDaemon(True)
 server_tick_thread.start()
+
+web_thread = threading.Thread(target=web.start, args=[srv.game])
+web_thread.setDaemon(True)
+web_thread.start()
 
 while server_thread.isAlive():
   sleep(1)

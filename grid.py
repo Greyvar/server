@@ -9,12 +9,15 @@ class Grid:
 
   def initGrid(self):
     self.tiles = {}
+    self.entities = {}
 
     for row in range(0, 16):
       self.tiles[row] = {}
+      self.entities[row] = {}
 
       for col in range(0, 16):
         self.tiles[row][col] = None
+        self.entities[row][col] = None
 
   def getTile(self, x, y):
     tileFound = True
@@ -30,14 +33,29 @@ class Grid:
       return t
     else:
       return self.tiles[x][y]
+
+  def getEntity(self, row, col):
+    try:
+      if self.entities[row, col] != None:
+        return self.entities[row][col]
+    except:
+      return None
     
   def setTile(self, row, col, tile):
     self.tiles[row][col] = tile;
+
+  def setEntity(self, row, col, ent):
+    self.entities[row][col] = ent
 
   def allTiles(self):
     for row in range(0, 16):
       for col in range(0, 16):
         yield [row, col, self.getTile(row, col)]
+
+  def allEntities(self):
+    for row in range(0, 16):
+      for col in range(0, 16):
+        yield [row, col, self.entities[row][col]]
 
   def canStandOn(self, x, y):
     if y >= len(self.tiles) or y < 0:
