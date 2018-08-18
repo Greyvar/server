@@ -15,6 +15,7 @@ from tile import Tile
 from entity import Entity
 import yaml
 import web
+from EventBus import EventBus
 
 import cProfile
 
@@ -22,6 +23,10 @@ class server(socketserver.ThreadingMixIn, socketserver.TCPServer):
   allow_reuse_address = True
   gridCache = dict()
   run = True
+
+  eventBus = EventBus()
+
+  entdefs = dict()
 
   def halt(self):
     logging.debug("Server cleanly shutting down.");
@@ -41,9 +46,29 @@ class server(socketserver.ThreadingMixIn, socketserver.TCPServer):
     logging.debug("Server tick. " + str(len(self.game.clientsToPlayers)) + " clients.")
 
   def setup(self):
-    self.load_world("isleOfStarting_dev")
+    self.load_entdefs()
+    self.load_world("isleOfDebug_dev")
 
     self.game = game.game(self)
+
+  def load_entdefs(self):
+    try: 
+      for f in os.listdir("dat/entdefs/"):
+        if f.endswith(".yml"):
+          entdef = self.load_entdef_file(f)
+
+          self.entdefs[entdef['title']] = entdef
+    except Exception as e:
+      logging.error("Excepting loading entdefs", type(e), str(e), e)
+      
+  def load_entdef_file(self, f):
+    handle = open("dat/entdefs/" + f, 'r')
+    entdef = yaml.load(handle.read())
+    handle.close()
+
+    logging.info("Loaded entdef " + entdef['title'] + " from " + f)
+
+    return entdef
 
   def load_world(self, worldName):
     try: 
@@ -55,8 +80,20 @@ class server(socketserver.ThreadingMixIn, socketserver.TCPServer):
 
       self.spawnGrid = self.load_grid("dat/worlds/" + worldName + "/grids/" + gridName)
 
+      for trigger in worldDef['triggers']:
+        self.load_world_trigger(trigger)
+
+      self.eventBus.fire("world_loaded")
     except Exception as e: 
       print("Failed to load world", type(e), str(e), e)
+
+  def load_world_trigger(self, trigger):
+    triggerConditions = {
+#      "conditionPlayerWalkInto": conditionPlayerWalkInto
+    }
+
+#    if trigger in triggerConditions:
+
 
   def load_grid(self, gridFilename):
     logging.debug("Loading grid: " + gridFilename)
@@ -76,12 +113,17 @@ class server(socketserver.ThreadingMixIn, socketserver.TCPServer):
     for ent in yamlContents["entities"]:
       logging.info("Loaded entity")
 
-      e = Entity(ent["texture"])
-      e.id = int(ent["id"])
+      if ent['definition'] not in self.entdefs:
+        logging.warn("Found entity instance with unregistered entdef: " + ent['definition'])
+      else:
+        entdef = self.entdefs[ent['definition']]
 
-      ggrid.setEntity(int(ent["x"]), int(ent["y"]), e)
+        e = Entity(ent["definition"], entdef['initialState'])
+        e.id = int(ent["id"])
 
-    logging.info("blat")
+        ggrid.setEntity(int(ent["x"]), int(ent["y"]), e)
+
+    logging.info("Loaded all entities")
     return ggrid
 
 def signal_handler(signal, frame):

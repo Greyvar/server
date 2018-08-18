@@ -1,6 +1,8 @@
 class Entity:
   id = 0
-  tex = None
+  definition = None
+  state = None
 
-  def __init__(self, tex):
-    self.tex = tex
+  def __init__(self, definition, state):
+    self.definition = definition
+    self.state = state

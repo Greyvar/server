@@ -44,8 +44,6 @@ class client_interface(socketserver.StreamRequestHandler):
 
             chunkBuf += chunk.decode("utf-8")
 
-            print(chunkBuf)
-
             while ETB in chunkBuf:
                 packet, chunkBuf = chunkBuf.split(ETB, 1)
 
@@ -122,8 +120,6 @@ class client_interface(socketserver.StreamRequestHandler):
             "walkState": int(math.floor(player.walkState))
         }
 
-        print(("move", player.posX, player.posY))
-
         self.send("MOVE", move)
 
     def register_template_command(self, name, command):
@@ -144,7 +140,6 @@ class client_interface(socketserver.StreamRequestHandler):
                 break;
 
         if canOptimize:
-            print("can optimize!")
             for key in template:
                 original.pop(key, None)
 
@@ -173,16 +168,17 @@ class client_interface(socketserver.StreamRequestHandler):
 
             self.send("TILE", tile);
 
-        print(self.grid.entities)
-
         for row, col, ent in self.grid.allEntities():
             if ent == None: continue
+
+            entdef = self.server.entdefs[ent.definition]
+            tex = entdef['states'][ent.state]['tex']
 
             ent = {
               "x": row,
               "y": col,
               "id": ent.id,
-              "tex": ent.tex
+              "tex": tex
             }
 
             self.send("ENT", ent)
@@ -235,8 +231,6 @@ class client_interface(socketserver.StreamRequestHandler):
 
         currentTile = player.getCurrentTile()
         needsTeleport = False
-
-        print(("handleMovr() ", moveX, moveY, currentTile.dstDir, currentTile.dstGrid, player.grid)) 
 
         if currentTile.dstGrid != None:
             logging.debug("this tile has a destination: " + currentTile.dstDir)

@@ -14,9 +14,6 @@ class player:
     self.skin = random.choice(["Purple"])
     self.walkState = 0
     self.grid = None
-
-    print(" col is " + str(self.color))
-
     self.timeOfLastMove = time.time()
 
   def getTileX(self, offset = 0):
