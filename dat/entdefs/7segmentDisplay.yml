@@ -1,0 +1,26 @@
+---
+title: 7segmentDisplay
+initialState: empty
+states:
+  empty:
+    tex: digitMaskNull.png
+  zero:
+    tex: digitMask0.png
+  one:
+    tex: digitMask1.png
+  two:
+    tex: digitMask2.png
+  three:
+    tex: digitMask3.png
+  four:
+    tex: digitMask4.png
+  five:
+    tex: digitMask5.png
+  six:
+    tex: digitMask6.png
+  seven:
+    tex: digitMask7.png
+  eight:
+    tex: digitMask8.png
+  nine: 
+    tex: digitMask9.png

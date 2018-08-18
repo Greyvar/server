@@ -1,0 +1,6 @@
+---
+title: key
+initialState: keylike
+states:
+  keylike: 
+    tex: key.png

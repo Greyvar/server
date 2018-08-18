@@ -1,6 +1,7 @@
 ---
 width: 16
 height: 16
+lastEntityId: 0
 tiles:
 - texture: "grass.png"
   x: 0
@@ -1794,3 +1795,4 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
+entities: []

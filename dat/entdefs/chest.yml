@@ -1,0 +1,8 @@
+---
+title: chest
+initialState: closed
+states:
+  closed:
+    tex: chest.png
+  open: 
+    tex: chestOpen.png

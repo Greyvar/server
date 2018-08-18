@@ -1,0 +1,6 @@
+---
+title: sign
+initialState: signy
+states:
+  signy: 
+    tex: sign.png

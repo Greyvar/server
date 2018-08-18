@@ -1,0 +1,19 @@
+---
+author: "unknown"
+title: "Cell of Escape"
+spawnGrid: "0.0.grid"
+triggers:
+- title: "firstSwitch"
+  conditions:
+  - type: "conditionPlayerStepOn"
+    arguments:
+      pos:
+        type: "tileCoords"
+        x: 6
+        y: 6
+  actions:
+  - type: "actionMessage"
+    arguments:
+      message:
+        type: "string"
+        value: "You stepped on my switch!"

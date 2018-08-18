@@ -1,0 +1,6 @@
+---
+title: document
+initialState: open
+states:
+  open:
+    tex: document.png

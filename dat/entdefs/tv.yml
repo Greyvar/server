@@ -1,0 +1,6 @@
+---
+title: tv
+initialState: on
+states:
+  on:
+    tex: tv.png 

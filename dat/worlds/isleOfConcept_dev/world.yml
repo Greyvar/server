@@ -1,4 +1,5 @@
 ---
-title: Isle of Concept
-author: James Read
-spawnGrid: 0.0.grid
+author: "James Read"
+title: "Isle of Concept"
+spawnGrid: "0.0.grid"
+triggers: []

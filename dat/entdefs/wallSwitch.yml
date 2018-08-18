@@ -1,0 +1,8 @@
+---
+title: wallSwitch
+initialState: flickedLeft
+states:
+  flickedLeft:
+    tex: wallSwitchLeft.png
+  flickedRight:
+    tex: wallSwitchRight.png

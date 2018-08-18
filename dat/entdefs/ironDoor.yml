@@ -1,0 +1,9 @@
+---
+title: ironDoor
+initialState: closed
+states:
+  closed:
+    tex: ironDoor.png
+  open:
+    tex: iconDoorOpen.png
+

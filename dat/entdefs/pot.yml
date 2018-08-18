@@ -1,0 +1,7 @@
+---
+title: pot
+initialState: potlike
+states:
+  potlike:
+    tex: pot.png
+

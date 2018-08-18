@@ -1,4 +1,19 @@
 ---
-title: Isle of Starting
-author: James Read
-spawnGrid: 1.1.grid
+author: "James Read"
+title: "Isle of Starting"
+spawnGrid: "1.1.grid"
+triggers:
+- title: "Message about locked chest"
+  conditions:
+  - type: "conditionPlayerWalkInto"
+    arguments:
+      pos:
+        type: "tileCoords"
+        x: 6
+        y: 3
+  actions:
+  - type: "actionMessage"
+    arguments:
+      message:
+        type: "string"
+        value: "This chest is locked."

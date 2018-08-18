@@ -1,6 +1,7 @@
 ---
 width: 16
 height: 16
+lastEntityId: 1
 tiles:
 - texture: "dirtHillsideDarkCornerInside.png"
   x: 0
@@ -1794,4 +1795,8 @@ tiles:
   flipH: false
   flipV: false
   traversable: false
-entities: []
+entities:
+- x: 9
+  y: 7
+  id: 1
+  definition: "chest"

@@ -1,0 +1,6 @@
+---
+title: cake
+initialState: cakey
+states:
+  cakey: 
+    tex: cake.png

@@ -1,0 +1,6 @@
+---
+title: pictureHead
+initialState: yellow
+states:
+  yellow:
+    tex: pictureYellowHead.png

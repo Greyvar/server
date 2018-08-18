@@ -1,6 +1,7 @@
 ---
-width: 16
-height: 16
+width: 22
+height: 18
+lastEntityId: 23
 tiles:
 - texture: "water.png"
   x: 0
@@ -8,42 +9,42 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 0
   y: 1
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 0
   y: 2
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 0
   y: 3
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 0
   y: 4
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 0
   y: 5
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "waterSandCornerInverse.png"
   x: 0
   y: 6
@@ -85,56 +86,70 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 0
   y: 12
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 0
   y: 13
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 0
   y: 14
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 0
   y: 15
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 0
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 0
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "water.png"
   x: 1
   y: 0
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 1
   y: 1
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 1
   y: 2
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "waterSandCornerInverse.png"
   x: 1
   y: 3
@@ -211,28 +226,42 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 1
   y: 14
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 1
   y: 15
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 1
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 1
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "water.png"
   x: 2
   y: 0
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "waterSandCornerInverse.png"
   x: 2
   y: 1
@@ -337,14 +366,28 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 2
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 2
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "water.png"
   x: 3
   y: 0
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "waterSand.png"
   x: 3
   y: 1
@@ -451,12 +494,26 @@ tiles:
   flipV: true
   traversable: true
 - texture: "water.png"
+  x: 3
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 3
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
   x: 4
   y: 0
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "waterSand.png"
   x: 4
   y: 1
@@ -562,6 +619,20 @@ tiles:
   flipH: true
   flipV: false
   traversable: true
+- texture: "water.png"
+  x: 4
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 4
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSandCornerInverse.png"
   x: 5
   y: 0
@@ -673,7 +744,21 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 5
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 5
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSand.png"
   x: 6
   y: 0
@@ -785,7 +870,21 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 6
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 6
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSandCornerInverse.png"
   x: 7
   y: 0
@@ -897,14 +996,28 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 7
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 7
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "water.png"
   x: 8
   y: 0
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "waterSandCornerInverse.png"
   x: 8
   y: 1
@@ -1009,7 +1122,21 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 8
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 8
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSandCornerInverse.png"
   x: 9
   y: 0
@@ -1038,34 +1165,34 @@ tiles:
   flipH: true
   flipV: true
   traversable: true
-- texture: "waterSand.png"
-  x: 9
-  y: 4
-  rot: 90
-  flipH: true
-  flipV: true
-  traversable: true
-- texture: "waterSand.png"
-  x: 9
-  y: 5
-  rot: 90
-  flipH: true
-  flipV: true
-  traversable: true
-- texture: "waterSand.png"
-  x: 9
-  y: 6
-  rot: 90
-  flipH: true
-  flipV: true
-  traversable: true
 - texture: "waterSandCornerInverse.png"
   x: 9
-  y: 7
+  y: 4
   rot: 270
   flipH: true
   flipV: true
   traversable: true
+- texture: "water.png"
+  x: 9
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 9
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 9
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSand.png"
   x: 9
   y: 8
@@ -1121,7 +1248,21 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 9
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 9
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSand.png"
   x: 10
   y: 0
@@ -1143,52 +1284,52 @@ tiles:
   flipH: true
   flipV: false
   traversable: true
-- texture: "sandyGrass.png"
-  x: 10
-  y: 3
-  rot: 270
-  flipH: true
-  flipV: false
-  traversable: true
-- texture: "sandyGrass.png"
-  x: 10
-  y: 4
-  rot: 270
-  flipH: true
-  flipV: false
-  traversable: true
-- texture: "sandyGrass.png"
-  x: 10
-  y: 5
-  rot: 270
-  flipH: true
-  flipV: false
-  traversable: true
 - texture: "sandGrassCorner.png"
   x: 10
-  y: 6
+  y: 3
   rot: 0
   flipH: true
   flipV: false
   traversable: true
 - texture: "waterSand.png"
   x: 10
-  y: 7
+  y: 4
   rot: 0
   flipH: true
   flipV: true
   traversable: true
+- texture: "water.png"
+  x: 10
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 10
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSandCornerInverse.png"
   x: 10
-  y: 8
-  rot: 90
+  y: 7
+  rot: 0
   flipH: true
   flipV: true
   traversable: true
 - texture: "waterSandCorner.png"
   x: 10
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sand.png"
+  x: 10
   y: 9
-  rot: 90
+  rot: 0
   flipH: false
   flipV: false
   traversable: true
@@ -1233,7 +1374,21 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 10
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 10
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSand.png"
   x: 11
   y: 0
@@ -1248,61 +1403,61 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "houseRoofCornerBlue.png"
+- texture: "grass.png"
   x: 11
   y: 2
-  rot: 180
-  flipH: false
-  flipV: true
-  traversable: true
-- texture: "houseRoofBottom.png"
-  x: 11
-  y: 3
-  rot: 180
-  flipH: false
-  flipV: true
-  traversable: true
-- texture: "houseSide.png"
-  x: 11
-  y: 4
   rot: 0
-  flipH: true
-  flipV: true
-  traversable: true
-- texture: "houseCorner.png"
-  x: 11
-  y: 5
-  rot: 0
-  flipH: true
+  flipH: false
   flipV: false
   traversable: true
 - texture: "sandyGrass.png"
   x: 11
-  y: 6
+  y: 3
   rot: 180
   flipH: true
   flipV: false
   traversable: true
 - texture: "waterSand.png"
   x: 11
-  y: 7
+  y: 4
   rot: 0
   flipH: true
   flipV: true
   traversable: true
 - texture: "water.png"
+  x: 11
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 11
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSand.png"
+  x: 11
+  y: 7
+  rot: 180
+  flipH: true
+  flipV: true
+  traversable: true
+- texture: "sand.png"
   x: 11
   y: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
-- texture: "waterSand.png"
+- texture: "sand.png"
   x: 11
   y: 9
-  rot: 180
-  flipH: true
-  flipV: true
+  rot: 0
+  flipH: false
+  flipV: false
   traversable: true
 - texture: "sandyGrass.png"
   x: 11
@@ -1345,7 +1500,21 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 11
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 11
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSand.png"
   x: 12
   y: 0
@@ -1360,56 +1529,56 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "houseRoofBlue.png"
+- texture: "grass.png"
   x: 12
   y: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
-- texture: "houseRoofBottomMiddle.png"
-  x: 12
-  y: 3
-  rot: 0
-  flipH: false
-  flipV: false
-  traversable: true
-- texture: "houseWindowsTop.png"
-  x: 12
-  y: 4
-  rot: 0
-  flipH: false
-  flipV: false
-  traversable: true
-- texture: "houseDoor.png"
-  x: 12
-  y: 5
-  rot: 0
-  flipH: false
-  flipV: false
-  traversable: true
 - texture: "sandyGrass.png"
   x: 12
-  y: 6
+  y: 3
   rot: 180
   flipH: true
   flipV: false
   traversable: true
 - texture: "sandBridge.png"
   x: 12
-  y: 7
+  y: 4
   rot: 180
   flipH: false
   flipV: false
   traversable: true
 - texture: "bridge.png"
   x: 12
-  y: 8
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "bridge.png"
+  x: 12
+  y: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "sandBridge.png"
+  x: 12
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sand.png"
+  x: 12
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sand.png"
   x: 12
   y: 9
   rot: 0
@@ -1457,7 +1626,21 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 12
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 12
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSand.png"
   x: 13
   y: 0
@@ -1472,61 +1655,61 @@ tiles:
   flipH: false
   flipV: false
   traversable: true
-- texture: "houseRoofCornerBlue.png"
+- texture: "grass.png"
   x: 13
   y: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
-- texture: "houseRoofBottom.png"
-  x: 13
-  y: 3
-  rot: 0
-  flipH: false
-  flipV: false
-  traversable: true
-- texture: "houseSide.png"
-  x: 13
-  y: 4
-  rot: 0
-  flipH: false
-  flipV: false
-  traversable: true
-- texture: "houseCorner.png"
-  x: 13
-  y: 5
-  rot: 0
-  flipH: false
-  flipV: false
-  traversable: true
 - texture: "sandyGrass.png"
   x: 13
-  y: 6
+  y: 3
   rot: 180
   flipH: true
   flipV: false
   traversable: true
 - texture: "waterSand.png"
   x: 13
-  y: 7
+  y: 4
   rot: 0
   flipH: true
   flipV: true
   traversable: true
 - texture: "water.png"
   x: 13
-  y: 8
+  y: 5
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
-- texture: "waterSand.png"
+  traversable: false
+- texture: "water.png"
   x: 13
-  y: 9
-  rot: 180
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 13
+  y: 7
+  rot: 90
   flipH: true
   flipV: true
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 13
+  y: 8
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: true
+- texture: "sand.png"
+  x: 13
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
   traversable: true
 - texture: "sandyGrass.png"
   x: 13
@@ -1569,7 +1752,21 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 13
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 13
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSand.png"
   x: 14
   y: 0
@@ -1591,54 +1788,54 @@ tiles:
   flipH: true
   flipV: false
   traversable: true
-- texture: "sandyGrass.png"
-  x: 14
-  y: 3
-  rot: 90
-  flipH: true
-  flipV: false
-  traversable: true
-- texture: "sandyGrass.png"
-  x: 14
-  y: 4
-  rot: 90
-  flipH: true
-  flipV: false
-  traversable: true
-- texture: "sandyGrass.png"
-  x: 14
-  y: 5
-  rot: 90
-  flipH: true
-  flipV: false
-  traversable: true
 - texture: "sandGrassCorner.png"
   x: 14
-  y: 6
+  y: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "waterSand.png"
   x: 14
-  y: 7
+  y: 4
   rot: 0
   flipH: true
   flipV: true
   traversable: true
 - texture: "water.png"
   x: 14
-  y: 8
+  y: 5
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
-- texture: "waterSand.png"
+  traversable: false
+- texture: "water.png"
   x: 14
-  y: 9
-  rot: 180
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 14
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 14
+  y: 8
+  rot: 90
   flipH: true
   flipV: true
+  traversable: true
+- texture: "waterSandCorner.png"
+  x: 14
+  y: 9
+  rot: 90
+  flipH: false
+  flipV: false
   traversable: true
 - texture: "sandGrassCorner.png"
   x: 14
@@ -1681,7 +1878,21 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
+- texture: "water.png"
+  x: 14
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 14
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
 - texture: "waterSandCornerInverse.png"
   x: 15
   y: 0
@@ -1710,41 +1921,41 @@ tiles:
   flipH: true
   flipV: true
   traversable: true
-- texture: "waterSand.png"
+- texture: "waterSandCornerInverse.png"
   x: 15
   y: 4
-  rot: 270
-  flipH: true
-  flipV: true
+  rot: 0
+  flipH: false
+  flipV: false
   traversable: true
-- texture: "waterSand.png"
+- texture: "waterSandCornerInverse.png"
   x: 15
   y: 5
-  rot: 270
+  rot: 0
   flipH: true
   flipV: true
   traversable: true
-- texture: "waterSand.png"
+- texture: "waterSandCornerInverse.png"
   x: 15
   y: 6
   rot: 270
   flipH: true
   flipV: true
   traversable: true
-- texture: "waterSandCornerInverse.png"
+- texture: "water.png"
   x: 15
   y: 7
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 15
   y: 8
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "waterSandCornerInverse.png"
   x: 15
   y: 9
@@ -1759,12 +1970,12 @@ tiles:
   flipH: true
   flipV: true
   traversable: true
-- texture: "waterSand.png"
+- texture: "sandBridge.png"
   x: 15
   y: 11
-  rot: 270
-  flipH: true
-  flipV: true
+  rot: 90
+  flipH: false
+  flipV: false
   traversable: true
 - texture: "waterSand.png"
   x: 15
@@ -1786,21 +1997,806 @@ tiles:
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
+  traversable: false
 - texture: "water.png"
   x: 15
   y: 15
   rot: 0
   flipH: false
   flipV: false
-  traversable: true
-entities:
-- x: 11
-  y: 9
-  texture: "sign.png"
-- x: 11
-  y: 10
-  texture: "construct.png"
-- x: 14
+  traversable: false
+- texture: "water.png"
+  x: 15
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 15
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 16
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 16
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 16
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 16
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 16
+  y: 4
+  rot: 0
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "waterSandCorner.png"
+  x: 16
   y: 5
-  texture: "chest.png"
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCorner.png"
+  x: 16
+  y: 6
+  rot: 180
+  flipH: true
+  flipV: false
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 16
+  y: 7
+  rot: 270
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "water.png"
+  x: 16
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 16
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 16
+  y: 10
+  rot: 0
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "sandBridge.png"
+  x: 16
+  y: 11
+  rot: 270
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSand.png"
+  x: 16
+  y: 12
+  rot: 90
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 16
+  y: 13
+  rot: 270
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "water.png"
+  x: 16
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 16
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 16
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 16
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 17
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 17
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 17
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 17
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSand.png"
+  x: 17
+  y: 4
+  rot: 180
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "sand.png"
+  x: 17
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "sand.png"
+  x: 17
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSand.png"
+  x: 17
+  y: 7
+  rot: 0
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "water.png"
+  x: 17
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 17
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSand.png"
+  x: 17
+  y: 10
+  rot: 180
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "sand.png"
+  x: 17
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "sand.png"
+  x: 17
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSand.png"
+  x: 17
+  y: 13
+  rot: 0
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "water.png"
+  x: 17
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 17
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 17
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 17
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 18
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 18
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 18
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 18
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 18
+  y: 4
+  rot: 90
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "waterSandCorner.png"
+  x: 18
+  y: 5
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "sand.png"
+  x: 18
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCorner.png"
+  x: 18
+  y: 7
+  rot: 180
+  flipH: true
+  flipV: false
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 18
+  y: 8
+  rot: 270
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "water.png"
+  x: 18
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSand.png"
+  x: 18
+  y: 10
+  rot: 180
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "sand.png"
+  x: 18
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "sand.png"
+  x: 18
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSand.png"
+  x: 18
+  y: 13
+  rot: 0
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "water.png"
+  x: 18
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 18
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 18
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 18
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 19
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 19
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 19
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 19
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 19
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 19
+  y: 5
+  rot: 90
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "waterSandCorner.png"
+  x: 19
+  y: 6
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "sand.png"
+  x: 19
+  y: 7
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "sandBridge.png"
+  x: 19
+  y: 8
+  rot: 180
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "bridge.png"
+  x: 19
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "sandBridge.png"
+  x: 19
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "sand.png"
+  x: 19
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCorner.png"
+  x: 19
+  y: 12
+  rot: 0
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 19
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 19
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 19
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 19
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 19
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 20
+  y: 6
+  rot: 90
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "waterSandCorner.png"
+  x: 20
+  y: 7
+  rot: 90
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSand.png"
+  x: 20
+  y: 8
+  rot: 0
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 20
+  y: 10
+  rot: 90
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "waterSand.png"
+  x: 20
+  y: 11
+  rot: 270
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 20
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 20
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 0
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 1
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 2
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 3
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 4
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 5
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 6
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 21
+  y: 7
+  rot: 90
+  flipH: true
+  flipV: true
+  traversable: false
+- texture: "waterSandCornerInverse.png"
+  x: 21
+  y: 8
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 10
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 11
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 12
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 13
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 14
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 15
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 16
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+- texture: "water.png"
+  x: 21
+  y: 17
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: false
+entities:
+- x: 4
+  y: 8
+  id: 18
+  definition: "document"
+- x: 6
+  y: 11
+  id: 16
+  definition: "key"
+- x: 11
+  y: 2
+  id: 5
+  definition: "chest"
+- x: 13
+  y: 2
+  id: 4
+  definition: "chest"
+- x: 17
+  y: 6
+  id: 21
+  definition: "key"
+- x: 18
+  y: 12
+  id: 7
+  definition: "pressureButton"
