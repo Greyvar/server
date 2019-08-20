@@ -1,2 +1,2 @@
 default:
-	go build ./...
+	go build github.com/greyvar/server/cmd/servercmd/
