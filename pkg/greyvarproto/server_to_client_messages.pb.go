@@ -20,6 +20,109 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
+type ServerFrameResponse struct {
+	MoveResponse         *MoveResponse      `protobuf:"bytes,1,opt,name=moveResponse,proto3" json:"moveResponse,omitempty"`
+	EntityMoved          *EntityMoved       `protobuf:"bytes,2,opt,name=entityMoved,proto3" json:"entityMoved,omitempty"`
+	EntitySpawn          *EntitySpawn       `protobuf:"bytes,3,opt,name=entitySpawn,proto3" json:"entitySpawn,omitempty"`
+	PlayerQuit           *PlayerQuit        `protobuf:"bytes,4,opt,name=playerQuit,proto3" json:"playerQuit,omitempty"`
+	PlayerAlreadyHere    *PlayerAlreadyHere `protobuf:"bytes,5,opt,name=playerAlreadyHere,proto3" json:"playerAlreadyHere,omitempty"`
+	PlayerJoined         *PlayerJoined      `protobuf:"bytes,6,opt,name=playerJoined,proto3" json:"playerJoined,omitempty"`
+	PlayerYou            *PlayerYou         `protobuf:"bytes,7,opt,name=playerYou,proto3" json:"playerYou,omitempty"`
+	SingleTileChange     *Tile              `protobuf:"bytes,8,opt,name=singleTileChange,proto3" json:"singleTileChange,omitempty"`
+	Grid                 *Grid              `protobuf:"bytes,9,opt,name=grid,proto3" json:"grid,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
+	XXX_unrecognized     []byte             `json:"-"`
+	XXX_sizecache        int32              `json:"-"`
+}
+
+func (m *ServerFrameResponse) Reset()         { *m = ServerFrameResponse{} }
+func (m *ServerFrameResponse) String() string { return proto.CompactTextString(m) }
+func (*ServerFrameResponse) ProtoMessage()    {}
+func (*ServerFrameResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_5f34367b8a54972c, []int{0}
+}
+
+func (m *ServerFrameResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ServerFrameResponse.Unmarshal(m, b)
+}
+func (m *ServerFrameResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ServerFrameResponse.Marshal(b, m, deterministic)
+}
+func (m *ServerFrameResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ServerFrameResponse.Merge(m, src)
+}
+func (m *ServerFrameResponse) XXX_Size() int {
+	return xxx_messageInfo_ServerFrameResponse.Size(m)
+}
+func (m *ServerFrameResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_ServerFrameResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ServerFrameResponse proto.InternalMessageInfo
+
+func (m *ServerFrameResponse) GetMoveResponse() *MoveResponse {
+	if m != nil {
+		return m.MoveResponse
+	}
+	return nil
+}
+
+func (m *ServerFrameResponse) GetEntityMoved() *EntityMoved {
+	if m != nil {
+		return m.EntityMoved
+	}
+	return nil
+}
+
+func (m *ServerFrameResponse) GetEntitySpawn() *EntitySpawn {
+	if m != nil {
+		return m.EntitySpawn
+	}
+	return nil
+}
+
+func (m *ServerFrameResponse) GetPlayerQuit() *PlayerQuit {
+	if m != nil {
+		return m.PlayerQuit
+	}
+	return nil
+}
+
+func (m *ServerFrameResponse) GetPlayerAlreadyHere() *PlayerAlreadyHere {
+	if m != nil {
+		return m.PlayerAlreadyHere
+	}
+	return nil
+}
+
+func (m *ServerFrameResponse) GetPlayerJoined() *PlayerJoined {
+	if m != nil {
+		return m.PlayerJoined
+	}
+	return nil
+}
+
+func (m *ServerFrameResponse) GetPlayerYou() *PlayerYou {
+	if m != nil {
+		return m.PlayerYou
+	}
+	return nil
+}
+
+func (m *ServerFrameResponse) GetSingleTileChange() *Tile {
+	if m != nil {
+		return m.SingleTileChange
+	}
+	return nil
+}
+
+func (m *ServerFrameResponse) GetGrid() *Grid {
+	if m != nil {
+		return m.Grid
+	}
+	return nil
+}
+
 type MoveResponse struct {
 	PlayerId             int32    `protobuf:"varint,1,opt,name=playerId,proto3" json:"playerId,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -31,7 +134,7 @@ func (m *MoveResponse) Reset()         { *m = MoveResponse{} }
 func (m *MoveResponse) String() string { return proto.CompactTextString(m) }
 func (*MoveResponse) ProtoMessage()    {}
 func (*MoveResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5f34367b8a54972c, []int{0}
+	return fileDescriptor_5f34367b8a54972c, []int{1}
 }
 
 func (m *MoveResponse) XXX_Unmarshal(b []byte) error {
@@ -70,7 +173,7 @@ func (m *EntityMoved) Reset()         { *m = EntityMoved{} }
 func (m *EntityMoved) String() string { return proto.CompactTextString(m) }
 func (*EntityMoved) ProtoMessage()    {}
 func (*EntityMoved) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5f34367b8a54972c, []int{1}
+	return fileDescriptor_5f34367b8a54972c, []int{2}
 }
 
 func (m *EntityMoved) XXX_Unmarshal(b []byte) error {
@@ -98,162 +201,6 @@ func (m *EntityMoved) GetEntityId() int32 {
 	return 0
 }
 
-type PlayerQuit struct {
-	PlayerId             int32    `protobuf:"varint,1,opt,name=playerId,proto3" json:"playerId,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PlayerQuit) Reset()         { *m = PlayerQuit{} }
-func (m *PlayerQuit) String() string { return proto.CompactTextString(m) }
-func (*PlayerQuit) ProtoMessage()    {}
-func (*PlayerQuit) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5f34367b8a54972c, []int{2}
-}
-
-func (m *PlayerQuit) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PlayerQuit.Unmarshal(m, b)
-}
-func (m *PlayerQuit) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PlayerQuit.Marshal(b, m, deterministic)
-}
-func (m *PlayerQuit) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PlayerQuit.Merge(m, src)
-}
-func (m *PlayerQuit) XXX_Size() int {
-	return xxx_messageInfo_PlayerQuit.Size(m)
-}
-func (m *PlayerQuit) XXX_DiscardUnknown() {
-	xxx_messageInfo_PlayerQuit.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PlayerQuit proto.InternalMessageInfo
-
-func (m *PlayerQuit) GetPlayerId() int32 {
-	if m != nil {
-		return m.PlayerId
-	}
-	return 0
-}
-
-type PlayerAlreadyHere struct {
-	PlayerId             int32    `protobuf:"varint,1,opt,name=playerId,proto3" json:"playerId,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PlayerAlreadyHere) Reset()         { *m = PlayerAlreadyHere{} }
-func (m *PlayerAlreadyHere) String() string { return proto.CompactTextString(m) }
-func (*PlayerAlreadyHere) ProtoMessage()    {}
-func (*PlayerAlreadyHere) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5f34367b8a54972c, []int{3}
-}
-
-func (m *PlayerAlreadyHere) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PlayerAlreadyHere.Unmarshal(m, b)
-}
-func (m *PlayerAlreadyHere) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PlayerAlreadyHere.Marshal(b, m, deterministic)
-}
-func (m *PlayerAlreadyHere) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PlayerAlreadyHere.Merge(m, src)
-}
-func (m *PlayerAlreadyHere) XXX_Size() int {
-	return xxx_messageInfo_PlayerAlreadyHere.Size(m)
-}
-func (m *PlayerAlreadyHere) XXX_DiscardUnknown() {
-	xxx_messageInfo_PlayerAlreadyHere.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PlayerAlreadyHere proto.InternalMessageInfo
-
-func (m *PlayerAlreadyHere) GetPlayerId() int32 {
-	if m != nil {
-		return m.PlayerId
-	}
-	return 0
-}
-
-type PlayerJoined struct {
-	Username             string   `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PlayerJoined) Reset()         { *m = PlayerJoined{} }
-func (m *PlayerJoined) String() string { return proto.CompactTextString(m) }
-func (*PlayerJoined) ProtoMessage()    {}
-func (*PlayerJoined) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5f34367b8a54972c, []int{4}
-}
-
-func (m *PlayerJoined) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PlayerJoined.Unmarshal(m, b)
-}
-func (m *PlayerJoined) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PlayerJoined.Marshal(b, m, deterministic)
-}
-func (m *PlayerJoined) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PlayerJoined.Merge(m, src)
-}
-func (m *PlayerJoined) XXX_Size() int {
-	return xxx_messageInfo_PlayerJoined.Size(m)
-}
-func (m *PlayerJoined) XXX_DiscardUnknown() {
-	xxx_messageInfo_PlayerJoined.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PlayerJoined proto.InternalMessageInfo
-
-func (m *PlayerJoined) GetUsername() string {
-	if m != nil {
-		return m.Username
-	}
-	return ""
-}
-
-type PlayerYou struct {
-	PlayerId             int32    `protobuf:"varint,1,opt,name=playerId,proto3" json:"playerId,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PlayerYou) Reset()         { *m = PlayerYou{} }
-func (m *PlayerYou) String() string { return proto.CompactTextString(m) }
-func (*PlayerYou) ProtoMessage()    {}
-func (*PlayerYou) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5f34367b8a54972c, []int{5}
-}
-
-func (m *PlayerYou) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PlayerYou.Unmarshal(m, b)
-}
-func (m *PlayerYou) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PlayerYou.Marshal(b, m, deterministic)
-}
-func (m *PlayerYou) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PlayerYou.Merge(m, src)
-}
-func (m *PlayerYou) XXX_Size() int {
-	return xxx_messageInfo_PlayerYou.Size(m)
-}
-func (m *PlayerYou) XXX_DiscardUnknown() {
-	xxx_messageInfo_PlayerYou.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PlayerYou proto.InternalMessageInfo
-
-func (m *PlayerYou) GetPlayerId() int32 {
-	if m != nil {
-		return m.PlayerId
-	}
-	return 0
-}
-
 type EntitySpawn struct {
 	EntityId             int32    `protobuf:"varint,1,opt,name=entityId,proto3" json:"entityId,omitempty"`
 	X                    int32    `protobuf:"varint,2,opt,name=x,proto3" json:"x,omitempty"`
@@ -270,7 +217,7 @@ func (m *EntitySpawn) Reset()         { *m = EntitySpawn{} }
 func (m *EntitySpawn) String() string { return proto.CompactTextString(m) }
 func (*EntitySpawn) ProtoMessage()    {}
 func (*EntitySpawn) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5f34367b8a54972c, []int{6}
+	return fileDescriptor_5f34367b8a54972c, []int{3}
 }
 
 func (m *EntitySpawn) XXX_Unmarshal(b []byte) error {
@@ -333,6 +280,162 @@ func (m *EntitySpawn) GetTexture() string {
 	return ""
 }
 
+type PlayerQuit struct {
+	PlayerId             int32    `protobuf:"varint,1,opt,name=playerId,proto3" json:"playerId,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *PlayerQuit) Reset()         { *m = PlayerQuit{} }
+func (m *PlayerQuit) String() string { return proto.CompactTextString(m) }
+func (*PlayerQuit) ProtoMessage()    {}
+func (*PlayerQuit) Descriptor() ([]byte, []int) {
+	return fileDescriptor_5f34367b8a54972c, []int{4}
+}
+
+func (m *PlayerQuit) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_PlayerQuit.Unmarshal(m, b)
+}
+func (m *PlayerQuit) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_PlayerQuit.Marshal(b, m, deterministic)
+}
+func (m *PlayerQuit) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PlayerQuit.Merge(m, src)
+}
+func (m *PlayerQuit) XXX_Size() int {
+	return xxx_messageInfo_PlayerQuit.Size(m)
+}
+func (m *PlayerQuit) XXX_DiscardUnknown() {
+	xxx_messageInfo_PlayerQuit.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_PlayerQuit proto.InternalMessageInfo
+
+func (m *PlayerQuit) GetPlayerId() int32 {
+	if m != nil {
+		return m.PlayerId
+	}
+	return 0
+}
+
+type PlayerAlreadyHere struct {
+	PlayerId             int32    `protobuf:"varint,1,opt,name=playerId,proto3" json:"playerId,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *PlayerAlreadyHere) Reset()         { *m = PlayerAlreadyHere{} }
+func (m *PlayerAlreadyHere) String() string { return proto.CompactTextString(m) }
+func (*PlayerAlreadyHere) ProtoMessage()    {}
+func (*PlayerAlreadyHere) Descriptor() ([]byte, []int) {
+	return fileDescriptor_5f34367b8a54972c, []int{5}
+}
+
+func (m *PlayerAlreadyHere) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_PlayerAlreadyHere.Unmarshal(m, b)
+}
+func (m *PlayerAlreadyHere) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_PlayerAlreadyHere.Marshal(b, m, deterministic)
+}
+func (m *PlayerAlreadyHere) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PlayerAlreadyHere.Merge(m, src)
+}
+func (m *PlayerAlreadyHere) XXX_Size() int {
+	return xxx_messageInfo_PlayerAlreadyHere.Size(m)
+}
+func (m *PlayerAlreadyHere) XXX_DiscardUnknown() {
+	xxx_messageInfo_PlayerAlreadyHere.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_PlayerAlreadyHere proto.InternalMessageInfo
+
+func (m *PlayerAlreadyHere) GetPlayerId() int32 {
+	if m != nil {
+		return m.PlayerId
+	}
+	return 0
+}
+
+type PlayerJoined struct {
+	Username             string   `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *PlayerJoined) Reset()         { *m = PlayerJoined{} }
+func (m *PlayerJoined) String() string { return proto.CompactTextString(m) }
+func (*PlayerJoined) ProtoMessage()    {}
+func (*PlayerJoined) Descriptor() ([]byte, []int) {
+	return fileDescriptor_5f34367b8a54972c, []int{6}
+}
+
+func (m *PlayerJoined) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_PlayerJoined.Unmarshal(m, b)
+}
+func (m *PlayerJoined) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_PlayerJoined.Marshal(b, m, deterministic)
+}
+func (m *PlayerJoined) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PlayerJoined.Merge(m, src)
+}
+func (m *PlayerJoined) XXX_Size() int {
+	return xxx_messageInfo_PlayerJoined.Size(m)
+}
+func (m *PlayerJoined) XXX_DiscardUnknown() {
+	xxx_messageInfo_PlayerJoined.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_PlayerJoined proto.InternalMessageInfo
+
+func (m *PlayerJoined) GetUsername() string {
+	if m != nil {
+		return m.Username
+	}
+	return ""
+}
+
+type PlayerYou struct {
+	PlayerId             int32    `protobuf:"varint,1,opt,name=playerId,proto3" json:"playerId,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *PlayerYou) Reset()         { *m = PlayerYou{} }
+func (m *PlayerYou) String() string { return proto.CompactTextString(m) }
+func (*PlayerYou) ProtoMessage()    {}
+func (*PlayerYou) Descriptor() ([]byte, []int) {
+	return fileDescriptor_5f34367b8a54972c, []int{7}
+}
+
+func (m *PlayerYou) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_PlayerYou.Unmarshal(m, b)
+}
+func (m *PlayerYou) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_PlayerYou.Marshal(b, m, deterministic)
+}
+func (m *PlayerYou) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PlayerYou.Merge(m, src)
+}
+func (m *PlayerYou) XXX_Size() int {
+	return xxx_messageInfo_PlayerYou.Size(m)
+}
+func (m *PlayerYou) XXX_DiscardUnknown() {
+	xxx_messageInfo_PlayerYou.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_PlayerYou proto.InternalMessageInfo
+
+func (m *PlayerYou) GetPlayerId() int32 {
+	if m != nil {
+		return m.PlayerId
+	}
+	return 0
+}
+
 type Tile struct {
 	Col                  int32    `protobuf:"varint,1,opt,name=col,proto3" json:"col,omitempty"`
 	Row                  int32    `protobuf:"varint,2,opt,name=row,proto3" json:"row,omitempty"`
@@ -349,7 +452,7 @@ func (m *Tile) Reset()         { *m = Tile{} }
 func (m *Tile) String() string { return proto.CompactTextString(m) }
 func (*Tile) ProtoMessage()    {}
 func (*Tile) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5f34367b8a54972c, []int{7}
+	return fileDescriptor_5f34367b8a54972c, []int{8}
 }
 
 func (m *Tile) XXX_Unmarshal(b []byte) error {
@@ -424,7 +527,7 @@ func (m *Grid) Reset()         { *m = Grid{} }
 func (m *Grid) String() string { return proto.CompactTextString(m) }
 func (*Grid) ProtoMessage()    {}
 func (*Grid) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5f34367b8a54972c, []int{8}
+	return fileDescriptor_5f34367b8a54972c, []int{9}
 }
 
 func (m *Grid) XXX_Unmarshal(b []byte) error {
@@ -470,7 +573,7 @@ func (m *ConnectionResponse) Reset()         { *m = ConnectionResponse{} }
 func (m *ConnectionResponse) String() string { return proto.CompactTextString(m) }
 func (*ConnectionResponse) ProtoMessage()    {}
 func (*ConnectionResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5f34367b8a54972c, []int{9}
+	return fileDescriptor_5f34367b8a54972c, []int{10}
 }
 
 func (m *ConnectionResponse) XXX_Unmarshal(b []byte) error {
@@ -508,7 +611,7 @@ func (m *NoResponse) Reset()         { *m = NoResponse{} }
 func (m *NoResponse) String() string { return proto.CompactTextString(m) }
 func (*NoResponse) ProtoMessage()    {}
 func (*NoResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_5f34367b8a54972c, []int{10}
+	return fileDescriptor_5f34367b8a54972c, []int{11}
 }
 
 func (m *NoResponse) XXX_Unmarshal(b []byte) error {
@@ -530,13 +633,14 @@ func (m *NoResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_NoResponse proto.InternalMessageInfo
 
 func init() {
+	proto.RegisterType((*ServerFrameResponse)(nil), "greyvarproto.ServerFrameResponse")
 	proto.RegisterType((*MoveResponse)(nil), "greyvarproto.MoveResponse")
 	proto.RegisterType((*EntityMoved)(nil), "greyvarproto.EntityMoved")
+	proto.RegisterType((*EntitySpawn)(nil), "greyvarproto.EntitySpawn")
 	proto.RegisterType((*PlayerQuit)(nil), "greyvarproto.PlayerQuit")
 	proto.RegisterType((*PlayerAlreadyHere)(nil), "greyvarproto.PlayerAlreadyHere")
 	proto.RegisterType((*PlayerJoined)(nil), "greyvarproto.PlayerJoined")
 	proto.RegisterType((*PlayerYou)(nil), "greyvarproto.PlayerYou")
-	proto.RegisterType((*EntitySpawn)(nil), "greyvarproto.EntitySpawn")
 	proto.RegisterType((*Tile)(nil), "greyvarproto.Tile")
 	proto.RegisterType((*Grid)(nil), "greyvarproto.Grid")
 	proto.RegisterType((*ConnectionResponse)(nil), "greyvarproto.ConnectionResponse")
@@ -546,29 +650,39 @@ func init() {
 func init() { proto.RegisterFile("server_to_client_messages.proto", fileDescriptor_5f34367b8a54972c) }
 
 var fileDescriptor_5f34367b8a54972c = []byte{
-	// 377 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x7c, 0x92, 0x4f, 0x8b, 0xdb, 0x30,
-	0x10, 0xc5, 0x71, 0xfe, 0x35, 0x99, 0xb8, 0xd0, 0x8a, 0x1e, 0x44, 0x2f, 0x0d, 0xa2, 0x50, 0x37,
-	0x87, 0x14, 0xda, 0x5b, 0x6f, 0xa5, 0xb4, 0x4d, 0x0b, 0x2d, 0x5d, 0xef, 0x12, 0xd8, 0x53, 0xf0,
-	0xc6, 0xb3, 0x89, 0x40, 0x91, 0x8c, 0x24, 0xc7, 0xf6, 0xee, 0x97, 0x5f, 0x24, 0xd9, 0xd9, 0xdd,
-	0x8b, 0x6f, 0xfa, 0x3d, 0xde, 0xbc, 0x37, 0x36, 0x03, 0xef, 0x0c, 0xea, 0x13, 0xea, 0xad, 0x55,
-	0xdb, 0x9d, 0xe0, 0x28, 0xed, 0xf6, 0x88, 0xc6, 0x64, 0x7b, 0x34, 0xab, 0x42, 0x2b, 0xab, 0x48,
-	0xbc, 0xd7, 0xd8, 0x9c, 0x32, 0xed, 0x89, 0x2d, 0x21, 0xfe, 0xab, 0x4e, 0x98, 0xa2, 0x29, 0x94,
-	0x34, 0x48, 0xde, 0xc2, 0xb4, 0x10, 0x59, 0x83, 0xfa, 0x77, 0x4e, 0xa3, 0x45, 0x94, 0x8c, 0xd3,
-	0x33, 0xb3, 0x8f, 0x30, 0xff, 0x21, 0x2d, 0xb7, 0x8d, 0x9b, 0xc8, 0x9d, 0x15, 0x3d, 0x3e, 0x5a,
-	0x3b, 0x66, 0x09, 0xc0, 0x7f, 0x3f, 0x76, 0x51, 0x72, 0xdb, 0x1b, 0xfa, 0x09, 0x5e, 0x07, 0xe7,
-	0x37, 0xa1, 0x31, 0xcb, 0x9b, 0x35, 0xea, 0xfe, 0x2d, 0x96, 0x10, 0x87, 0x81, 0x3f, 0x8a, 0xcb,
-	0xb0, 0x46, 0x69, 0x50, 0xcb, 0xec, 0x88, 0xde, 0x3b, 0x4b, 0xcf, 0xcc, 0x3e, 0xc0, 0x2c, 0x78,
-	0xaf, 0x55, 0xd9, 0x1b, 0x7a, 0xdf, 0x7d, 0xda, 0x65, 0x91, 0x55, 0xb2, 0xef, 0xd3, 0x48, 0x0c,
-	0x51, 0x4d, 0x07, 0x5e, 0x8c, 0x6a, 0x47, 0x0d, 0x1d, 0x06, 0x6a, 0x1c, 0x55, 0x74, 0x14, 0xa8,
-	0x72, 0x74, 0xa0, 0xe3, 0x40, 0x07, 0x42, 0xe1, 0x85, 0xc5, 0xda, 0x96, 0x1a, 0xe9, 0xc4, 0xaf,
-	0xd9, 0x21, 0xbb, 0x83, 0xd1, 0x15, 0x17, 0x48, 0x5e, 0xc1, 0x70, 0xa7, 0x44, 0x5b, 0xe8, 0x9e,
-	0x4e, 0xd1, 0xaa, 0x6a, 0xdb, 0xdc, 0xd3, 0x29, 0x16, 0x6b, 0xdf, 0x38, 0x4b, 0xdd, 0x93, 0xbc,
-	0x81, 0xf1, 0xad, 0xe0, 0xc5, 0xda, 0xf7, 0x4e, 0xd3, 0x00, 0x9d, 0xba, 0xf1, 0xfd, 0xad, 0xba,
-	0x09, 0x79, 0xd6, 0xf7, 0xfb, 0x3c, 0xcb, 0x7e, 0xc2, 0xe8, 0x97, 0xe6, 0xb9, 0xf3, 0x5b, 0x6e,
-	0x45, 0xf7, 0x0b, 0x03, 0x90, 0xc4, 0xa9, 0x02, 0x0d, 0x1d, 0x2c, 0x86, 0xc9, 0xfc, 0x33, 0x59,
-	0x3d, 0xbd, 0x9d, 0x95, 0x5b, 0x3a, 0x0d, 0x06, 0xf6, 0x15, 0xc8, 0x77, 0x25, 0x25, 0xee, 0x2c,
-	0x57, 0xf2, 0x7c, 0x4d, 0xef, 0xe1, 0x65, 0x38, 0xc7, 0x0d, 0x6a, 0xc3, 0x95, 0x6c, 0xd3, 0x9f,
-	0x8b, 0x2c, 0x06, 0xf8, 0xa7, 0xba, 0x99, 0x9b, 0x89, 0x0f, 0xff, 0xf2, 0x10, 0x00, 0x00, 0xff,
-	0xff, 0x2f, 0x31, 0x35, 0xdb, 0xc9, 0x02, 0x00, 0x00,
+	// 542 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x7c, 0x94, 0x5f, 0x6b, 0x13, 0x41,
+	0x14, 0xc5, 0xd9, 0x36, 0xdb, 0x66, 0x6f, 0x56, 0x68, 0x47, 0xc1, 0xb1, 0x2f, 0x2d, 0x8b, 0x68,
+	0xec, 0x43, 0x04, 0x45, 0x10, 0x85, 0x82, 0x14, 0x6b, 0x15, 0x2a, 0x75, 0x2a, 0x81, 0x3e, 0x85,
+	0x35, 0x7b, 0x4d, 0x06, 0x36, 0x33, 0x61, 0x76, 0xf2, 0x67, 0xf5, 0x83, 0xf9, 0xf5, 0x64, 0x66,
+	0xb2, 0x9b, 0x59, 0x92, 0xe6, 0x6d, 0xce, 0x9d, 0xdf, 0xb9, 0x64, 0xee, 0xb9, 0x59, 0x38, 0x2d,
+	0x50, 0xcd, 0x51, 0x0d, 0xb4, 0x1c, 0x0c, 0x73, 0x8e, 0x42, 0x0f, 0x26, 0x58, 0x14, 0xe9, 0x08,
+	0x8b, 0xde, 0x54, 0x49, 0x2d, 0x49, 0x3c, 0x52, 0x58, 0xce, 0x53, 0x65, 0x55, 0xf2, 0xaf, 0x05,
+	0x8f, 0xef, 0xac, 0xe3, 0x4a, 0xa5, 0x13, 0x64, 0x58, 0x4c, 0xa5, 0x28, 0x90, 0x5c, 0x40, 0x3c,
+	0x91, 0xf3, 0x5a, 0xd3, 0xe0, 0x2c, 0xe8, 0x76, 0xde, 0x9c, 0xf4, 0x7c, 0x73, 0xef, 0xc6, 0x23,
+	0x58, 0x83, 0x27, 0x1f, 0xa1, 0x83, 0x42, 0x73, 0x5d, 0x1a, 0x26, 0xa3, 0x7b, 0xd6, 0xfe, 0xac,
+	0x69, 0xff, 0xbc, 0x06, 0x98, 0x4f, 0xaf, 0xcd, 0x77, 0xd3, 0x74, 0x21, 0xe8, 0xfe, 0xc3, 0x66,
+	0x0b, 0x30, 0x9f, 0x26, 0xef, 0x01, 0xa6, 0x79, 0x5a, 0xa2, 0xfa, 0x31, 0xe3, 0x9a, 0xb6, 0xac,
+	0x97, 0x36, 0xbd, 0xb7, 0xf5, 0x3d, 0xf3, 0x58, 0x72, 0x03, 0xc7, 0x4e, 0x7d, 0xca, 0x15, 0xa6,
+	0x59, 0x79, 0x8d, 0x0a, 0x69, 0x68, 0x1b, 0x9c, 0x6e, 0x6b, 0xe0, 0x61, 0x6c, 0xd3, 0x69, 0x46,
+	0xe8, 0x8a, 0xdf, 0x24, 0x17, 0x98, 0xd1, 0x83, 0x6d, 0x23, 0xbc, 0xf5, 0x08, 0xd6, 0xe0, 0xc9,
+	0x3b, 0x88, 0x9c, 0xbe, 0x97, 0x33, 0x7a, 0x68, 0xcd, 0x4f, 0xb7, 0x99, 0xef, 0xe5, 0x8c, 0xad,
+	0x49, 0x72, 0x01, 0x47, 0x05, 0x17, 0xa3, 0x1c, 0x7f, 0xf2, 0x1c, 0x2f, 0xc7, 0xa9, 0x18, 0x21,
+	0x6d, 0x5b, 0x37, 0x69, 0xba, 0xcd, 0x3d, 0xdb, 0x60, 0xc9, 0x0b, 0x68, 0x8d, 0x14, 0xcf, 0x68,
+	0xb4, 0xcd, 0xf3, 0x45, 0xf1, 0x8c, 0xd9, 0xfb, 0xe4, 0x1c, 0x62, 0x3f, 0x7f, 0x72, 0x02, 0x6d,
+	0xf7, 0x23, 0xbe, 0x66, 0x76, 0x5b, 0x42, 0x56, 0xeb, 0xe4, 0x15, 0x74, 0xbc, 0xb0, 0x0d, 0xea,
+	0x12, 0x5b, 0xa3, 0x95, 0x4e, 0xfe, 0x56, 0xa8, 0x4b, 0x73, 0x07, 0x4a, 0x62, 0x08, 0x96, 0x76,
+	0xb3, 0x42, 0x16, 0x2c, 0x8d, 0x2a, 0xed, 0xaa, 0x84, 0x2c, 0x28, 0x8d, 0x5a, 0xd8, 0xf0, 0x43,
+	0x16, 0x2c, 0x8c, 0x1a, 0xdb, 0x24, 0x43, 0x16, 0x8c, 0x09, 0x85, 0x43, 0x8d, 0x4b, 0x3d, 0x53,
+	0x68, 0x33, 0x89, 0x58, 0x25, 0x93, 0x2e, 0xc0, 0x7a, 0x37, 0x76, 0xbe, 0xe8, 0x35, 0x1c, 0x6f,
+	0x2c, 0xc1, 0x4e, 0xc3, 0x39, 0xc4, 0x7e, 0xd6, 0x86, 0x9d, 0x15, 0xa8, 0x44, 0x3a, 0x71, 0x7f,
+	0xae, 0x88, 0xd5, 0x3a, 0x79, 0x09, 0x51, 0x1d, 0xed, 0xce, 0xa6, 0x7f, 0xa0, 0x65, 0x92, 0x23,
+	0x47, 0xb0, 0x3f, 0x94, 0xf9, 0xea, 0xda, 0x1c, 0x4d, 0x45, 0xc9, 0xc5, 0x6a, 0x3a, 0xe6, 0x68,
+	0x2a, 0x1a, 0x97, 0x76, 0x42, 0x11, 0x33, 0x47, 0xf2, 0x04, 0xc2, 0xdf, 0x39, 0x9f, 0x5e, 0xdb,
+	0x39, 0xb5, 0x99, 0x13, 0x55, 0xb5, 0x6f, 0xe7, 0xb5, 0xaa, 0xf6, 0x5d, 0x3f, 0x6d, 0xe7, 0x65,
+	0xfb, 0xe9, 0xe4, 0x0a, 0x5a, 0x66, 0x1b, 0x0c, 0xaf, 0xb9, 0xce, 0xab, 0x57, 0x38, 0x41, 0xba,
+	0xa6, 0x9a, 0x63, 0x41, 0xf7, 0xce, 0xf6, 0x1f, 0x58, 0x3d, 0x07, 0x24, 0x1f, 0x80, 0x5c, 0x4a,
+	0x21, 0x70, 0xa8, 0xb9, 0x14, 0xf5, 0x36, 0x3d, 0x87, 0x47, 0xee, 0x43, 0xd6, 0x47, 0x55, 0x70,
+	0x29, 0x56, 0xdd, 0x9b, 0xc5, 0x24, 0x06, 0xf8, 0x2e, 0x2b, 0xcf, 0xaf, 0x03, 0xdb, 0xfc, 0xed,
+	0xff, 0x00, 0x00, 0x00, 0xff, 0xff, 0xc6, 0xe0, 0x80, 0x93, 0x03, 0x05, 0x00, 0x00,
 }
