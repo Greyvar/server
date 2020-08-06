@@ -8,6 +8,8 @@ import (
 	fmt "fmt"
 	proto "github.com/golang/protobuf/proto"
 	grpc "google.golang.org/grpc"
+	codes "google.golang.org/grpc/codes"
+	status "google.golang.org/grpc/status"
 	math "math"
 )
 
@@ -44,11 +46,11 @@ var fileDescriptor_2ad2c4f41754552d = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConn
+var _ grpc.ClientConnInterface
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion4
+const _ = grpc.SupportPackageIsVersion6
 
 // ServerInterfaceClient is the client API for ServerInterface service.
 //
@@ -60,10 +62,10 @@ type ServerInterfaceClient interface {
 }
 
 type serverInterfaceClient struct {
-	cc *grpc.ClientConn
+	cc grpc.ClientConnInterface
 }
 
-func NewServerInterfaceClient(cc *grpc.ClientConn) ServerInterfaceClient {
+func NewServerInterfaceClient(cc grpc.ClientConnInterface) ServerInterfaceClient {
 	return &serverInterfaceClient{cc}
 }
 
@@ -99,6 +101,20 @@ type ServerInterfaceServer interface {
 	Connect(context.Context, *ConnectionRequest) (*ConnectionResponse, error)
 	PlayerSetup(context.Context, *NewPlayer) (*NoResponse, error)
 	GetServerFrame(context.Context, *ClientRequests) (*ServerFrameResponse, error)
+}
+
+// UnimplementedServerInterfaceServer can be embedded to have forward compatible implementations.
+type UnimplementedServerInterfaceServer struct {
+}
+
+func (*UnimplementedServerInterfaceServer) Connect(ctx context.Context, req *ConnectionRequest) (*ConnectionResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Connect not implemented")
+}
+func (*UnimplementedServerInterfaceServer) PlayerSetup(ctx context.Context, req *NewPlayer) (*NoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method PlayerSetup not implemented")
+}
+func (*UnimplementedServerInterfaceServer) GetServerFrame(ctx context.Context, req *ClientRequests) (*ServerFrameResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetServerFrame not implemented")
 }
 
 func RegisterServerInterfaceServer(s *grpc.Server, srv ServerInterfaceServer) {
