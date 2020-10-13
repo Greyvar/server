@@ -64,7 +64,7 @@ func (s *serverInterface) PlayerSetup(ctx context.Context, plr *pb.NewPlayer) (*
 	fmt.Println("PlayerSetup");
 
 	s.remotePlayers = append(s.remotePlayers, rp);
-	return nil, nil;
+	return new(pb.NoResponse), nil;
 }
 
 func Start() {
