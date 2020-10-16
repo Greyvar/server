@@ -57,8 +57,8 @@ func (s *serverInterface) PlayerSetup(ctx context.Context, plr *pb.NewPlayer) (*
 		Username: "bob",
 		NeedsGridUpdate: true,
 		Spawned: false,
-		X: 16,
-		Y: 16,
+		X: 32,
+		Y: 32,
 	}
 
 	fmt.Println("PlayerSetup");
