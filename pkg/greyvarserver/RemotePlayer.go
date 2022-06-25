@@ -8,6 +8,5 @@ type RemotePlayer struct {
 	NeedsGridUpdate bool;
 	Spawned bool;
 
-	X int32;
-	Y int32;
+	Entity *Entity;
 }

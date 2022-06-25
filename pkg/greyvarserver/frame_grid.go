@@ -4,7 +4,7 @@ import (
 	pb "github.com/greyvar/server/pkg/greyvarproto"
 )
 
-func FrameGridUpdates(s *serverInterface, serverFrame *pb.ServerFrameResponse) {
+func frameGridUpdates(s *serverInterface, serverFrame *pb.ServerFrameResponse) {
 	if isGridUpdateNeeded(s) {
 		serverFrame.Grid = generateGridUpdate(s);
 	}

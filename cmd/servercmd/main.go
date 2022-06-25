@@ -1,13 +1,14 @@
 package main;
 
 import (
-	"fmt"
 	"time"
 	greyvar "github.com/greyvar/server/pkg/greyvarserver"
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {
-	fmt.Println("Greyvar Server 2");
+	log.SetLevel(log.DebugLevel);
+	log.Info("Greyvar Server 2");
 
 	greyvar.Start();
 

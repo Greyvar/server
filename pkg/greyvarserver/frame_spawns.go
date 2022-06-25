@@ -12,12 +12,21 @@ func FramePlayerSpawns(s *serverInterface, serverFrame *pb.ServerFrameResponse, 
 			"spawned": rp.Spawned,
 		}).Info("Spawning player");
 
+		// Spawn this entity for all players in the next server frame.
 		spawn := pb.EntitySpawn{}
-		spawn.X = rp.X;
-		spawn.Y = rp.Y;
+		spawn.EntityId = rp.Entity.Id;
+		spawn.PrimaryColor = 0xff0000ff;
+		spawn.X = rp.Entity.X;
+		spawn.Y = rp.Entity.Y;
 		spawn.Texture = "playerBob.png"
 
-		serverFrame.EntitySpawn = &spawn;
+		serverFrame.EntitySpawns = append(serverFrame.EntitySpawns, &spawn);
+
+		// Now send a joining message
+		playerJoin :=  pb.PlayerJoined{}
+		playerJoin.Username = rp.Username;
+
+		serverFrame.PlayerJoined = &playerJoin;
 
 		rp.Spawned = true
 	}

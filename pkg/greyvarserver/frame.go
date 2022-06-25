@@ -6,22 +6,46 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-func processMoveRequest(mr *pb.MoveRequest) {
-	log.Info(mr)
-}
-
+/**
+A server frame represents the entire state of the game. Client's can request 
+updates, such as moving a player. The update may or may not be accepted by the
+server (eg, player is trying to walk through a wall, or even walk too quickly). 
+*/
 func (s *serverInterface) GetServerFrame(ctx context.Context, req *pb.ClientRequests) (*pb.ServerFrameResponse, error) {
-	res := new(pb.ServerFrameResponse);
+	processClientRequests(s, req);
 
-	FrameGridUpdates(s, res)
-
-	for i, _ := range s.remotePlayers {
-		FramePlayerSpawns(s, res, &s.remotePlayers[i])
-	}
-
-	if req.MoveRequest != nil {
-		processMoveRequest(req.MoveRequest);
-	}
-
-	return res, nil;
+	return buildServerFrame(s), nil;
 }
+
+func frameEntityPositions(s *serverInterface, frame *pb.ServerFrameResponse) {
+	for _, ent := range s.entities {
+		entpos := pb.EntityPosition {
+			X: ent.X,
+			Y: ent.Y,
+			EntityId: ent.Id,
+		}
+
+		frame.EntityPositions = append(frame.EntityPositions, &entpos);
+	}
+}
+
+func buildServerFrame(s *serverInterface) *pb.ServerFrameResponse {
+	frame := new(pb.ServerFrameResponse);
+
+	frameGridUpdates(s, frame)
+
+	for _, player := range s.remotePlayers {
+		FramePlayerSpawns(s, frame, player)
+	}
+
+	// Note that position updates need to come after spawns, so we don't update
+	// the position of an entity that has not yet spawned.
+	frameEntityPositions(s, frame);
+
+	log.WithFields(log.Fields{
+		"serverFrame": frame,
+	}).Debug("ServerFrame");
+
+	return frame;
+}
+
