@@ -1,4 +1,6 @@
 /greyvar-server
 *.pyc
 **/*.swp
+**/*.swo
 **/*.directory
+gen

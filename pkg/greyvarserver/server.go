@@ -1,21 +1,30 @@
 package greyvarserver;
 
 import (
-	"context"
 	"fmt"
-	"net"
+	"net/http"
 	log "github.com/sirupsen/logrus"
 	"time"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/metadata"
-	pb "github.com/greyvar/server/pkg/greyvarproto"
+	pb "github.com/greyvar/server/gen/greyvarprotocol"
 	"github.com/greyvar/server/pkg/gridFileHandler"
+	"github.com/gorilla/websocket"
+	"github.com/golang/protobuf/proto"
 )
+
+var upgrader = websocket.Upgrader {
+	ReadBufferSize: 1024,
+	WriteBufferSize: 1024,
+	CheckOrigin: func(r *http.Request) bool {
+		return true
+	},
+}
 
 type serverInterface struct {
 	remotePlayers map[int64]*RemotePlayer;
 	entities []*Entity;
 	grids []gridFileHandler.GridFile;
+
+	nextFrame pb.ServerFrameResponse;
 
 	lastEntityId int64;
 }
@@ -56,16 +65,35 @@ func (s *serverInterface) tick() {
 	log.Debug("server tick");
 }
 
-func (s *serverInterface) Connect(ctx context.Context, req *pb.ConnectionRequest) (*pb.ConnectionResponse, error) {
-	res := new(pb.ConnectionResponse);
-	res.ServerVersion = "waffles2";
+func (s *serverInterface) onConnected(c *websocket.Conn) {
 	log.Info("Player connected");
 
-	return res, nil;
+	res := new(pb.ConnectionResponse);
+	res.ServerVersion = "waffles2";
+
+	s.nextFrame = pb.ServerFrameResponse{}
+	s.nextFrame.ConnectionResponse = res
+	s.sendFrame(c)
 }
 
-func (s *serverInterface) PlayerSetup(ctx context.Context, plr *pb.NewPlayer) (*pb.NoResponse, error) {
-	md, _ := metadata.FromIncomingContext(ctx);
+func (s *serverInterface) sendFrame(c *websocket.Conn) {
+	data, err := proto.Marshal(&s.nextFrame);
+
+	if err != nil {
+		log.Errorf("Could not marshal obj to protobuf in sendMessage: %v", err);
+		return
+	}
+
+
+	log.Infof("msg len = %v", len(data))
+
+	c.WriteMessage(websocket.BinaryMessage, data)
+
+	s.nextFrame = pb.ServerFrameResponse{}
+}
+
+func (s *serverInterface) playerSetup(c *websocket.Conn) (*pb.NoResponse, error) {
+	md := "?"
 
 	log.WithFields(log.Fields{
 		"uuid": md,
@@ -94,22 +122,56 @@ func (s *serverInterface) PlayerSetup(ctx context.Context, plr *pb.NewPlayer) (*
 	return new(pb.NoResponse), nil;
 }
 
+func (server *serverInterface) handleClientRequests(reqs *pb.ClientRequests) {
+	log.Infof("handleClientRequests %v", reqs)
+}
+
+func (server *serverInterface) handleConnection(c *websocket.Conn) {
+	log.Infof("New Handler")
+
+	server.onConnected(c)
+
+	for {
+		_, rawMessage, err := c.ReadMessage()
+
+		if err != nil {
+			log.Warnf("Conn readMessage fail: %v", err)
+			break
+		}
+
+		reqs := &pb.ClientRequests{}
+		err = proto.Unmarshal(rawMessage, reqs)
+
+		if err != nil {
+			log.Warnf("Unmarshal failure: %v", err)
+		}
+
+		server.handleClientRequests(reqs)
+	}
+
+	log.Infof("Closing handler")
+}
+
 func Start() {
 	log.Info("Server starting");
 
-	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%d", 2000));
+	server := newServer()
 
-	if (err != nil) {
-		log.Fatalf("failed to listen %v ", err);
-	}
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		log.Infof("New conn")
 
-	server := newServer();
+		c, err := upgrader.Upgrade(w, r, nil)
 
-	grpcServer := grpc.NewServer();
-	pb.RegisterServerInterfaceServer(grpcServer, server);
+		if err != nil {
+			log.Errorf("Upgrade: %v", err)
+			return
+		}
+
+		go server.handleConnection(c)
+	})
 
 	go server.mainLoop();
 
-	grpcServer.Serve(lis);
+	log.Fatal(http.ListenAndServe("0.0.0.0:8080", nil))
 }
 

@@ -1,7 +1,7 @@
 package greyvarserver;
 
 import (
-	pb "github.com/greyvar/server/pkg/greyvarproto"
+	pb "github.com/greyvar/server/gen/greyvarprotocol"
 )
 
 func frameGridUpdates(s *serverInterface, serverFrame *pb.ServerFrameResponse) {

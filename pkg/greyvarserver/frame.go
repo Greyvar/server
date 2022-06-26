@@ -2,7 +2,7 @@ package greyvarserver;
 
 import (
 	"context"
-	pb "github.com/greyvar/server/pkg/greyvarproto"
+	pb "github.com/greyvar/server/gen/greyvarprotocol"
 	log "github.com/sirupsen/logrus"
 )
 
