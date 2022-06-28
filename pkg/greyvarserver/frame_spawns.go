@@ -17,7 +17,7 @@ func FramePlayerSpawns(s *serverInterface, serverFrame *pb.ServerFrameResponse, 
 		spawn.Y = rp.Y;
 		spawn.Texture = "playerBob.png"
 
-		serverFrame.EntitySpawn = &spawn;
+		serverFrame.EntitySpawns = append(serverFrame.EntitySpawns, &spawn)
 
 		rp.Spawned = true
 	}
