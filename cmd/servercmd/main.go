@@ -2,6 +2,7 @@ package main;
 
 import (
 	"time"
+	log "github.com/sirupsen/logrus"
 	greyvar "github.com/greyvar/server/pkg/greyvarserver"
 	log "github.com/sirupsen/logrus"
 )
