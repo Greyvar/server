@@ -1,23 +1,47 @@
 package greyvarserver;
 
 import (
-	"context"
 	pb "github.com/greyvar/server/gen/greyvarprotocol"
 	log "github.com/sirupsen/logrus"
+	"github.com/golang/protobuf/proto"
+	"github.com/gorilla/websocket"
 )
 
-/**
-A server frame represents the entire state of the game. Client's can request 
-updates, such as moving a player. The update may or may not be accepted by the
-server (eg, player is trying to walk through a wall, or even walk too quickly). 
-*/
-func (s *serverInterface) GetServerFrame(ctx context.Context, req *pb.ClientRequests) (*pb.ServerFrameResponse, error) {
-	processClientRequests(s, req);
+func (s *serverInterface) frame() {
+	s.currentFrame = &pb.ServerFrameResponse{}
 
-	return buildServerFrame(s), nil;
+	log.WithFields(log.Fields{
+		"Players": (s.remotePlayers),
+	}).Debug("frame() tick");
+
+	frameGridUpdates(s)
+
+	for _, player := range s.remotePlayers {
+		frameSpawnPlayer(s, player)
+	}
+
+	// Note that position updates need to come after spawns, so we don't update
+	// the position of an entity that has not yet spawned.
+	frameEntityPositions(s);
+
+	s.broadcastServerFrame()
 }
 
-func frameEntityPositions(s *serverInterface, frame *pb.ServerFrameResponse) {
+func (s *serverInterface) broadcastServerFrame() {
+	data, err := proto.Marshal(s.currentFrame);
+
+	if err != nil {
+		log.Errorf("Could not marshal obj to protobuf in sendMessage: %v", err);
+		return
+	}
+
+	for _, player := range s.remotePlayers {
+		player.Connection.WriteMessage(websocket.BinaryMessage, data)
+	}
+}
+
+
+func frameEntityPositions(s *serverInterface) {
 	for _, ent := range s.entities {
 		entpos := pb.EntityPosition {
 			X: ent.X,
@@ -25,27 +49,7 @@ func frameEntityPositions(s *serverInterface, frame *pb.ServerFrameResponse) {
 			EntityId: ent.Id,
 		}
 
-		frame.EntityPositions = append(frame.EntityPositions, &entpos);
+		s.currentFrame.EntityPositions = append(s.currentFrame.EntityPositions, &entpos);
 	}
-}
-
-func buildServerFrame(s *serverInterface) *pb.ServerFrameResponse {
-	frame := new(pb.ServerFrameResponse);
-
-	frameGridUpdates(s, frame)
-
-	for _, player := range s.remotePlayers {
-		FramePlayerSpawns(s, frame, player)
-	}
-
-	// Note that position updates need to come after spawns, so we don't update
-	// the position of an entity that has not yet spawned.
-	frameEntityPositions(s, frame);
-
-	log.WithFields(log.Fields{
-		"serverFrame": frame,
-	}).Debug("ServerFrame");
-
-	return frame;
 }
 

@@ -5,7 +5,7 @@ import(
 	log "github.com/sirupsen/logrus"
 )
 
-func FramePlayerSpawns(s *serverInterface, serverFrame *pb.ServerFrameResponse, rp *RemotePlayer) {
+func frameSpawnPlayer(s *serverInterface, rp *RemotePlayer) {
 	if !rp.Spawned {
 		log.WithFields(log.Fields {
 			"player": rp.Username,
@@ -20,13 +20,13 @@ func FramePlayerSpawns(s *serverInterface, serverFrame *pb.ServerFrameResponse, 
 		spawn.Y = rp.Entity.Y;
 		spawn.Texture = "playerBob.png"
 
-		serverFrame.EntitySpawns = append(serverFrame.EntitySpawns, &spawn);
+		s.currentFrame.EntitySpawns = append(s.currentFrame.EntitySpawns, &spawn);
 
 		// Now send a joining message
 		playerJoin :=  pb.PlayerJoined{}
 		playerJoin.Username = rp.Username;
 
-		serverFrame.PlayerJoined = &playerJoin;
+		s.currentFrame.PlayerJoined = &playerJoin;
 
 		rp.Spawned = true
 	}

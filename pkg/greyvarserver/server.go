@@ -21,10 +21,10 @@ var upgrader = websocket.Upgrader {
 
 type serverInterface struct {
 	remotePlayers map[int64]*RemotePlayer;
-	entities []*Entity;
+	entities map[int64]*Entity;
 	grids []gridFileHandler.GridFile;
 
-	nextFrame pb.ServerFrameResponse;
+	currentFrame *pb.ServerFrameResponse;
 
 	lastEntityId int64;
 }
@@ -37,6 +37,7 @@ func (s *serverInterface) nextEntityId() int64 {
 
 func newServer() *serverInterface {
 	s := &serverInterface{};
+	s.entities = make(map[int64]*Entity)
 	s.remotePlayers = make(map[int64]*RemotePlayer);
 	s.loadGrid("dat/worlds/isleOfStarting_dev/grids/1.1.grid")
 
@@ -56,48 +57,13 @@ func (s *serverInterface) loadGrid(filename string) {
 
 func (s *serverInterface) mainLoop() {
 	for {
-		time.Sleep(1 * time.Second)
-		s.tick();
+		time.Sleep(100 * time.Millisecond)
+		s.frame();
 	}
 }
 
-func (s *serverInterface) tick() {
-	log.Debug("server tick");
-}
-
-func (s *serverInterface) onConnected(c *websocket.Conn) {
+func (s *serverInterface) onConnected(c *websocket.Conn) (*RemotePlayer) {
 	log.Info("Player connected");
-
-	res := new(pb.ConnectionResponse);
-	res.ServerVersion = "waffles2";
-
-	s.nextFrame = pb.ServerFrameResponse{}
-	s.nextFrame.ConnectionResponse = res
-	s.sendFrame(c)
-}
-
-func (s *serverInterface) sendFrame(c *websocket.Conn) {
-	data, err := proto.Marshal(&s.nextFrame);
-
-	if err != nil {
-		log.Errorf("Could not marshal obj to protobuf in sendMessage: %v", err);
-		return
-	}
-
-
-	log.Infof("msg len = %v", len(data))
-
-	c.WriteMessage(websocket.BinaryMessage, data)
-
-	s.nextFrame = pb.ServerFrameResponse{}
-}
-
-func (s *serverInterface) playerSetup(c *websocket.Conn) (*pb.NoResponse, error) {
-	md := "?"
-
-	log.WithFields(log.Fields{
-		"uuid": md,
-	}).Info("PlayerSetup");
 
 	// Register an entity for this new player. In the next server frame the
 	// unspawned player will spawn an entity.
@@ -108,28 +74,42 @@ func (s *serverInterface) playerSetup(c *websocket.Conn) (*pb.NoResponse, error)
 		Id: s.nextEntityId(),
 	}
 
-	s.entities = append(s.entities, &playerEntity);
+	s.entities[playerEntity.Id] = &playerEntity
 
 	rp := RemotePlayer {
+		Connection: c,
 		Username: "bob",
 		NeedsGridUpdate: true,
 		Spawned: false,
 		Entity: &playerEntity,
 	}
 
+	res := new(pb.ConnectionResponse);
+	res.ServerVersion = "waffles2";
+
+	s.currentFrame.ConnectionResponse = res
+
 	s.remotePlayers[playerEntity.Id] = &rp;
 
-	return new(pb.NoResponse), nil;
+	return &rp
 }
 
-func (server *serverInterface) handleClientRequests(reqs *pb.ClientRequests) {
-	log.Infof("handleClientRequests %v", reqs)
+func (s *serverInterface) onDisconnected(c *websocket.Conn) {
+	for i, rp := range s.remotePlayers {
+		if rp.Connection == c {
+			delete(s.entities, rp.Entity.Id)
+			delete(s.remotePlayers, i)
+			return
+		}
+	}
+
+	log.Warnf("Could not find remoteplayer to remove in onDisconnected")
 }
 
 func (server *serverInterface) handleConnection(c *websocket.Conn) {
 	log.Infof("New Handler")
 
-	server.onConnected(c)
+	rp := server.onConnected(c)
 
 	for {
 		_, rawMessage, err := c.ReadMessage()
@@ -146,8 +126,10 @@ func (server *serverInterface) handleConnection(c *websocket.Conn) {
 			log.Warnf("Unmarshal failure: %v", err)
 		}
 
-		server.handleClientRequests(reqs)
+		server.handleClientRequests(rp, reqs)
 	}
+
+	server.onDisconnected(c)
 
 	log.Infof("Closing handler")
 }

@@ -4,9 +4,9 @@ import (
 	pb "github.com/greyvar/server/gen/greyvarprotocol"
 )
 
-func frameGridUpdates(s *serverInterface, serverFrame *pb.ServerFrameResponse) {
+func frameGridUpdates(s *serverInterface) {
 	if isGridUpdateNeeded(s) {
-		serverFrame.Grid = generateGridUpdate(s);
+		s.currentFrame.Grid = generateGridUpdate(s);
 	}
 }
 
@@ -29,8 +29,8 @@ func generateGridUpdate(s *serverInterface) (*pb.Grid) {
 
 	for _, memTile := range s.grids[0].Tiles {
 		netTile := new(pb.Tile);
-		netTile.Row = memTile.X;
-		netTile.Col = memTile.Y;
+		netTile.Row = memTile.Y;
+		netTile.Col = memTile.X;
 		netTile.Tex = memTile.Texture;
 		netTile.Rot = memTile.Rot
 		netTile.FlipH = memTile.FlipH
