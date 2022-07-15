@@ -1,0 +1,7 @@
+---
+title: player
+initialState: idle
+states:
+  idle:
+    tex: ss_playerBob.png 
+    frames: 4

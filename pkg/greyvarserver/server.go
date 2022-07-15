@@ -7,6 +7,7 @@ import (
 	"time"
 	pb "github.com/greyvar/server/gen/greyvarprotocol"
 	"github.com/greyvar/server/pkg/gridFileHandler"
+	"github.com/greyvar/server/pkg/entdefReader"
 	"github.com/gorilla/websocket"
 	"github.com/golang/protobuf/proto"
 )
@@ -20,13 +21,14 @@ var upgrader = websocket.Upgrader {
 }
 
 type serverInterface struct {
-	remotePlayers map[int64]*RemotePlayer;
-	entities map[int64]*Entity;
+	remotePlayers map[string]*RemotePlayer;
+	entityInstances map[int64]*Entity;
+	entityDefinitions map[string]*entdefReader.EntityDefinition
 	grids []gridFileHandler.GridFile;
 
-	currentFrame *pb.ServerFrameResponse;
-
 	lastEntityId int64;
+
+	frameTime int64;
 }
 
 func (s *serverInterface) nextEntityId() int64 {
@@ -35,10 +37,32 @@ func (s *serverInterface) nextEntityId() int64 {
 	return s.lastEntityId;
 }
 
+func (s *serverInterface) loadServerEntdefs() {
+	log.Infof("Loading server entdefs")
+
+	s.loadEntdef("player")
+}
+
+func (s *serverInterface) loadEntdef(definition string) {
+	if _, ok := s.entityDefinitions[definition]; ok {
+		return
+	}
+
+	entdef, err := entdefReader.ReadEntdef(definition)
+
+	if err != nil {
+		log.Warnf("entdef read error! %v", entdef)
+	} else {
+		s.entityDefinitions[definition] = entdef
+	}
+}
+
 func newServer() *serverInterface {
 	s := &serverInterface{};
-	s.entities = make(map[int64]*Entity)
-	s.remotePlayers = make(map[int64]*RemotePlayer);
+	s.entityInstances = make(map[int64]*Entity)
+	s.entityDefinitions = make(map[string]*entdefReader.EntityDefinition)
+	s.loadServerEntdefs()
+	s.remotePlayers = make(map[string]*RemotePlayer);
 	s.loadGrid("dat/worlds/isleOfStarting_dev/grids/1.1.grid")
 
 	return s;
@@ -50,6 +74,22 @@ func (s *serverInterface) loadGrid(filename string) {
 	if err != nil {
 		fmt.Printf("Cannot load grid: %v", err)
 		return
+	}
+
+	log.Infof("Loading grid entdefs")
+
+	for _, gfEnt := range gf.Entities {
+		s.loadEntdef(gfEnt.Definition)
+
+		ent := &Entity{
+			Definition: gfEnt.Definition,
+			ServerId: s.nextEntityId(),
+			X: gfEnt.X * 16,
+			Y: gfEnt.Y * 16,
+			Spawned: true,
+		}
+	
+		s.entityInstances[ent.ServerId] = ent
 	}
 
 	s.grids = append(s.grids, *gf);
@@ -68,37 +108,53 @@ func (s *serverInterface) onConnected(c *websocket.Conn) (*RemotePlayer) {
 	// Register an entity for this new player. In the next server frame the
 	// unspawned player will spawn an entity.
 	playerEntity := Entity {
-		X: 64,
-		Y: 64,
+		X: 48,
+		Y: 48,
+		Definition: "player",
 		ServerDebugAlias: "player",
-		Id: s.nextEntityId(),
+		ServerId: s.nextEntityId(),
 	}
 
-	s.entities[playerEntity.Id] = &playerEntity
+	s.entityInstances[playerEntity.ServerId] = &playerEntity
 
-	rp := RemotePlayer {
+	rp := &RemotePlayer {
 		Connection: c,
 		Username: "bob",
 		NeedsGridUpdate: true,
 		Spawned: false,
 		Entity: &playerEntity,
+		KnownEntities: make(map[int64]*Entity),
+		KnownEntdefs: make(map[string]bool),
+		TimeOfLastMoveRequest: s.frameTime,
 	}
 
-	res := new(pb.ConnectionResponse);
-	res.ServerVersion = "waffles2";
+	// NOTE: This player needs to get a ConnectionResponse to get things going
+	// before it is added to s.remotePlayers - so we send the connection frame
+	// outside of the main frame loop. 
+	//
+	// If we used rp.currentFrame here, it would get overwritten by the frame()
+	// loop before a ConnectionResponse was sent.
 
-	s.currentFrame.ConnectionResponse = res
+	connectionFrame := &pb.ServerUpdate{
+		ConnectionResponse: &pb.ConnectionResponse {
+			ServerVersion: "waffles2",
+		},
+	} 
 
-	s.remotePlayers[playerEntity.Id] = &rp;
+	s.sendServerFrame(connectionFrame, rp)
 
-	return &rp
+	// NOTE: Now it's safe to add.
+
+	s.remotePlayers[rp.Username] = rp;
+
+	return rp
 }
 
 func (s *serverInterface) onDisconnected(c *websocket.Conn) {
-	for i, rp := range s.remotePlayers {
+	for _, rp := range s.remotePlayers {
 		if rp.Connection == c {
-			delete(s.entities, rp.Entity.Id)
-			delete(s.remotePlayers, i)
+			delete(s.entityInstances, rp.Entity.ServerId)
+			delete(s.remotePlayers, rp.Username)
 			return
 		}
 	}

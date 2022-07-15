@@ -10,17 +10,20 @@ type Tile struct {
 	Texture string
 }
 
-type Entity struct {
-	X uint32
-	Y uint32
-	Id string
+type GridFileEntityInstance struct {
+	X int32
+	Y int32
 	Definition string
+	GridID string `yaml:"id"` // Ignored from map file for now. Overwritten by server. Will need to change this.
+
+	Spawned bool `yaml:"-"`
+	State string `yaml:"-"`
 }
 
 type GridFile struct {
 	Width int
 	Height int
 	Tiles []Tile
-	Entities []Entity
+	Entities []GridFileEntityInstance
 	LastEntityId string `yaml:"lastEntityId"`
 }

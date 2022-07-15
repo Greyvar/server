@@ -1,0 +1,7 @@
+---
+title: flowers
+initialState: wiggle
+states:
+  wiggle:
+    tex: ss_flowers.png 
+    frames: 4

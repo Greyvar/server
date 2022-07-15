@@ -4,24 +4,11 @@ import (
 	pb "github.com/greyvar/server/gen/greyvarprotocol"
 )
 
-func frameGridUpdates(s *serverInterface) {
-	if isGridUpdateNeeded(s) {
-		s.currentFrame.Grid = generateGridUpdate(s);
+func frameGridUpdates(s *serverInterface, p *RemotePlayer) {
+	if (p.NeedsGridUpdate) {
+		p.currentFrame.Grid = generateGridUpdate(s);
+		p.NeedsGridUpdate = false
 	}
-}
-
-func isGridUpdateNeeded(s *serverInterface) bool {
-	ret := false
-
-	for i, rp := range s.remotePlayers {
-		if (rp.NeedsGridUpdate) {
-			s.remotePlayers[i].NeedsGridUpdate = false
-
-			ret = true
-		}
-	}
-
-	return ret
 }
 
 func generateGridUpdate(s *serverInterface) (*pb.Grid) {

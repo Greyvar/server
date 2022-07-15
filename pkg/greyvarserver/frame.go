@@ -1,6 +1,7 @@
 package greyvarserver;
 
 import (
+	"time"
 	pb "github.com/greyvar/server/gen/greyvarprotocol"
 	log "github.com/sirupsen/logrus"
 	"github.com/golang/protobuf/proto"
@@ -8,48 +9,63 @@ import (
 )
 
 func (s *serverInterface) frame() {
-	s.currentFrame = &pb.ServerFrameResponse{}
+	s.frameTime = time.Now().UnixNano();
 
-	log.WithFields(log.Fields{
-		"Players": (s.remotePlayers),
-	}).Debug("frame() tick");
+	s.processPlayerRequests();
 
-	frameGridUpdates(s)
+	s.createServerUpdates();
 
-	for _, player := range s.remotePlayers {
-		frameSpawnPlayer(s, player)
-	}
-
-	// Note that position updates need to come after spawns, so we don't update
-	// the position of an entity that has not yet spawned.
-	frameEntityPositions(s);
-
-	s.broadcastServerFrame()
+	s.sendServerUpdates();
 }
 
-func (s *serverInterface) broadcastServerFrame() {
-	data, err := proto.Marshal(s.currentFrame);
+func (s *serverInterface) processPlayerRequests() {}
+
+func (s *serverInterface) createServerUpdates() {
+	for _, p := range s.remotePlayers {
+		p.currentFrame = &pb.ServerUpdate{}
+
+		frameNewEntdefs(s, p)
+		frameSpawnPlayer(s, p)
+		frameSpawnEntities(s, p)
+		frameGridUpdates(s, p)
+		frameEntityPositions(s, p);
+	}
+}
+
+func (s *serverInterface) sendServerUpdates() {
+	// We deliberatly iterate over remotePlayers again here, just sending
+	// the server frame - so that hopefully clients don't perceive lag from 
+	// processing the frame updates for each player, above.
+	for _, player := range s.remotePlayers {
+		s.sendServerFrameForPlayer(player)
+	}
+}
+
+func (s *serverInterface) sendServerFrameForPlayer(p *RemotePlayer) {
+	s.sendServerFrame(p.currentFrame, p)
+}
+
+func (s *serverInterface) sendServerFrame(frame *pb.ServerUpdate, p *RemotePlayer) {
+	data, err := proto.Marshal(frame);
 
 	if err != nil {
 		log.Errorf("Could not marshal obj to protobuf in sendMessage: %v", err);
 		return
 	}
 
-	for _, player := range s.remotePlayers {
-		player.Connection.WriteMessage(websocket.BinaryMessage, data)
-	}
+	p.Connection.WriteMessage(websocket.BinaryMessage, data)
 }
 
 
-func frameEntityPositions(s *serverInterface) {
-	for _, ent := range s.entities {
+func frameEntityPositions(s *serverInterface, p *RemotePlayer) {
+	for _, ent := range s.entityInstances {
 		entpos := pb.EntityPosition {
 			X: ent.X,
 			Y: ent.Y,
-			EntityId: ent.Id,
+			EntityId: ent.ServerId,
 		}
 
-		s.currentFrame.EntityPositions = append(s.currentFrame.EntityPositions, &entpos);
+		p.currentFrame.EntityPositions = append(p.currentFrame.EntityPositions, &entpos);
 	}
 }
 
