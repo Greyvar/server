@@ -1,7 +1,11 @@
 ---
 title: player
 initialState: idle
+texture: ss_playerBob.png 
 states:
   idle:
-    tex: ss_playerBob.png 
-    frames: 4
+    frames: 
+      - 0
+      - 1
+      - 2
+      - 3

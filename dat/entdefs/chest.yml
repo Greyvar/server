@@ -1,8 +1,7 @@
 ---
 title: chest
 initialState: closed
+texture: chest.png
 states:
   closed:
-    tex: chest.png
   open: 
-    tex: chestOpen.png
