@@ -22,7 +22,7 @@ func frameSpawnEntities(s *serverInterface, rp* RemotePlayer) {
 			spawn.X = entinst.X
 			spawn.Y = entinst.Y
 			spawn.PrimaryColor = 0xff0000ff;
-			spawn.Texture = entdef.States[entinst.State].Tex
+			spawn.Texture = entdef.Texture
 
 			rp.currentFrame.EntitySpawns = append(rp.currentFrame.EntitySpawns, &spawn)
 

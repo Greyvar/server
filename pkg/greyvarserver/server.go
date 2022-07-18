@@ -63,7 +63,7 @@ func newServer() *serverInterface {
 	s.entityDefinitions = make(map[string]*entdefReader.EntityDefinition)
 	s.loadServerEntdefs()
 	s.remotePlayers = make(map[string]*RemotePlayer);
-	s.loadGrid("dat/worlds/isleOfStarting_dev/grids/1.1.grid")
+	s.loadGrid("dat/worlds/gen/grids/0.grid")
 
 	return s;
 }
