@@ -10,6 +10,7 @@ import (
 	"github.com/greyvar/server/pkg/entdefReader"
 	"github.com/gorilla/websocket"
 	"github.com/golang/protobuf/proto"
+	"github.com/fsnotify/fsnotify"
 )
 
 var upgrader = websocket.Upgrader {
@@ -63,7 +64,11 @@ func newServer() *serverInterface {
 	s.entityDefinitions = make(map[string]*entdefReader.EntityDefinition)
 	s.loadServerEntdefs()
 	s.remotePlayers = make(map[string]*RemotePlayer);
-	s.loadGrid("dat/worlds/gen/grids/0.grid")
+	
+	filename := "dat/worlds/gen/grids/0.grid"
+
+	s.loadGrid(filename)
+	go s.watchGridFile(filename)
 
 	return s;
 }
@@ -93,6 +98,41 @@ func (s *serverInterface) loadGrid(filename string) {
 	}
 
 	s.grids = append(s.grids, *gf);
+}
+
+func (s *serverInterface) watchGridFile(filename string) {
+	watcher, err := fsnotify.NewWatcher()
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer watcher.Close()
+
+	done := make(chan bool)
+	go func() {
+		for {
+			select {
+			case event, ok := <-watcher.Events:
+				if !ok {
+					return
+				}
+				log.Printf("event: %v\n", event)
+				if event.Op&fsnotify.Write == fsnotify.Write {
+					s.loadGrid("dat/worlds/gen/grids/0.grid")
+				}
+			case err, ok := <-watcher.Errors:
+				if !ok {
+					return
+				}
+				log.Println("error:", err)
+			}
+		}
+	}()
+
+	err = watcher.Add(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+	<-done
 }
 
 func (s *serverInterface) mainLoop() {

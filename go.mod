@@ -1,6 +1,7 @@
 module github.com/greyvar/server
 
 require (
+	github.com/fsnotify/fsnotify v1.5.4 // indirect
 	github.com/golang/protobuf v1.5.2
 	github.com/gorilla/websocket v1.5.0
 	github.com/sirupsen/logrus v1.8.1
