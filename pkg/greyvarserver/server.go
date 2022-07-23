@@ -1,7 +1,6 @@
 package greyvarserver;
 
 import (
-	"fmt"
 	"net/http"
 	log "github.com/sirupsen/logrus"
 	"time"
@@ -25,7 +24,7 @@ type serverInterface struct {
 	remotePlayers map[string]*RemotePlayer;
 	entityInstances map[int64]*Entity;
 	entityDefinitions map[string]*entdefReader.EntityDefinition
-	grids []gridFileHandler.GridFile;
+	grids []*gridFileHandler.GridFile;
 
 	lastEntityId int64;
 
@@ -73,12 +72,12 @@ func newServer() *serverInterface {
 	return s;
 }
 
-func (s *serverInterface) loadGrid(filename string) {
+func (s *serverInterface) loadGrid(filename string) *gridFileHandler.GridFile {
 	gf, err := gridFileHandler.ReadGridFile(filename)
 
 	if err != nil {
-		fmt.Printf("Cannot load grid: %v", err)
-		return
+		log.Errorf("Cannot load grid: %v", err)
+		return nil
 	}
 
 	log.Infof("Loading grid entdefs")
@@ -89,15 +88,17 @@ func (s *serverInterface) loadGrid(filename string) {
 		ent := &Entity{
 			Definition: gfEnt.Definition,
 			ServerId: s.nextEntityId(),
-			X: gfEnt.X * 16,
-			Y: gfEnt.Y * 16,
+			X: gfEnt.Row * 16,
+			Y: gfEnt.Col * 16,
 			Spawned: true,
 		}
 	
 		s.entityInstances[ent.ServerId] = ent
 	}
 
-	s.grids = append(s.grids, *gf);
+	s.grids = append(s.grids, gf);
+
+	return gf
 }
 
 func (s *serverInterface) watchGridFile(filename string) {
@@ -109,15 +110,29 @@ func (s *serverInterface) watchGridFile(filename string) {
 
 	done := make(chan bool)
 	go func() {
+		lastProcessedEvent := time.Now().Unix()
+
 		for {
 			select {
 			case event, ok := <-watcher.Events:
 				if !ok {
+					log.Errorf("The grid inotify watcher failed")
 					return
 				}
+
+				if ((time.Now().Unix() - lastProcessedEvent) < 2) {
+					log.Warnf("Debouncing probable duplicate inotify event")
+					continue
+				}
+
+				lastProcessedEvent = time.Now().Unix()
+
 				log.Printf("event: %v\n", event)
 				if event.Op&fsnotify.Write == fsnotify.Write {
-					s.loadGrid("dat/worlds/gen/grids/0.grid")
+					oldGrid := s.findGridByFilename(filename)
+					newGrid := s.loadGrid(filename)
+
+					s.migrateGridTiles(oldGrid, newGrid)
 				}
 			case err, ok := <-watcher.Errors:
 				if !ok {
@@ -135,6 +150,44 @@ func (s *serverInterface) watchGridFile(filename string) {
 	<-done
 }
 
+func (s *serverInterface) unloadGrid(tounload *gridFileHandler.GridFile) {
+	for _, g := range s.grids {
+		if g == tounload {
+			log.Infof("unloading grid")
+			return
+		}
+	}
+
+	log.Errorf("Cannot find the grid to unload!")
+}
+
+func (s *serverInterface) migrateGridTiles(oldGrid *gridFileHandler.GridFile, newGrid *gridFileHandler.GridFile) {
+	for _, oldTile := range oldGrid.Tiles {
+		for _, newTile := range newGrid.Tiles {
+			if oldTile.Row == newTile.Row && oldTile.Col == newTile.Col {
+				oldTile.Texture = newTile.Texture
+				continue
+			}
+		}
+	}
+
+	for _, rp := range s.remotePlayers {
+		rp.NeedsGridUpdate = true
+	}
+}
+
+func (s *serverInterface) findGridByFilename(filename string) *gridFileHandler.GridFile {
+	for _, g := range s.grids {
+		if g.Filename == filename {
+			return g;
+		}
+	}
+
+	log.Errorf("Could not find grid by filename: %v", filename)
+
+	return nil;
+}
+
 func (s *serverInterface) mainLoop() {
 	for {
 		time.Sleep(100 * time.Millisecond)
@@ -148,8 +201,8 @@ func (s *serverInterface) onConnected(c *websocket.Conn) (*RemotePlayer) {
 	// Register an entity for this new player. In the next server frame the
 	// unspawned player will spawn an entity.
 	playerEntity := Entity {
-		X: 48,
-		Y: 48,
+		X: 16 * 9,
+		Y: 16 * 8,
 		Definition: "player",
 		ServerDebugAlias: "player",
 		ServerId: s.nextEntityId(),

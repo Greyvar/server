@@ -16,6 +16,7 @@ func ReadGridFile(filename string) (*GridFile, error) {
 	}
 
 	gf := GridFile{}
+	gf.Filename = filename
 
 	err = yaml.UnmarshalStrict(file, &gf);
 

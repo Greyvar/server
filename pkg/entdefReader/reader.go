@@ -18,7 +18,7 @@ func ReadEntdef(name string) (*EntityDefinition, error) {
 		return nil, err
 	}
 
-	entdef := EntityDefinition{}
+	entdef := &EntityDefinition{}
 
 	err = yaml.UnmarshalStrict(file, &entdef);
 
@@ -27,5 +27,9 @@ func ReadEntdef(name string) (*EntityDefinition, error) {
 		return nil, err
 	}
 
-	return &entdef, err
+	if entdef.Texture == "" {
+		log.Warnf("entdef has no texture %v", filename )
+	}
+
+	return entdef, err
 }

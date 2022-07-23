@@ -1,6 +1,6 @@
 ---
 title: key
 initialState: keylike
+texture: key.png
 states:
   keylike: 
-    tex: key.png

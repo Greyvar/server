@@ -12,12 +12,17 @@ func frameGridUpdates(s *serverInterface, p *RemotePlayer) {
 }
 
 func generateGridUpdate(s *serverInterface) (*pb.Grid) {
-	gridToSend := new(pb.Grid);
+	memGrid := s.grids[0]
 
-	for _, memTile := range s.grids[0].Tiles {
+	gridToSend := &pb.Grid {
+		RowCount: memGrid.RowCount,
+		ColCount: memGrid.ColCount,
+	}
+	
+	for _, memTile := range memGrid.Tiles {
 		netTile := new(pb.Tile);
-		netTile.Row = memTile.Y;
-		netTile.Col = memTile.X;
+		netTile.Row = memTile.Row;
+		netTile.Col = memTile.Col;
 		netTile.Tex = memTile.Texture;
 		netTile.Rot = memTile.Rot
 		netTile.FlipH = memTile.FlipH

@@ -1,6 +1,6 @@
 ---
 title: document
-initialState: open
+initialState: default
+texture: document.png
 states:
-  open:
-    tex: document.png
+  default:

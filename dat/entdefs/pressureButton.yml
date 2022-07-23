@@ -1,8 +1,7 @@
 ---
 title: pressureButton
+texture: pressureButton.png
 initialState: unpressed
 states:
   unpressed:
-    tex: pressureButton.png
   pressed:
-    tex: pressureButtonPressed.png
