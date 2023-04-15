@@ -5,8 +5,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"time"
 	pb "github.com/greyvar/server/gen/greyvarprotocol"
-	"github.com/greyvar/server/pkg/gridFileHandler"
-	"github.com/greyvar/server/pkg/entdefReader"
+	"github.com/greyvar/datlib/entdefs"
+	"github.com/greyvar/datlib/gridfiles"
 	"github.com/gorilla/websocket"
 	"github.com/golang/protobuf/proto"
 	"github.com/fsnotify/fsnotify"
@@ -23,8 +23,8 @@ var upgrader = websocket.Upgrader {
 type serverInterface struct {
 	remotePlayers map[string]*RemotePlayer;
 	entityInstances map[int64]*Entity;
-	entityDefinitions map[string]*entdefReader.EntityDefinition
-	grids []*gridFileHandler.GridFile;
+	entityDefinitions map[string]*entdefs.EntityDefinition
+	grids []*gridfiles.Grid;
 
 	lastEntityId int64;
 
@@ -48,7 +48,7 @@ func (s *serverInterface) loadEntdef(definition string) {
 		return
 	}
 
-	entdef, err := entdefReader.ReadEntdef(definition)
+	entdef, err := entdefs.ReadEntdef(definition)
 
 	if err != nil {
 		log.Warnf("entdef read error! %v", entdef)
@@ -60,7 +60,7 @@ func (s *serverInterface) loadEntdef(definition string) {
 func newServer() *serverInterface {
 	s := &serverInterface{};
 	s.entityInstances = make(map[int64]*Entity)
-	s.entityDefinitions = make(map[string]*entdefReader.EntityDefinition)
+	s.entityDefinitions = make(map[string]*entdefs.EntityDefinition)
 	s.loadServerEntdefs()
 	s.remotePlayers = make(map[string]*RemotePlayer);
 	
@@ -72,8 +72,8 @@ func newServer() *serverInterface {
 	return s;
 }
 
-func (s *serverInterface) loadGrid(filename string) *gridFileHandler.GridFile {
-	gf, err := gridFileHandler.ReadGridFile(filename)
+func (s *serverInterface) loadGrid(filename string) *gridfiles.Grid {
+	gf, err := gridfiles.ReadGrid(filename)
 
 	if err != nil {
 		log.Errorf("Cannot load grid: %v", err)
@@ -87,9 +87,10 @@ func (s *serverInterface) loadGrid(filename string) *gridFileHandler.GridFile {
 
 		ent := &Entity{
 			Definition: gfEnt.Definition,
+			State: s.entityDefinitions[gfEnt.Definition].InitialState, 
 			ServerId: s.nextEntityId(),
-			X: gfEnt.Row * 16,
-			Y: gfEnt.Col * 16,
+			X: int32(gfEnt.Row * 16),
+			Y: int32(gfEnt.Col * 16),
 			Spawned: true,
 		}
 	
@@ -150,7 +151,7 @@ func (s *serverInterface) watchGridFile(filename string) {
 	<-done
 }
 
-func (s *serverInterface) unloadGrid(tounload *gridFileHandler.GridFile) {
+func (s *serverInterface) unloadGrid(tounload *gridfiles.Grid) {
 	for _, g := range s.grids {
 		if g == tounload {
 			log.Infof("unloading grid")
@@ -161,7 +162,8 @@ func (s *serverInterface) unloadGrid(tounload *gridFileHandler.GridFile) {
 	log.Errorf("Cannot find the grid to unload!")
 }
 
-func (s *serverInterface) migrateGridTiles(oldGrid *gridFileHandler.GridFile, newGrid *gridFileHandler.GridFile) {
+func (s *serverInterface) migrateGridTiles(oldGrid *gridfiles.Grid, newGrid *gridfiles.Grid) {
+	/**
 	for _, oldTile := range oldGrid.Tiles {
 		for _, newTile := range newGrid.Tiles {
 			if oldTile.Row == newTile.Row && oldTile.Col == newTile.Col {
@@ -170,13 +172,14 @@ func (s *serverInterface) migrateGridTiles(oldGrid *gridFileHandler.GridFile, ne
 			}
 		}
 	}
+	**/
 
 	for _, rp := range s.remotePlayers {
 		rp.NeedsGridUpdate = true
 	}
 }
 
-func (s *serverInterface) findGridByFilename(filename string) *gridFileHandler.GridFile {
+func (s *serverInterface) findGridByFilename(filename string) *gridfiles.Grid {
 	for _, g := range s.grids {
 		if g.Filename == filename {
 			return g;
@@ -204,6 +207,7 @@ func (s *serverInterface) onConnected(c *websocket.Conn) (*RemotePlayer) {
 		X: 16 * 9,
 		Y: 16 * 8,
 		Definition: "player",
+		State: "idle",
 		ServerDebugAlias: "player",
 		ServerId: s.nextEntityId(),
 	}
@@ -275,7 +279,7 @@ func (server *serverInterface) handleConnection(c *websocket.Conn) {
 			log.Warnf("Unmarshal failure: %v", err)
 		}
 
-		server.handleClientRequests(rp, reqs)
+		rp.pendingRequests = append(rp.pendingRequests, reqs)
 	}
 
 	server.onDisconnected(c)
@@ -303,6 +307,9 @@ func Start() {
 
 	go server.mainLoop();
 
-	log.Fatal(http.ListenAndServe("0.0.0.0:8080", nil))
+	cert := "greyvar.crt"
+	key := "greyvar.key" 
+
+	log.Fatal(http.ListenAndServeTLS("0.0.0.0:8443", cert, key, nil))
 }
 

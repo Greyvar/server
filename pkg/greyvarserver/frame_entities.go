@@ -14,13 +14,15 @@ func frameNewEntdefs(s *serverInterface, p *RemotePlayer) {
 
 			netEntdef := &pb.EntityDefinition{
 				Name: serverEntdef.Title,
+				Texture: serverEntdef.Texture,
 			}
 
-			for _, serverEntState := range serverEntdef.States {
+			for name, serverEntState := range serverEntdef.States {
 				netEntState := &pb.EntityState {
 					Frames: serverEntState.Frames,
-					Name: serverEntState.Name,
+					Name: name, // serverEntState.Name is not used really
 				}
+
 
 				netEntdef.States = append(netEntdef.States, netEntState)
 			}

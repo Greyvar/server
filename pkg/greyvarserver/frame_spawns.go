@@ -8,9 +8,7 @@ import(
 func frameSpawnEntities(s *serverInterface, rp* RemotePlayer) {
 	for _, entinst := range s.entityInstances {
 		if _, known := rp.KnownEntities[entinst.ServerId]; !known {
-			entdef := s.entityDefinitions[entinst.Definition]
-
-			entinst.State = entdef.InitialState
+			//entdef := s.entityDefinitions[entinst.Definition]
 
 			log.WithFields(log.Fields {
 				"ent": entinst.Definition,
@@ -18,11 +16,12 @@ func frameSpawnEntities(s *serverInterface, rp* RemotePlayer) {
 			}).Info("Spawning entity for player")
 
 			spawn := pb.EntitySpawn{}
+			spawn.Definition = entinst.Definition
+			spawn.InitialState = entinst.State
 			spawn.EntityId = entinst.ServerId
 			spawn.X = entinst.X
 			spawn.Y = entinst.Y
 			spawn.PrimaryColor = 0xff0000ff;
-			spawn.Texture = entdef.Texture
 
 			rp.currentFrame.EntitySpawns = append(rp.currentFrame.EntitySpawns, &spawn)
 

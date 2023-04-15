@@ -19,7 +19,9 @@ func generateGridUpdate(s *serverInterface) (*pb.Grid) {
 		ColCount: memGrid.ColCount,
 	}
 	
-	for _, memTile := range memGrid.Tiles {
+	for _, pos := range memGrid.CellIterator() {
+		memTile := memGrid.Tiles[pos.Row][pos.Col]
+
 		netTile := new(pb.Tile);
 		netTile.Row = memTile.Row;
 		netTile.Col = memTile.Col;

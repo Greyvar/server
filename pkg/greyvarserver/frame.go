@@ -16,14 +16,29 @@ func (s *serverInterface) frame() {
 	s.createServerUpdates();
 
 	s.sendServerUpdates();
+
+	log.Infof("frame")
 }
 
-func (s *serverInterface) processPlayerRequests() {}
-
-func (s *serverInterface) createServerUpdates() {
+func (s *serverInterface) processPlayerRequests() {
 	for _, p := range s.remotePlayers {
 		p.currentFrame = &pb.ServerUpdate{}
 
+
+		for len(p.pendingRequests) > 0 {
+			req := p.pendingRequests[0]
+			p.pendingRequests = p.pendingRequests[1:]
+
+			if req.MoveRequest != nil {
+				processMoveRequest(s, p, req.MoveRequest);
+			}
+		}
+
+	}
+}
+
+func (s *serverInterface) createServerUpdates() {
+	for _, p := range s.remotePlayers {
 		frameNewEntdefs(s, p)
 		frameSpawnPlayer(s, p)
 		frameSpawnEntities(s, p)

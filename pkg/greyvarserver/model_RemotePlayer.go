@@ -19,5 +19,7 @@ type RemotePlayer struct {
 	TimeOfLastMoveRequest int64;
 
 	currentFrame *pb.ServerUpdate;
+
+	pendingRequests []*pb.ClientRequests;
 }
 
