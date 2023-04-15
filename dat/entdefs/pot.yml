@@ -1,7 +1,8 @@
 ---
 title: pot
 initialState: potlike
+texture: pot.png
 states:
   potlike:
-    tex: pot.png
-
+    frames:
+      - 0

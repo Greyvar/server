@@ -1,6 +1,7 @@
 ---
 title: cake
 initialState: cakey
+texture: cake.png
 states:
   cakey: 
-    tex: cake.png
+    frames: [0]

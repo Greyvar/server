@@ -4,4 +4,6 @@ texture: pressureButton.png
 initialState: unpressed
 states:
   unpressed:
+    frames: [0]
   pressed:
+    frames: [1]

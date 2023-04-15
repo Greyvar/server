@@ -1,9 +1,8 @@
 ---
 title: ironDoor
 initialState: closed
+texture: ironDoor.png
 states:
   closed:
-    tex: ironDoor.png
-  open:
-    tex: iconDoorOpen.png
+    frames: [0]
 

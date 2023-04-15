@@ -1,6 +1,8 @@
 ---
 title: pictureHead
 initialState: yellow
+texture: pictureYellowHead.png
 states:
   yellow:
-    tex: pictureYellowHead.png
+    frames:
+      - 0

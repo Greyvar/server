@@ -4,4 +4,6 @@ initialState: closed
 texture: chest.png
 states:
   closed:
+    frames: [0]
   open: 
+    frames: [3, 4, 5]

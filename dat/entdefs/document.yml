@@ -4,3 +4,4 @@ initialState: default
 texture: document.png
 states:
   default:
+    frames: [0]

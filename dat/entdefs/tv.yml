@@ -1,6 +1,7 @@
 ---
 title: tv
 initialState: on
+texture: tv.png
 states:
   on:
-    tex: tv.png 
+    frames: [0]

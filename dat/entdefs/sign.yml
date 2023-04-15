@@ -3,4 +3,5 @@ title: sign
 initialState: signy
 texture: sign.png
 states:
-  signy: 
+  signy:
+    frames: [0]

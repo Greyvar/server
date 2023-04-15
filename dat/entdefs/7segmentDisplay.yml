@@ -1,26 +1,28 @@
 ---
 title: 7segmentDisplay
 initialState: empty
+texture: 7segmentDisplay.png
 states:
-  empty:
-    tex: digitMaskNull.png
   zero:
-    tex: digitMask0.png
+    frames: [0]
   one:
-    tex: digitMask1.png
+    frames: [1]
   two:
-    tex: digitMask2.png
+    frames: [2]
   three:
-    tex: digitMask3.png
+    frames: [3]
   four:
-    tex: digitMask4.png
+    frames: [4]
   five:
-    tex: digitMask5.png
+    frames: [5]
   six:
-    tex: digitMask6.png
+    frames: [6]
   seven:
-    tex: digitMask7.png
+    frames: [7]
   eight:
-    tex: digitMask8.png
-  nine: 
-    tex: digitMask9.png
+    frames: [8]
+  nine:
+    frames: [9]
+  empty:
+    frames: [10]
+

@@ -4,6 +4,7 @@ initialState: idle
 texture: ss_playerBob.png 
 states:
   idle:
+    name: idle
     frames: 
       - 0
       - 1
