@@ -1,1795 +1,1795 @@
 ---
-width: 16
-height: 16
+colcount: 16
+rowcount: 16
 tiles:
 - texture: "black.png"
-  x: 0
-  y: 0
+  col: 0
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 1
+  col: 0
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 2
+  col: 0
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 3
+  col: 0
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 4
+  col: 0
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 5
+  col: 0
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 6
+  col: 0
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 7
+  col: 0
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 8
+  col: 0
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 9
+  col: 0
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 10
+  col: 0
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 11
+  col: 0
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 12
+  col: 0
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 13
+  col: 0
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 14
+  col: 0
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 0
-  y: 15
+  col: 0
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 0
+  col: 1
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 1
+  col: 1
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 2
+  col: 1
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 3
+  col: 1
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 4
+  col: 1
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 5
+  col: 1
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 6
+  col: 1
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 7
+  col: 1
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 8
+  col: 1
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 9
+  col: 1
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 10
+  col: 1
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 11
+  col: 1
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 12
+  col: 1
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 13
+  col: 1
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 14
+  col: 1
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 1
-  y: 15
+  col: 1
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 0
+  col: 2
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 1
+  col: 2
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 2
+  col: 2
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 3
+  col: 2
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 4
+  col: 2
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 5
+  col: 2
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 6
+  col: 2
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 7
+  col: 2
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 8
+  col: 2
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 9
+  col: 2
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 10
+  col: 2
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 11
+  col: 2
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 12
+  col: 2
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 13
+  col: 2
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 14
+  col: 2
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 2
-  y: 15
+  col: 2
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 0
+  col: 3
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 1
+  col: 3
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 2
+  col: 3
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 3
+  col: 3
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 4
+  col: 3
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 5
+  col: 3
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 6
+  col: 3
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 7
+  col: 3
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 8
+  col: 3
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 9
+  col: 3
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 10
+  col: 3
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 11
+  col: 3
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 12
+  col: 3
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 13
+  col: 3
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 14
+  col: 3
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 3
-  y: 15
+  col: 3
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 0
+  col: 4
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 1
+  col: 4
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 2
+  col: 4
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 3
+  col: 4
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 4
+  col: 4
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 5
+  col: 4
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 6
+  col: 4
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 7
+  col: 4
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 8
+  col: 4
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 9
+  col: 4
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 10
+  col: 4
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 11
+  col: 4
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 12
+  col: 4
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 13
+  col: 4
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 14
+  col: 4
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 4
-  y: 15
+  col: 4
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 5
-  y: 0
+  col: 5
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 5
-  y: 1
+  col: 5
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 5
-  y: 2
+  col: 5
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 5
-  y: 3
+  col: 5
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 5
-  y: 4
+  col: 5
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 5
-  y: 5
+  col: 5
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 5
-  y: 6
+  col: 5
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 5
-  y: 7
+  col: 5
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 5
-  y: 8
+  col: 5
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 5
-  y: 9
+  col: 5
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 5
-  y: 10
+  col: 5
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 5
-  y: 11
+  col: 5
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 5
-  y: 12
+  col: 5
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 5
-  y: 13
+  col: 5
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 5
-  y: 14
+  col: 5
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 5
-  y: 15
+  col: 5
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 6
-  y: 0
+  col: 6
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 6
-  y: 1
+  col: 6
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 6
-  y: 2
+  col: 6
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 6
-  y: 3
+  col: 6
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 6
-  y: 4
+  col: 6
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "bookcaseCorner.png"
-  x: 6
-  y: 5
+  col: 6
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 6
-  y: 6
+  col: 6
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "table.png"
-  x: 6
-  y: 7
+  col: 6
+  row: 7
   rot: 0
   flipH: true
   flipV: false
   traversable: true
 - texture: "tableBottom.png"
-  x: 6
-  y: 8
+  col: 6
+  row: 8
   rot: 0
   flipH: true
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 6
-  y: 9
+  col: 6
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 6
-  y: 10
+  col: 6
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 6
-  y: 11
+  col: 6
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 6
-  y: 12
+  col: 6
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 6
-  y: 13
+  col: 6
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 6
-  y: 14
+  col: 6
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 6
-  y: 15
+  col: 6
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 7
-  y: 0
+  col: 7
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 7
-  y: 1
+  col: 7
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 7
-  y: 2
+  col: 7
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 7
-  y: 3
+  col: 7
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 7
-  y: 4
+  col: 7
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "bookcaseCorner.png"
-  x: 7
-  y: 5
+  col: 7
+  row: 5
   rot: 0
   flipH: true
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 7
-  y: 6
+  col: 7
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "table.png"
-  x: 7
-  y: 7
+  col: 7
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "tableBottom.png"
-  x: 7
-  y: 8
+  col: 7
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 7
-  y: 9
+  col: 7
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 7
-  y: 10
+  col: 7
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 7
-  y: 11
+  col: 7
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 7
-  y: 12
+  col: 7
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 7
-  y: 13
+  col: 7
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 7
-  y: 14
+  col: 7
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 7
-  y: 15
+  col: 7
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 8
-  y: 0
+  col: 8
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 8
-  y: 1
+  col: 8
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 8
-  y: 2
+  col: 8
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 8
-  y: 3
+  col: 8
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 8
-  y: 4
+  col: 8
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 8
-  y: 5
+  col: 8
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 8
-  y: 6
+  col: 8
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 8
-  y: 7
+  col: 8
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 8
-  y: 8
+  col: 8
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 8
-  y: 9
+  col: 8
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 8
-  y: 10
+  col: 8
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 8
-  y: 11
+  col: 8
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 8
-  y: 12
+  col: 8
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 8
-  y: 13
+  col: 8
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 8
-  y: 14
+  col: 8
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 8
-  y: 15
+  col: 8
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 9
-  y: 0
+  col: 9
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 9
-  y: 1
+  col: 9
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 9
-  y: 2
+  col: 9
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 9
-  y: 3
+  col: 9
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 9
-  y: 4
+  col: 9
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "tv.png"
-  x: 9
-  y: 5
+  col: 9
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 9
-  y: 6
+  col: 9
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "castleSofa.png"
-  x: 9
-  y: 7
+  col: 9
+  row: 7
   rot: 0
   flipH: true
   flipV: false
   traversable: true
 - texture: "plushCarpet.png"
-  x: 9
-  y: 8
+  col: 9
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 9
-  y: 9
+  col: 9
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 9
-  y: 10
+  col: 9
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 9
-  y: 11
+  col: 9
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 9
-  y: 12
+  col: 9
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 9
-  y: 13
+  col: 9
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 9
-  y: 14
+  col: 9
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 9
-  y: 15
+  col: 9
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 10
-  y: 0
+  col: 10
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 10
-  y: 1
+  col: 10
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 10
-  y: 2
+  col: 10
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 10
-  y: 3
+  col: 10
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 10
-  y: 4
+  col: 10
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 10
-  y: 5
+  col: 10
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 10
-  y: 6
+  col: 10
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "castleSofa.png"
-  x: 10
-  y: 7
+  col: 10
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "plushCarpet.png"
-  x: 10
-  y: 8
+  col: 10
+  row: 8
   rot: 0
   flipH: true
   flipV: true
   traversable: true
 - texture: "stone.png"
-  x: 10
-  y: 9
+  col: 10
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 10
-  y: 10
+  col: 10
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 10
-  y: 11
+  col: 10
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 10
-  y: 12
+  col: 10
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 10
-  y: 13
+  col: 10
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 10
-  y: 14
+  col: 10
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 10
-  y: 15
+  col: 10
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 11
-  y: 0
+  col: 11
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 11
-  y: 1
+  col: 11
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 11
-  y: 2
+  col: 11
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 11
-  y: 3
+  col: 11
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 11
-  y: 4
-  rot: 0
-  flipH: false
-  flipV: false
-  traversable: true
-- texture: "stone.png"
-  x: 11
-  y: 5
+  col: 11
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 11
-  y: 6
+  col: 11
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 11
-  y: 7
+  col: 11
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 11
-  y: 8
+  col: 11
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "stone.png"
-  x: 11
-  y: 9
+  col: 11
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
+- texture: "stone.png"
+  col: 11
+  row: 9
+  rot: 0
+  flipH: false
+  flipV: false
+  traversable: true
 - texture: "black.png"
-  x: 11
-  y: 10
+  col: 11
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 11
-  y: 11
+  col: 11
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 11
-  y: 12
+  col: 11
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 11
-  y: 13
+  col: 11
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 11
-  y: 14
+  col: 11
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 11
-  y: 15
+  col: 11
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 0
+  col: 12
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 1
+  col: 12
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 2
+  col: 12
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 3
+  col: 12
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 4
+  col: 12
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 5
+  col: 12
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 6
+  col: 12
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 7
+  col: 12
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 8
+  col: 12
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 9
+  col: 12
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 10
+  col: 12
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 11
+  col: 12
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 12
+  col: 12
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 13
+  col: 12
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 14
+  col: 12
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 12
-  y: 15
+  col: 12
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 0
+  col: 13
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 1
+  col: 13
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 2
+  col: 13
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 3
+  col: 13
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 4
+  col: 13
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 5
+  col: 13
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 6
+  col: 13
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 7
+  col: 13
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 8
+  col: 13
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 9
+  col: 13
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 10
+  col: 13
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 11
+  col: 13
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 12
+  col: 13
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 13
+  col: 13
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 14
+  col: 13
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 13
-  y: 15
+  col: 13
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 0
+  col: 14
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 1
+  col: 14
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 2
+  col: 14
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 3
+  col: 14
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 4
+  col: 14
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 5
+  col: 14
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 6
+  col: 14
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 7
+  col: 14
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 8
+  col: 14
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 9
+  col: 14
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 10
+  col: 14
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 11
+  col: 14
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 12
+  col: 14
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 13
+  col: 14
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 14
+  col: 14
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 14
-  y: 15
+  col: 14
+  row: 15
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 0
+  col: 15
+  row: 0
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 1
+  col: 15
+  row: 1
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 2
+  col: 15
+  row: 2
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 3
+  col: 15
+  row: 3
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 4
+  col: 15
+  row: 4
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 5
+  col: 15
+  row: 5
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 6
+  col: 15
+  row: 6
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 7
+  col: 15
+  row: 7
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 8
+  col: 15
+  row: 8
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 9
+  col: 15
+  row: 9
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 10
+  col: 15
+  row: 10
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 11
+  col: 15
+  row: 11
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 12
+  col: 15
+  row: 12
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 13
+  col: 15
+  row: 13
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 14
+  col: 15
+  row: 14
   rot: 0
   flipH: false
   flipV: false
   traversable: true
 - texture: "black.png"
-  x: 15
-  y: 15
+  col: 15
+  row: 15
   rot: 0
   flipH: false
   flipV: false
