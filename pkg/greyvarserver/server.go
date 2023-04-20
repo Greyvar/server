@@ -1,24 +1,19 @@
 package greyvarserver;
 
 import (
+	"os"
+	"context"
+	"path/filepath"
 	"net/http"
 	log "github.com/sirupsen/logrus"
 	"time"
 	pb "github.com/greyvar/server/gen/greyvarprotocol"
 	"github.com/greyvar/datlib/entdefs"
 	"github.com/greyvar/datlib/gridfiles"
-	"github.com/gorilla/websocket"
-	"github.com/golang/protobuf/proto"
 	"github.com/fsnotify/fsnotify"
+	"nhooyr.io/websocket"
+	"nhooyr.io/websocket/wspb"
 )
-
-var upgrader = websocket.Upgrader {
-	ReadBufferSize: 1024,
-	WriteBufferSize: 1024,
-	CheckOrigin: func(r *http.Request) bool {
-		return true
-	},
-}
 
 type serverInterface struct {
 	remotePlayers map[string]*RemotePlayer;
@@ -259,21 +254,20 @@ func (s *serverInterface) onDisconnected(c *websocket.Conn) {
 	log.Warnf("Could not find remoteplayer to remove in onDisconnected")
 }
 
-func (server *serverInterface) handleConnection(c *websocket.Conn) {
+func (server *serverInterface) handleConnection(w http.ResponseWriter, r *http.Request) {
+	c, err := websocket.Accept(w, r, nil)
+	defer c.Close(websocket.StatusInternalError, "internal error")
+	
+	ctx, cancel := context.WithTimeout(r.Context(), time.Second*10)
+	defer cancel()
+
 	log.Infof("New Handler")
 
 	rp := server.onConnected(c)
 
 	for {
-		_, rawMessage, err := c.ReadMessage()
-
-		if err != nil {
-			log.Warnf("Conn readMessage fail: %v", err)
-			break
-		}
-
 		reqs := &pb.ClientRequests{}
-		err = proto.Unmarshal(rawMessage, reqs)
+		err = wspb.Read(ctx, c, reqs)
 
 		if err != nil {
 			log.Warnf("Unmarshal failure: %v", err)
@@ -287,29 +281,54 @@ func (server *serverInterface) handleConnection(c *websocket.Conn) {
 	log.Infof("Closing handler")
 }
 
+func findResDir() string {
+	return firstExistingDir("res", []string {
+		"/var/www/html/greyvar-client/res",
+		"../webclient/res/",
+	})
+}
+
+func findWebclientDir() string {
+	return firstExistingDir("webclient", []string {
+		"../webclient/dist/",
+	})
+}
+
+func firstExistingDir(name string, directoriesToSearch []string) string {
+	for _, dir := range directoriesToSearch {
+		if _, err := os.Stat(dir); !os.IsNotExist(err) {
+			dir, _ := filepath.Abs(dir)
+			log.Infof("Found %v dir: %v", name, dir)
+			return dir 
+		}
+	}
+
+	log.Fatalf("Could not find %v dir", name)
+
+	return ""
+}
+
 func Start() {
 	log.Info("Server starting");
 
 	server := newServer()
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		log.Infof("New conn")
+	mux := http.NewServeMux()
 
-		c, err := upgrader.Upgrade(w, r, nil)
-
-		if err != nil {
-			log.Errorf("Upgrade: %v", err)
-			return
-		}
-
-		go server.handleConnection(c)
-	})
+	mux.HandleFunc("/api", server.handleConnection)
+	mux.Handle("/res/", http.StripPrefix("/res/", http.FileServer(http.Dir(findResDir()))))
+	mux.Handle("/", http.FileServer(http.Dir(findWebclientDir())))
 
 	go server.mainLoop();
 
 	cert := "greyvar.crt"
 	key := "greyvar.key" 
 
-	log.Fatal(http.ListenAndServeTLS("0.0.0.0:8443", cert, key, nil))
+	srv := &http.Server {
+		Addr: "0.0.0.0:8443",
+		Handler: mux,
+	}
+
+	log.Fatal(srv.ListenAndServeTLS(cert, key))
 }
 

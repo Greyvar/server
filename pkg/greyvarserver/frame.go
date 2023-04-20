@@ -4,8 +4,8 @@ import (
 	"time"
 	pb "github.com/greyvar/server/gen/greyvarprotocol"
 	log "github.com/sirupsen/logrus"
-	"github.com/golang/protobuf/proto"
-	"github.com/gorilla/websocket"
+	"nhooyr.io/websocket/wspb"
+	"context"
 )
 
 func (s *serverInterface) frame() {
@@ -17,7 +17,7 @@ func (s *serverInterface) frame() {
 
 	s.sendServerUpdates();
 
-	log.Infof("frame")
+	//log.Infof("frame")
 }
 
 func (s *serverInterface) processPlayerRequests() {
@@ -61,14 +61,12 @@ func (s *serverInterface) sendServerFrameForPlayer(p *RemotePlayer) {
 }
 
 func (s *serverInterface) sendServerFrame(frame *pb.ServerUpdate, p *RemotePlayer) {
-	data, err := proto.Marshal(frame);
+	err := wspb.Write(context.Background(), p.Connection, frame)
 
 	if err != nil {
 		log.Errorf("Could not marshal obj to protobuf in sendMessage: %v", err);
 		return
 	}
-
-	p.Connection.WriteMessage(websocket.BinaryMessage, data)
 }
 
 
