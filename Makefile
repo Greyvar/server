@@ -1,5 +1,5 @@
 default:
-	go build -o greyvar-server github.com/greyvar/server/cmd/servercmd/ 
+	go build -o greyvar-server
 
 
 certs:
