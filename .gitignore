@@ -4,3 +4,4 @@
 **/*.swo
 **/*.directory
 gen
+/go.work
