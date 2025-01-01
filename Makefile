@@ -2,6 +2,7 @@ default:
 	go build -o greyvar-server
 
 protoc:
+	rm -rf protocol
 	gh repo clone greyvar/protocol
 	$(MAKE) -w -C protocol generate
 	cp -r protocol/server_go/gen ./

@@ -1,7 +1,7 @@
 package greyvarserver;
 
 import (
-	"nhooyr.io/websocket"
+	"github.com/coder/websocket"
 	pb "github.com/greyvar/server/gen/greyvarprotocol"
 )
 

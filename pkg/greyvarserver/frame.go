@@ -4,7 +4,7 @@ import (
 	"time"
 	pb "github.com/greyvar/server/gen/greyvarprotocol"
 	log "github.com/sirupsen/logrus"
-	"nhooyr.io/websocket/wspb"
+	"github.com/coder/websocket/wsjson"
 	"context"
 )
 
@@ -61,7 +61,7 @@ func (s *serverInterface) sendServerFrameForPlayer(p *RemotePlayer) {
 }
 
 func (s *serverInterface) sendServerFrame(frame *pb.ServerUpdate, p *RemotePlayer) {
-	err := wspb.Write(context.Background(), p.Connection, frame)
+	err := wsjson.Write(context.Background(), p.Connection, frame)
 
 	if err != nil {
 		log.Errorf("Could not marshal obj to protobuf in sendMessage: %v", err);

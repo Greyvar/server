@@ -11,8 +11,8 @@ import (
 	"github.com/greyvar/datlib/entdefs"
 	"github.com/greyvar/datlib/gridfiles"
 	"github.com/fsnotify/fsnotify"
-	"nhooyr.io/websocket"
-	"nhooyr.io/websocket/wspb"
+	"github.com/coder/websocket"
+	"github.com/coder/websocket/wsjson"
 )
 
 type serverInterface struct {
@@ -267,10 +267,11 @@ func (server *serverInterface) handleConnection(w http.ResponseWriter, r *http.R
 
 	for {
 		reqs := &pb.ClientRequests{}
-		err = wspb.Read(ctx, c, reqs)
+		err = wsjson.Read(ctx, c, reqs)
 
 		if err != nil {
 			log.Warnf("Unmarshal failure: %v", err)
+			break
 		}
 
 		rp.pendingRequests = append(rp.pendingRequests, reqs)

@@ -5,3 +5,7 @@
 **/*.directory
 gen
 /go.work
+greyvar.crt
+greyvar.csr
+greyvar.key
+protocol
