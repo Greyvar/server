@@ -1,3 +1,3 @@
-//go:generate make grpc
+//go:generate make protoc
 
 package main
