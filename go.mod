@@ -9,11 +9,12 @@ require (
 )
 
 require (
-	github.com/stretchr/testify v1.7.1 // indirect
+	github.com/jamesread/golure v0.0.0-20250821142658-fa4de6860090 // indirect
+	github.com/stretchr/testify v1.10.0 // indirect
 	golang.org/x/sys v0.28.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
-go 1.21
+go 1.23.8
 
-toolchain go1.22.9
+toolchain go1.24.4
