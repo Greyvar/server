@@ -1,4 +1,5 @@
 /greyvar-server
+tmp/
 *.pyc
 **/*.swp
 **/*.swo
