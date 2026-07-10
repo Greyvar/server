@@ -8,7 +8,7 @@ import (
 
 func main() {
 	log.SetLevel(log.DebugLevel);
-	log.Info("Greyvar Server 2");
+	log.Info("Greyvar Server");
 
 	greyvar.Start();
 

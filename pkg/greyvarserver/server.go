@@ -3,16 +3,16 @@ package greyvarserver;
 import (
 	"os"
 	"context"
-	"path/filepath"
 	"net/http"
 	log "github.com/sirupsen/logrus"
 	"time"
 	pb "github.com/greyvar/server/gen/greyvarprotocol"
+	"github.com/jamesread/golure/pkg/dirs"
 	"github.com/greyvar/datlib/entdefs"
 	"github.com/greyvar/datlib/gridfiles"
 	"github.com/fsnotify/fsnotify"
-	"github.com/coder/websocket"
-	"github.com/coder/websocket/wsjson"
+	"crypto/x509"
+	"encoding/pem"
 )
 
 type serverInterface struct {
@@ -255,58 +255,96 @@ func (s *serverInterface) onDisconnected(c *websocket.Conn) {
 }
 
 func (server *serverInterface) handleConnection(w http.ResponseWriter, r *http.Request) {
-	c, err := websocket.Accept(w, r, nil)
-	defer c.Close(websocket.StatusInternalError, "internal error")
+	log.Infof("New connection")
+
+	client, err := websocket.Accept(w, r, nil)
+	defer client.Close(websocket.StatusInternalError, "internal error")
 	
 	ctx, cancel := context.WithTimeout(r.Context(), time.Second*10)
 	defer cancel()
 
 	log.Infof("New Handler")
 
-	rp := server.onConnected(c)
+	rp := server.onConnected(client)
 
 	for {
 		reqs := &pb.ClientRequests{}
-		err = wsjson.Read(ctx, c, reqs)
+		err = wsjson.Read(ctx, client, reqs)
+
+		log.Infof("C: %+v", client);
 
 		if err != nil {
-			log.Warnf("Unmarshal failure: %v", err)
+			log.Infof("")
+			log.Warnf("handleConnection unmarshal failure: %v", err)
 			break
 		}
 
 		rp.pendingRequests = append(rp.pendingRequests, reqs)
 	}
 
-	server.onDisconnected(c)
+	server.onDisconnected(client)
 
 	log.Infof("Closing handler")
 }
 
-func findResDir() string {
-	return firstExistingDir("res", []string {
-		"/var/www/html/greyvar-client/res",
-		"../webclient/res/",
+func findResDir() (string, error) {
+	return dirs.GetFirstExistingDirectory("res", []string {
+		"../res/",
+		"/var/www/html/greyvar-res",
 	})
 }
 
-func findWebclientDir() string {
-	return firstExistingDir("webclient", []string {
+func findWebclientDir() (string, error) {
+	return dirs.GetFirstExistingDirectory("webclient", []string {
+		"/var/www/html/webclient/dist",
 		"../webclient/dist/",
 	})
 }
 
-func firstExistingDir(name string, directoriesToSearch []string) string {
-	for _, dir := range directoriesToSearch {
-		if _, err := os.Stat(dir); !os.IsNotExist(err) {
-			dir, _ := filepath.Abs(dir)
-			log.Infof("Found %v dir: %v", name, dir)
-			return dir 
+func printCertificateInfo(certPath string) {
+	log.Infof("Reading certificate: %v", certPath)
+
+	certPem, err := os.ReadFile(certPath)
+
+	if err != nil {
+		log.Fatalf("Cannot read cert file: %v", err)
+	}
+
+	block, _ := pem.Decode(certPem)
+
+	if block == nil || block.Type != "CERTIFICATE" {
+		log.Fatalf("Failed to decode certificate")
+	}
+
+	cert, err := x509.ParseCertificate(block.Bytes)
+
+	if err != nil {
+		log.Fatalf("Failed to parse certificate: %v", err)
+	}
+
+	if len(cert.DNSNames) == 0 {
+		log.Fatalf("No SANs in certificate")
+	} else {
+		for _, name := range cert.DNSNames {
+			log.Infof("  SAN: %v", name)
+		}
+
+		for _, ip := range cert.IPAddresses {
+			log.Infof("  IP : %v", ip)
 		}
 	}
 
-	log.Fatalf("Could not find %v dir", name)
+	// Print certificate expiry
+	log.Infof("  NotBefore: %v", cert.NotBefore)
+	log.Infof("  NotAfter: %v", cert.NotAfter)
+}
 
-	return ""
+func getNewApiHandler() (string, http.Handler, *http.Server) {
+	apiServer := api.NewServer()
+
+	path, handler := clientapiconnect.NewGreyvarApiHandler(apiServer)
+
+	return path, handler, apiServer
 }
 
 func Start() {
@@ -316,19 +354,28 @@ func Start() {
 
 	mux := http.NewServeMux()
 
+	resDir, _ := findResDir()
+	webclientDir, _ := findWebclientDir()
+
+	apipath, apihandler, apiserver := getNewApiHandler()
+
 	mux.HandleFunc("/api", server.handleConnection)
-	mux.Handle("/res/", http.StripPrefix("/res/", http.FileServer(http.Dir(findResDir()))))
-	mux.Handle("/", http.FileServer(http.Dir(findWebclientDir())))
+	mux.Handle("/res/", http.StripPrefix("/res/", http.FileServer(http.Dir(resDir))))
+	mux.Handle("/", http.FileServer(http.Dir(webclientDir)))
 
 	go server.mainLoop();
 
 	cert := "greyvar.crt"
-	key := "greyvar.key" 
+	key := "greyvar.key"
+
+	printCertificateInfo(cert);
 
 	srv := &http.Server {
 		Addr: "0.0.0.0:8443",
 		Handler: mux,
 	}
+
+	log.Infof("Listening on %v", srv.Addr)
 
 	log.Fatal(srv.ListenAndServeTLS(cert, key))
 }
