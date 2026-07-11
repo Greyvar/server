@@ -1,0 +1,202 @@
+{ "compressionlevel":-1,
+ "height":16,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[1, 1610612738, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+            5, 6, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+            1610612738, 1610612743, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+            1610612738, 1610612743, 3, 4, 4, 2147483656, 9, 2147483658, 10, 9, 242, 243, 243, 243, 89, 89,
+            1610612738, 1610612743, 3, 4, 4, 2147483651, 11, 12, 12, 12, 212, 213, 49, 49, 49, 49,
+            224, 49, 110, 9, 9, 2147483661, 12, 12, 12, 12, 13, 9, 212, 212, 212, 212,
+            390, 206, 332, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 15, 12,
+            46, 46, 388, 93, 203, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12,
+            144, 148, 314, 91, 92, 52, 52, 52, 113, 43, 43, 91, 92, 356, 355, 93,
+            105, 188, 332, 284, 52, 172, 52, 52, 302, 92, 92, 304, 52, 308, 310, 282,
+            311, 150, 182, 348, 264, 265, 266, 192, 192, 192, 267, 412, 131, 132, 371, 372,
+            331, 190, 46, 182, 387, 193, 46, 46, 46, 46, 188, 389, 86, 86, 184, 182,
+            125, 144, 148, 246, 408, 143, 143, 126, 126, 144, 46, 46, 142, 126, 126, 126,
+            1, 212, 212, 222, 412, 90, 43, 84, 82, 125, 126, 143, 127, 82, 43, 85,
+            1, 1, 1, 1, 213, 242, 243, 90, 88, 243, 243, 90, 43, 83, 88, 369,
+            1, 1, 1, 1, 1, 212, 213, 222, 128, 203, 129, 130, 88, 89, 244, 222],
+         "height":16,
+         "id":3,
+         "name":"Tile Layer 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":16,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":4,
+         "name":"Object Layer 1",
+         "objects":[
+                {
+                 "height":16,
+                 "id":1,
+                 "name":"",
+                 "opacity":1,
+                 "rotation":0,
+                 "type":"chest",
+                 "visible":true,
+                 "width":16,
+                 "x":168,
+                 "y":120
+                }, 
+                {
+                 "height":16,
+                 "id":2,
+                 "name":"",
+                 "opacity":1,
+                 "rotation":0,
+                 "type":"pressureButton",
+                 "visible":true,
+                 "width":16,
+                 "x":216,
+                 "y":152
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":5,
+ "nextobjectid":3,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.12.2",
+ "tileheight":16,
+ "tilesets":[
+        {
+         "columns":18,
+         "firstgid":1,
+         "margin":0,
+         "name":"export",
+         "spacing":0,
+         "tilecount":18,
+         "tileheight":16,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/water.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":1,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/waterSand.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":2,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/dirtHillsideDarkGrass.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":3,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/hill.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":4,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/waterSandCornerInverse.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":5,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/waterSandCorner.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":6,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/sand.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":7,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/dirtHillsideDarkCornerInside.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":8,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/dirtHillsideDark.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":9,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/hillStairs.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":10,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/grassFlowerPurple.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":11,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/grass.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":12,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/dirtHillsideCornerDark.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":13,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/sandyGrass.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":14,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/grassFlowerGreenBlue.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":15,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/sandGrassCorner.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                },
+            
+                {
+                 "id":16,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/sandGrassCornerInverse.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }, 
+                {
+                 "id":17,
+                 "image":"..\/..\/..\/..\/res\/img\/textures\/tiles\/grassFlowerRed.png",
+                 "imageheight":16,
+                 "imagewidth":16
+                }],
+         "tilewidth":16
+        }, 
+        {
+         "firstgid":19,
+         "source":"..\/..\/..\/..\/res\/img\/textures\/tilesets\/grass.tsx"
+        }],
+ "tilewidth":16,
+ "type":"map",
+ "version":"1.10",
+ "width":16
+}

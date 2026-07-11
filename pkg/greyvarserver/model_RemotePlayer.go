@@ -13,8 +13,15 @@ type RemotePlayer struct {
 
 	Entity *Entity;
 
+	CurrentGridId string;
+	CurrentWorldId string;
+
+	PendingGridTransition *GridTransitionInfo;
+
 	KnownEntities map[int64]*Entity;
 	KnownEntdefs map[string]bool
+	PendingDespawns []int64;
+	PendingConsoleMessages []string;
 
 	TimeOfLastMoveRequest int64;
 

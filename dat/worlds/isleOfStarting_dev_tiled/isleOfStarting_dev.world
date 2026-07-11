@@ -1,0 +1,84 @@
+{
+    "type": "world",
+    "maps": [
+        {
+            "fileName": "0.0.tmj",
+            "width": 256,
+            "height": 256,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "fileName": "0.1.tmj",
+            "width": 256,
+            "height": 256,
+            "x": 256,
+            "y": 0
+        },
+        {
+            "fileName": "1.0.tmj",
+            "width": 256,
+            "height": 256,
+            "x": 0,
+            "y": 256
+        },
+        {
+            "fileName": "1.1.blueHouse.tmj",
+            "width": 256,
+            "height": 256,
+            "x": 256,
+            "y": 256
+        },
+        {
+            "fileName": "1.1.tmj",
+            "width": 256,
+            "height": 256,
+            "x": 256,
+            "y": 256
+        },
+        {
+            "fileName": "1.1.redHouse.tmj",
+            "width": 256,
+            "height": 256,
+            "x": 256,
+            "y": 256
+        },
+        {
+            "fileName": "1.2.tmj",
+            "width": 256,
+            "height": 256,
+            "x": 512,
+            "y": 256
+        },
+        {
+            "fileName": "2.0.tmj",
+            "width": 256,
+            "height": 256,
+            "x": 0,
+            "y": 512
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "properties": [
+        {
+            "name": "author",
+            "type": "string",
+            "value": "James Read"
+        },
+        {
+            "name": "title",
+            "type": "string",
+            "value": "Isle of Starting"
+        },
+        {
+            "name": "spawnGrid",
+            "type": "string",
+            "value": "1.1.tmj"
+        },
+        {
+            "name": "triggers",
+            "type": "string",
+            "value": "[{\"actions\":[{\"arguments\":{\"message\":{\"type\":\"string\",\"value\":\"This chest is locked.\"}},\"type\":\"actionMessage\"}],\"conditions\":[{\"arguments\":{\"pos\":{\"true\":3,\"type\":\"tileCoords\",\"x\":6}},\"type\":\"conditionPlayerWalkInto\"}],\"title\":\"Message about locked chest\"}]"
+        }
+    ]
+}

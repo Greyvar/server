@@ -1,0 +1,35 @@
+{
+    "type": "world",
+    "maps": [
+        {
+            "fileName": "0.0.tmj",
+            "width": 256,
+            "height": 288,
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "properties": [
+        {
+            "name": "author",
+            "type": "string",
+            "value": "unknown"
+        },
+        {
+            "name": "title",
+            "type": "string",
+            "value": "Cell of Escape"
+        },
+        {
+            "name": "spawnGrid",
+            "type": "string",
+            "value": "0.0.tmj"
+        },
+        {
+            "name": "triggers",
+            "type": "string",
+            "value": "[{\"actions\":[{\"arguments\":{\"message\":{\"type\":\"string\",\"value\":\"You stepped on my switch!\"}},\"type\":\"actionMessage\"}],\"conditions\":[{\"arguments\":{\"pos\":{\"true\":6,\"type\":\"tileCoords\",\"x\":6}},\"type\":\"conditionPlayerStepOn\"}],\"title\":\"firstSwitch\"}]"
+        }
+    ]
+}

@@ -12,5 +12,8 @@ type Entity struct {
 	X int32;
 	Y int32;
 
+	GridId string;
+	WorldId string;
+
 	ServerDebugAlias string;
 }

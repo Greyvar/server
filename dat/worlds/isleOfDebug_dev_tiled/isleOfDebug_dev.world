@@ -1,0 +1,37 @@
+{
+    "type": "world",
+    "maps": [
+        {
+            "fileName": "0.0.tmj",
+            "width": 256,
+            "height": 256,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "fileName": "spawn.tmj",
+            "width": 256,
+            "height": 256,
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "properties": [
+        {
+            "name": "author",
+            "type": "string",
+            "value": "unknown"
+        },
+        {
+            "name": "title",
+            "type": "string",
+            "value": "Isle of Debug"
+        },
+        {
+            "name": "spawnGrid",
+            "type": "string",
+            "value": "spawn.tmj"
+        }
+    ]
+}

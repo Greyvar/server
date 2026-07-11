@@ -1,0 +1,30 @@
+{
+    "type": "world",
+    "maps": [
+        {
+            "fileName": "0.0.tmj",
+            "width": 320,
+            "height": 384,
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "properties": [
+        {
+            "name": "author",
+            "type": "string",
+            "value": "James Read"
+        },
+        {
+            "name": "title",
+            "type": "string",
+            "value": "Isle of Concept"
+        },
+        {
+            "name": "spawnGrid",
+            "type": "string",
+            "value": "0.0.tmj"
+        }
+    ]
+}

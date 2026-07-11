@@ -5,7 +5,7 @@ tmp_dir = "tmp"
 [build]
   args_bin = []
   bin = "greyvar-server"
-  cmd = "go build -o greyvar-server github.com/greyvar/server/cmd/servercmd/"
+  cmd = "go build -o greyvar-server"
   delay = 1000
   exclude_dir = ["assets", "tmp", "vendor", "testdata"]
   exclude_file = []

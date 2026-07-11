@@ -1,0 +1,27 @@
+{
+    "maps": [
+        {
+            "fileName": "ow-p01-n01-o0000.tmj",
+            "height": 256,
+            "width": 256,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "fileName": "ow-p01-x02-o0000.tmj",
+            "height": 256,
+            "width": 256,
+            "x": 256,
+            "y": 0
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "properties": [
+        {
+            "name": "foo",
+            "type": "string",
+            "value": "bar"
+        }
+    ],
+    "type": "world"
+}

@@ -2,7 +2,6 @@ package greyvarserver;
 
 import (
 	"os"
-	"context"
 	"net/http"
 	log "github.com/sirupsen/logrus"
 	"time"
@@ -10,7 +9,10 @@ import (
 	"github.com/jamesread/golure/pkg/dirs"
 	"github.com/greyvar/datlib/entdefs"
 	"github.com/greyvar/datlib/gridfiles"
+	"github.com/greyvar/server/pkg/worlds"
 	"github.com/fsnotify/fsnotify"
+	"github.com/coder/websocket"
+	"github.com/coder/websocket/wsjson"
 	"crypto/x509"
 	"encoding/pem"
 )
@@ -19,7 +21,8 @@ type serverInterface struct {
 	remotePlayers map[string]*RemotePlayer;
 	entityInstances map[int64]*Entity;
 	entityDefinitions map[string]*entdefs.EntityDefinition
-	grids []*gridfiles.Grid;
+	loadedWorlds map[string]*worlds.World;
+	defaultWorldId string;
 
 	lastEntityId int64;
 
@@ -46,55 +49,98 @@ func (s *serverInterface) loadEntdef(definition string) {
 	entdef, err := entdefs.ReadEntdef(definition)
 
 	if err != nil {
-		log.Warnf("entdef read error! %v", entdef)
+		log.Warnf("entdef read error for %q: %v", definition, err)
 	} else {
 		s.entityDefinitions[definition] = entdef
 	}
+}
+
+func defaultWorldId() string {
+	if env := os.Getenv("GREYVAR_WORLD"); env != "" {
+		return env
+	}
+
+	return "isleOfStarting_dev_tiled"
 }
 
 func newServer() *serverInterface {
 	s := &serverInterface{};
 	s.entityInstances = make(map[int64]*Entity)
 	s.entityDefinitions = make(map[string]*entdefs.EntityDefinition)
+	blockingTileTextures = loadBlockingTileTextures()
 	s.loadServerEntdefs()
 	s.remotePlayers = make(map[string]*RemotePlayer);
-	
-	filename := "dat/worlds/gen/grids/0.grid"
 
-	s.loadGrid(filename)
-	go s.watchGridFile(filename)
+	s.defaultWorldId = defaultWorldId()
+	s.loadedWorlds = make(map[string]*worlds.World)
+
+	if _, err := s.ensureWorldLoaded(s.defaultWorldId); err != nil {
+		log.Fatalf("Cannot load world %v: %v", s.defaultWorldId, err)
+	}
 
 	return s;
 }
 
-func (s *serverInterface) loadGrid(filename string) *gridfiles.Grid {
-	gf, err := gridfiles.ReadGrid(filename)
+func (s *serverInterface) ensureWorldLoaded(worldId string) (*worlds.World, error) {
+	if world, ok := s.loadedWorlds[worldId]; ok {
+		return world, nil
+	}
 
+	world, err := worlds.LoadWorld(worldId)
 	if err != nil {
-		log.Errorf("Cannot load grid: %v", err)
+		return nil, err
+	}
+
+	s.loadedWorlds[worldId] = world
+	log.Infof("Loaded world %v (%v) with %v grids, spawnGrid=%v",
+		world.ID, world.Title, len(world.Grids), world.SpawnGrid)
+
+	for gridId, grid := range world.Grids {
+		s.instantiateGridEntities(worldId, gridId, grid)
+	}
+
+	return world, nil
+}
+
+func (s *serverInterface) worldForPlayer(rp *RemotePlayer) *worlds.World {
+	if rp == nil {
 		return nil
 	}
 
-	log.Infof("Loading grid entdefs")
+	return s.loadedWorlds[rp.CurrentWorldId]
+}
+
+func (s *serverInterface) instantiateGridEntities(worldId string, gridId string, gf *gridfiles.Grid) {
+	log.Infof("Loading grid entities for %v/%v", worldId, gridId)
 
 	for _, gfEnt := range gf.Entities {
 		s.loadEntdef(gfEnt.Definition)
 
+		entdef, ok := s.entityDefinitions[gfEnt.Definition]
+		if !ok {
+			log.Warnf("Skipping entity with unknown entdef %q on %v/%v", gfEnt.Definition, worldId, gridId)
+			continue
+		}
+
 		ent := &Entity{
 			Definition: gfEnt.Definition,
-			State: s.entityDefinitions[gfEnt.Definition].InitialState, 
+			State: entdef.InitialState,
 			ServerId: s.nextEntityId(),
-			X: int32(gfEnt.Row * 16),
-			Y: int32(gfEnt.Col * 16),
+			X: int32(gfEnt.Col * 16),
+			Y: int32(gfEnt.Row * 16),
+			GridId: gridId,
+			WorldId: worldId,
 			Spawned: true,
 		}
 	
 		s.entityInstances[ent.ServerId] = ent
 	}
+}
 
-	s.grids = append(s.grids, gf);
-
-	return gf
+func spawnPositionForGrid(grid *gridfiles.Grid) (int32, int32) {
+	row := grid.RowCount / 2
+	col := grid.ColCount / 2
+	return int32(col * 16), int32(row * 16)
 }
 
 func (s *serverInterface) watchGridFile(filename string) {
@@ -125,10 +171,7 @@ func (s *serverInterface) watchGridFile(filename string) {
 
 				log.Printf("event: %v\n", event)
 				if event.Op&fsnotify.Write == fsnotify.Write {
-					oldGrid := s.findGridByFilename(filename)
-					newGrid := s.loadGrid(filename)
-
-					s.migrateGridTiles(oldGrid, newGrid)
+					s.migrateGridTiles()
 				}
 			case err, ok := <-watcher.Errors:
 				if !ok {
@@ -146,44 +189,19 @@ func (s *serverInterface) watchGridFile(filename string) {
 	<-done
 }
 
-func (s *serverInterface) unloadGrid(tounload *gridfiles.Grid) {
-	for _, g := range s.grids {
-		if g == tounload {
-			log.Infof("unloading grid")
-			return
-		}
-	}
-
-	log.Errorf("Cannot find the grid to unload!")
-}
-
-func (s *serverInterface) migrateGridTiles(oldGrid *gridfiles.Grid, newGrid *gridfiles.Grid) {
-	/**
-	for _, oldTile := range oldGrid.Tiles {
-		for _, newTile := range newGrid.Tiles {
-			if oldTile.Row == newTile.Row && oldTile.Col == newTile.Col {
-				oldTile.Texture = newTile.Texture
-				continue
-			}
-		}
-	}
-	**/
-
+func (s *serverInterface) migrateGridTiles() {
 	for _, rp := range s.remotePlayers {
 		rp.NeedsGridUpdate = true
 	}
 }
 
-func (s *serverInterface) findGridByFilename(filename string) *gridfiles.Grid {
-	for _, g := range s.grids {
-		if g.Filename == filename {
-			return g;
-		}
+func (s *serverInterface) gridById(worldId string, gridId string) *gridfiles.Grid {
+	world := s.loadedWorlds[worldId]
+	if world == nil {
+		return nil
 	}
 
-	log.Errorf("Could not find grid by filename: %v", filename)
-
-	return nil;
+	return world.Grids[gridId]
 }
 
 func (s *serverInterface) mainLoop() {
@@ -196,15 +214,28 @@ func (s *serverInterface) mainLoop() {
 func (s *serverInterface) onConnected(c *websocket.Conn) (*RemotePlayer) {
 	log.Info("Player connected");
 
-	// Register an entity for this new player. In the next server frame the
-	// unspawned player will spawn an entity.
+	world, err := s.ensureWorldLoaded(s.defaultWorldId)
+	if err != nil {
+		log.Fatalf("Cannot load default world %v: %v", s.defaultWorldId, err)
+	}
+
+	spawnGridId := world.SpawnGrid
+	spawnGrid := s.gridById(s.defaultWorldId, spawnGridId)
+	if spawnGrid == nil {
+		log.Fatalf("Spawn grid %v not found in world %v", spawnGridId, s.defaultWorldId)
+	}
+
+	spawnX, spawnY := spawnPositionForGrid(spawnGrid)
+
 	playerEntity := Entity {
-		X: 16 * 9,
-		Y: 16 * 8,
+		X: spawnX,
+		Y: spawnY,
 		Definition: "player",
 		State: "idle",
 		ServerDebugAlias: "player",
 		ServerId: s.nextEntityId(),
+		GridId: spawnGridId,
+		WorldId: s.defaultWorldId,
 	}
 
 	s.entityInstances[playerEntity.ServerId] = &playerEntity
@@ -215,27 +246,25 @@ func (s *serverInterface) onConnected(c *websocket.Conn) (*RemotePlayer) {
 		NeedsGridUpdate: true,
 		Spawned: false,
 		Entity: &playerEntity,
+		CurrentGridId: spawnGridId,
+		CurrentWorldId: s.defaultWorldId,
 		KnownEntities: make(map[int64]*Entity),
 		KnownEntdefs: make(map[string]bool),
 		TimeOfLastMoveRequest: s.frameTime,
 	}
 
-	// NOTE: This player needs to get a ConnectionResponse to get things going
-	// before it is added to s.remotePlayers - so we send the connection frame
-	// outside of the main frame loop. 
-	//
-	// If we used rp.currentFrame here, it would get overwritten by the frame()
-	// loop before a ConnectionResponse was sent.
-
 	connectionFrame := &pb.ServerUpdate{
 		ConnectionResponse: &pb.ConnectionResponse {
 			ServerVersion: "waffles2",
 		},
-	} 
+		Grid: generateGridUpdate(s, rp),
+	}
 
-	s.sendServerFrame(connectionFrame, rp)
+	rp.NeedsGridUpdate = false
+	rp.currentFrame = connectionFrame
+	frameNewEntdefs(s, rp)
 
-	// NOTE: Now it's safe to add.
+	s.sendServerFrame(rp.currentFrame, rp)
 
 	s.remotePlayers[rp.Username] = rp;
 
@@ -243,10 +272,26 @@ func (s *serverInterface) onConnected(c *websocket.Conn) (*RemotePlayer) {
 }
 
 func (s *serverInterface) onDisconnected(c *websocket.Conn) {
-	for _, rp := range s.remotePlayers {
+	for username, rp := range s.remotePlayers {
 		if rp.Connection == c {
+			oldGridId := rp.CurrentGridId
+			oldWorldId := rp.CurrentWorldId
+
+			for _, other := range s.remotePlayers {
+				if other == rp {
+					continue
+				}
+
+				if other.CurrentWorldId == oldWorldId && other.CurrentGridId == oldGridId {
+					if _, known := other.KnownEntities[rp.Entity.ServerId]; known {
+						other.PendingDespawns = append(other.PendingDespawns, rp.Entity.ServerId)
+						delete(other.KnownEntities, rp.Entity.ServerId)
+					}
+				}
+			}
+
 			delete(s.entityInstances, rp.Entity.ServerId)
-			delete(s.remotePlayers, rp.Username)
+			delete(s.remotePlayers, username)
 			return
 		}
 	}
@@ -255,15 +300,18 @@ func (s *serverInterface) onDisconnected(c *websocket.Conn) {
 }
 
 func (server *serverInterface) handleConnection(w http.ResponseWriter, r *http.Request) {
-	log.Infof("New connection")
+	log.Infof("New connection from %s", r.RemoteAddr)
 
-	client, err := websocket.Accept(w, r, nil)
+	client, err := websocket.Accept(w, r, &websocket.AcceptOptions{
+		OriginPatterns: []string{"*"},
+	})
+	if err != nil {
+		log.Warnf("websocket accept failed: %v", err)
+		return
+	}
 	defer client.Close(websocket.StatusInternalError, "internal error")
-	
-	ctx, cancel := context.WithTimeout(r.Context(), time.Second*10)
-	defer cancel()
 
-	log.Infof("New Handler")
+	ctx := r.Context()
 
 	rp := server.onConnected(client)
 
@@ -271,12 +319,18 @@ func (server *serverInterface) handleConnection(w http.ResponseWriter, r *http.R
 		reqs := &pb.ClientRequests{}
 		err = wsjson.Read(ctx, client, reqs)
 
-		log.Infof("C: %+v", client);
-
 		if err != nil {
-			log.Infof("")
-			log.Warnf("handleConnection unmarshal failure: %v", err)
+			log.Warnf("handleConnection read failure: %v", err)
 			break
+		}
+
+		if reqs.MoveRequest != nil {
+			log.WithFields(log.Fields{
+				"player":   rp.Username,
+				"entityId": rp.Entity.ServerId,
+				"x":        reqs.MoveRequest.X,
+				"y":        reqs.MoveRequest.Y,
+			}).Info("MoveRequest received over websocket")
 		}
 
 		rp.pendingRequests = append(rp.pendingRequests, reqs)
@@ -334,17 +388,8 @@ func printCertificateInfo(certPath string) {
 		}
 	}
 
-	// Print certificate expiry
 	log.Infof("  NotBefore: %v", cert.NotBefore)
 	log.Infof("  NotAfter: %v", cert.NotAfter)
-}
-
-func getNewApiHandler() (string, http.Handler, *http.Server) {
-	apiServer := api.NewServer()
-
-	path, handler := clientapiconnect.NewGreyvarApiHandler(apiServer)
-
-	return path, handler, apiServer
 }
 
 func Start() {
@@ -357,9 +402,8 @@ func Start() {
 	resDir, _ := findResDir()
 	webclientDir, _ := findWebclientDir()
 
-	apipath, apihandler, apiserver := getNewApiHandler()
-
 	mux.HandleFunc("/api", server.handleConnection)
+	mux.HandleFunc("/api/debug/blocking-tiles", server.handleBlockingTiles)
 	mux.Handle("/res/", http.StripPrefix("/res/", http.FileServer(http.Dir(resDir))))
 	mux.Handle("/", http.FileServer(http.Dir(webclientDir)))
 
@@ -379,4 +423,3 @@ func Start() {
 
 	log.Fatal(srv.ListenAndServeTLS(cert, key))
 }
-

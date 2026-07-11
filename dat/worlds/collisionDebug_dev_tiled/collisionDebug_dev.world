@@ -1,0 +1,30 @@
+{
+    "type": "world",
+    "maps": [
+        {
+            "fileName": "0.tmj",
+            "width": 256,
+            "height": 256,
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "properties": [
+        {
+            "name": "author",
+            "type": "string",
+            "value": "Greyvar"
+        },
+        {
+            "name": "title",
+            "type": "string",
+            "value": "Collision Debug"
+        },
+        {
+            "name": "spawnGrid",
+            "type": "string",
+            "value": "0.tmj"
+        }
+    ]
+}

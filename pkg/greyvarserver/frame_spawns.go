@@ -6,13 +6,12 @@ import(
 )
 
 func frameSpawnEntities(s *serverInterface, rp* RemotePlayer) {
-	for _, entinst := range s.entityInstances {
+	for _, entinst := range s.entitiesOnGrid(rp.CurrentWorldId, rp.CurrentGridId) {
 		if _, known := rp.KnownEntities[entinst.ServerId]; !known {
-			//entdef := s.entityDefinitions[entinst.Definition]
-
 			log.WithFields(log.Fields {
 				"ent": entinst.Definition,
 				"rp": rp.Username,
+				"gridId": rp.CurrentGridId,
 			}).Info("Spawning entity for player")
 
 			spawn := pb.EntitySpawn{}
@@ -36,13 +35,14 @@ func frameSpawnPlayer(s *serverInterface, rp *RemotePlayer) {
 			"player": rp.Username,
 		}).Info("Spawning player");
 
-		// The entity spawner will take care of spawning this RP's entity
-
-		playerJoin :=  pb.PlayerJoined{}
-		playerJoin.Username = rp.Username;
+		playerJoin := pb.PlayerJoined{}
+		playerJoin.Username = rp.Username
+		playerJoin.EntityId = rp.Entity.ServerId
 
 		for _, player := range s.remotePlayers {
-			player.currentFrame.PlayerJoined = &playerJoin;
+			if player.CurrentWorldId == rp.CurrentWorldId && player.CurrentGridId == rp.CurrentGridId {
+				player.currentFrame.PlayerJoined = &playerJoin;
+			}
 		}
 
 		rp.Spawned = true
