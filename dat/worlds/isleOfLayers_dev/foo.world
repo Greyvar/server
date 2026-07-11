@@ -1,0 +1,11 @@
+{
+    "patterns": [
+        {
+            "regexp": "ow-p0*(\d+)-n0*(\d+)-o0000\.tmx",
+            "multiplierX": 64,
+            "multiplierY": 64
+        }
+    ],
+    "type": "world",
+    "onlyShowAdjacentMaps": false
+}
